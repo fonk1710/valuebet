@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SchedinaAnalisi — Motore automatico</title>
+<title>SchedinaAnalisi</title>
 <style>
   * { box-sizing: border-box; }
   body {
@@ -11,7 +11,7 @@
     background: #0F2418;
     color: #EDEAE0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
-    padding: 24px 16px 64px;
+    padding: 24px 16px 90px;
   }
   .wrap { max-width: 880px; margin: 0 auto; }
   h1 {
@@ -22,76 +22,60 @@
   }
   h1 span { color: #D4A537; }
   .sub { color: #6E8A78; font-size: 12px; font-family: monospace; margin-top: 6px; }
-  .notes {
-    background: #16301F;
-    border: 1px solid #2A4A34;
-    border-radius: 10px;
-    padding: 14px 16px;
-    margin: 20px 0 28px;
-    font-size: 13px;
-    color: #8FA394;
-    line-height: 1.6;
-  }
+
+  .tabs { display: flex; gap: 4px; background: #16301F; border: 1px solid #2A4A34; border-radius: 10px; padding: 4px; width: fit-content; margin: 22px 0; }
+  .tabs button { background: transparent; border: none; color: #8FA394; padding: 9px 20px; border-radius: 7px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; }
+  .tabs button.active { background: #D4A537; color: #0F2418; }
+
+  .notes { background: #16301F; border: 1px solid #2A4A34; border-radius: 10px; padding: 14px 16px; margin: 0 0 24px; font-size: 13px; color: #8FA394; line-height: 1.6; }
   .notes b { color: #D4A537; }
-  .filters {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-  .filters button {
-    background: #16301F;
-    border: 1px solid #2A4A34;
-    color: #8FA394;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-family: monospace;
-    cursor: pointer;
-  }
-  .filters button.active {
-    background: #D4A537;
-    color: #0F2418;
-    border-color: #D4A537;
-  }
-  .card {
-    background: #152A1E;
-    border: 1px solid #2A4A34;
-    border-radius: 10px;
-    padding: 14px 18px;
-    margin-bottom: 12px;
-  }
-  .card-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
+
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+  .filters button { background: #16301F; border: 1px solid #2A4A34; color: #8FA394; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-family: monospace; cursor: pointer; }
+  .filters button.active { background: #D4A537; color: #0F2418; border-color: #D4A537; }
+
+  .card { background: #152A1E; border: 1px solid #2A4A34; border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; }
+  .card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 6px; }
   .match { font-size: 15px; font-weight: 600; }
   .meta { font-size: 11px; color: #6E8A78; font-family: monospace; margin-top: 2px; }
-  .pill {
-    font-size: 10px;
-    font-family: monospace;
-    text-transform: uppercase;
-    padding: 3px 9px;
-    border-radius: 999px;
-    border: 1px solid;
-  }
-  .pill.Alta { color: #6ee7b7; border-color: rgba(110,231,183,0.4); background: rgba(110,231,183,0.1); }
-  .pill.Media { color: #fcd34d; border-color: rgba(252,211,77,0.4); background: rgba(252,211,77,0.1); }
+  .pill { font-size: 10px; font-family: monospace; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; border: 1px solid; white-space: nowrap; }
+  .pill.Alta, .pill.vinta { color: #6ee7b7; border-color: rgba(110,231,183,0.4); background: rgba(110,231,183,0.1); }
+  .pill.Media, .pill.in_corso { color: #fcd34d; border-color: rgba(252,211,77,0.4); background: rgba(252,211,77,0.1); }
+  .pill.Bassa, .pill.persa { color: #94a3b8; border-color: rgba(148,163,184,0.4); background: rgba(148,163,184,0.1); }
+  .pill.persa { color: #fca5a5; border-color: rgba(252,165,165,0.4); background: rgba(252,165,165,0.1); }
   .market { color: #D4A537; font-family: monospace; font-size: 14px; margin: 8px 0 4px; }
   .note { color: #8FA394; font-size: 12.5px; line-height: 1.5; }
-  .empty {
-    text-align: center;
-    padding: 60px 20px;
-    color: #5C7A67;
-    font-size: 13px;
-    font-family: monospace;
-    border: 1px dashed #2A4A34;
-    border-radius: 10px;
-  }
+  .empty { text-align: center; padding: 60px 20px; color: #5C7A67; font-size: 13px; font-family: monospace; border: 1px dashed #2A4A34; border-radius: 10px; }
+
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 22px; }
+  .stat-card { background: #16301F; border: 1px solid #2A4A34; border-radius: 10px; padding: 14px 16px; }
+  .stat-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: #8FA394; font-weight: 600; }
+  .stat-value { font-family: 'Georgia', serif; font-size: 26px; margin-top: 6px; }
+  .pos { color: #6ee7b7; } .neg { color: #fca5a5; }
+
+  .row-between { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
+  .btn-gold { background: #D4A537; color: #0F2418; border: none; padding: 10px 16px; border-radius: 8px; font-weight: 700; font-size: 13px; cursor: pointer; font-family: inherit; }
+
+  .ticket-actions button { font-size: 11px; font-family: monospace; padding: 5px 10px; border-radius: 6px; cursor: pointer; margin-left: 6px; }
+  .btn-win { background: rgba(110,231,183,0.1); border: 1px solid rgba(110,231,183,0.4); color: #6ee7b7; }
+  .btn-lose { background: rgba(252,165,165,0.1); border: 1px solid rgba(252,165,165,0.4); color: #fca5a5; }
+  .btn-del { background: transparent; border: none; color: #5C7A67; cursor: pointer; font-size: 13px; }
+
+  .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 50; padding: 16px; }
+  .modal { background: #16301F; border: 1px solid #2A4A34; border-radius: 12px; padding: 20px; max-width: 480px; width: 100%; max-height: 85vh; overflow-y: auto; }
+  .modal h3 { margin: 0 0 16px; font-size: 17px; }
+  .field-label { font-size: 11px; text-transform: uppercase; color: #6E8A78; font-weight: 600; display: block; margin-bottom: 5px; }
+  .field { margin-bottom: 12px; }
+  input, select { width: 100%; background: #0F2418; border: 1px solid #2A4A34; border-radius: 6px; padding: 9px 10px; color: #EDEAE0; font-size: 13px; font-family: inherit; }
+  input:focus, select:focus { outline: none; border-color: #D4A537; }
+  .sel-block { border: 1px solid #2A4A34; border-radius: 8px; padding: 10px; background: #122419; margin-bottom: 10px; }
+  .grid3 { display: grid; grid-template-columns: 1.4fr 1fr 0.8fr; gap: 6px; margin-top: 6px; }
+  .type-toggle { display: flex; gap: 6px; margin-bottom: 14px; }
+  .type-toggle button { flex: 1; padding: 9px; border-radius: 8px; border: 1px solid #2A4A34; background: #0F2418; color: #8FA394; font-weight: 700; font-size: 12px; cursor: pointer; text-transform: uppercase; }
+  .type-toggle button.active { background: #D4A537; color: #0F2418; border-color: #D4A537; }
+  .modal-close { float: right; background: none; border: none; color: #6E8A78; font-size: 18px; cursor: pointer; }
+
+  .fab { position: fixed; bottom: 22px; right: 22px; display: flex; align-items: center; gap: 8px; background: #D4A537; color: #0F2418; padding: 13px 18px; border-radius: 999px; font-weight: 700; font-size: 13px; text-decoration: none; box-shadow: 0 6px 20px rgba(0,0,0,0.4); z-index: 40; }
 </style>
 </head>
 <body>
@@ -99,14 +83,46 @@
   <h1>Schedina<span>Analisi</span></h1>
   <div class="sub" id="updated">Caricamento...</div>
 
-  <div class="notes" id="notes"></div>
+  <div class="tabs">
+    <button data-tab="home" class="active">Home</button>
+    <button data-tab="storico">Storico</button>
+  </div>
 
-  <div class="filters" id="filters"></div>
-  <div id="signals"></div>
+  <div id="tab-home">
+    <div class="notes" id="notes"></div>
+    <div class="filters" id="filters"></div>
+    <div id="signals"></div>
+  </div>
+
+  <div id="tab-storico" style="display:none">
+    <div class="stats-grid" id="stats-grid"></div>
+    <div class="row-between">
+      <h2 style="margin:0;font-family:'Georgia',serif;font-size:22px;">Le tue giocate</h2>
+      <button class="btn-gold" id="btn-new-bet">+ Registra giocata</button>
+    </div>
+    <div id="bets-list"></div>
+  </div>
 </div>
 
+<a class="fab" id="analizza-link" href="#" target="_blank" rel="noopener">Analizza ↗</a>
+
+<div id="modal-root"></div>
+
 <script>
-async function load() {
+const REPO_ACTIONS_URL = "https://github.com/fonk1710/valuebet/actions/workflows/analyze.yml";
+document.getElementById('analizza-link').href = REPO_ACTIONS_URL;
+
+/* ---------------- Tabs ---------------- */
+document.querySelectorAll('.tabs button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tabs button').forEach(b => b.classList.toggle('active', b === btn));
+    document.getElementById('tab-home').style.display = btn.dataset.tab === 'home' ? '' : 'none';
+    document.getElementById('tab-storico').style.display = btn.dataset.tab === 'storico' ? '' : 'none';
+  });
+});
+
+/* ---------------- Home: segnali automatici ---------------- */
+async function loadSignals() {
   const container = document.getElementById('signals');
   const updated = document.getElementById('updated');
   const notes = document.getElementById('notes');
@@ -122,8 +138,7 @@ async function load() {
     return;
   }
 
-  const generated = new Date(data.generated_at);
-  updated.textContent = 'Aggiornato: ' + generated.toLocaleString('it-IT');
+  updated.textContent = 'Aggiornato: ' + new Date(data.generated_at).toLocaleString('it-IT');
   notes.innerHTML = '<b>Copertura:</b> ' + data.coverage_note + '<br><br><b>Quote:</b> ' + data.odds_note;
 
   const signals = data.signals || [];
@@ -152,10 +167,7 @@ async function load() {
     `).join('') || '<div class="empty">Nessun segnale per questo filtro.</div>';
   }
 
-  filtersEl.innerHTML = campionati.map(c =>
-    `<button data-c="${c}" class="${c === active ? 'active' : ''}">${c}</button>`
-  ).join('');
-
+  filtersEl.innerHTML = campionati.map(c => `<button data-c="${c}" class="${c === active ? 'active' : ''}">${c}</button>`).join('');
   filtersEl.querySelectorAll('button').forEach(btn => {
     btn.addEventListener('click', () => {
       active = btn.dataset.c;
@@ -163,11 +175,166 @@ async function load() {
       render();
     });
   });
-
   render();
 }
+loadSignals();
 
-load();
+/* ---------------- Storico: salvato nel browser (localStorage) ---------------- */
+const BETS_KEY = 'schedina-bets-v1';
+const MERCATI = ['1X2', 'Over/Under', 'GG/NG', 'Doppia Chance', 'Handicap', 'Marcatore', 'Altro'];
+
+function loadBets() {
+  try { return JSON.parse(localStorage.getItem(BETS_KEY)) || []; } catch (e) { return []; }
+}
+function saveBets(bets) {
+  localStorage.setItem(BETS_KEY, JSON.stringify(bets));
+}
+function uid() { return Math.random().toString(36).slice(2) + Date.now().toString(36); }
+function fmtEuro(n) { return (Number(n) || 0).toLocaleString('it-IT', { style: 'currency', currency: 'EUR' }); }
+function quotaTotale(bet) { return bet.selezioni.reduce((acc, s) => acc * (Number(s.quota) || 1), 1); }
+function profitto(bet) {
+  const importo = Number(bet.importo) || 0;
+  if (bet.esito === 'vinta') return importo * quotaTotale(bet) - importo;
+  if (bet.esito === 'persa') return -importo;
+  return 0;
+}
+
+function renderStorico() {
+  const bets = loadBets();
+  const decided = bets.filter(b => b.esito !== 'in_corso');
+  const totalStaked = decided.reduce((a, b) => a + (Number(b.importo) || 0), 0);
+  const totalProfit = decided.reduce((a, b) => a + profitto(b), 0);
+  const won = decided.filter(b => b.esito === 'vinta').length;
+  const winRate = decided.length ? (won / decided.length) * 100 : 0;
+  const roi = totalStaked ? (totalProfit / totalStaked) * 100 : 0;
+  const pending = bets.filter(b => b.esito === 'in_corso').length;
+
+  document.getElementById('stats-grid').innerHTML = `
+    <div class="stat-card"><div class="stat-label">Profitto/Perdita</div><div class="stat-value ${totalProfit >= 0 ? 'pos' : 'neg'}">${totalProfit >= 0 ? '+' : ''}${fmtEuro(totalProfit)}</div></div>
+    <div class="stat-card"><div class="stat-label">ROI</div><div class="stat-value ${roi >= 0 ? 'pos' : 'neg'}">${roi.toFixed(1)}%</div></div>
+    <div class="stat-card"><div class="stat-label">Win rate</div><div class="stat-value">${winRate.toFixed(0)}%</div></div>
+    <div class="stat-card"><div class="stat-label">Puntato</div><div class="stat-value">${fmtEuro(totalStaked)}</div></div>
+  `;
+
+  const list = document.getElementById('bets-list');
+  if (bets.length === 0) {
+    list.innerHTML = '<div class="empty">Nessuna giocata registrata. Salvata solo su questo dispositivo/browser.</div>';
+    return;
+  }
+  list.innerHTML = bets.map(b => `
+    <div class="card">
+      <div class="card-top">
+        <div>
+          <span class="meta">${b.tipo} · ${b.campionato || '—'} · ${b.data}</span>
+        </div>
+        <div class="ticket-actions">
+          <span class="pill ${b.esito}">${b.esito === 'in_corso' ? 'In corso' : b.esito === 'vinta' ? 'Vinta' : 'Persa'}</span>
+          <button class="btn-del" onclick="deleteBet('${b.id}')">✕</button>
+        </div>
+      </div>
+      ${b.selezioni.map(s => `
+        <div style="display:flex;justify-content:space-between;font-size:13px;margin:4px 0;">
+          <span>${s.squadre} <span style="color:#6E8A78">— ${s.mercato}${s.pronostico ? ' · ' + s.pronostico : ''}</span></span>
+          <span style="color:#D4A537;font-family:monospace">${Number(s.quota || 0).toFixed(2)}</span>
+        </div>
+      `).join('')}
+      <div class="card-top" style="margin-top:8px;border-top:1px dashed #2A4A34;padding-top:8px;">
+        <span class="meta">Quota tot. <b style="color:#D4A537">${quotaTotale(b).toFixed(2)}</b> · Puntato <b>${fmtEuro(b.importo)}</b></span>
+        ${b.esito === 'in_corso'
+          ? `<span class="ticket-actions"><button class="btn-win" onclick="setEsito('${b.id}','vinta')">Vinta</button><button class="btn-lose" onclick="setEsito('${b.id}','persa')">Persa</button></span>`
+          : `<span style="font-weight:700;color:${profitto(b) >= 0 ? '#6ee7b7' : '#fca5a5'}">${profitto(b) >= 0 ? '+' : ''}${fmtEuro(profitto(b))}</span>`
+        }
+      </div>
+    </div>
+  `).join('');
+}
+
+function deleteBet(id) {
+  saveBets(loadBets().filter(b => b.id !== id));
+  renderStorico();
+}
+function setEsito(id, esito) {
+  const bets = loadBets();
+  const b = bets.find(x => x.id === id);
+  if (b) b.esito = esito;
+  saveBets(bets);
+  renderStorico();
+}
+
+/* ---------------- Modal: nuova giocata ---------------- */
+function emptySel() { return { squadre: '', mercato: MERCATI[0], pronostico: '', quota: '' }; }
+
+function openNewBetModal() {
+  let tipo = 'Singola';
+  let selezioni = [emptySel()];
+
+  function optionsHtml() { return MERCATI.map(m => `<option value="${m}">${m}</option>`).join(''); }
+
+  function selHtml(i) {
+    const s = selezioni[i];
+    return `
+      <div class="sel-block">
+        ${tipo === 'Multipla' ? `<div style="display:flex;justify-content:space-between;margin-bottom:6px"><span class="meta">Evento ${i + 1}</span>${selezioni.length > 1 ? `<button class="btn-del" onclick="window.__removeSel(${i})">✕</button>` : ''}</div>` : ''}
+        <input placeholder="Squadra A - Squadra B" value="${s.squadre}" oninput="window.__updateSel(${i},'squadre',this.value)" />
+        <div class="grid3">
+          <select onchange="window.__updateSel(${i},'mercato',this.value)">${optionsHtml()}</select>
+          <input placeholder="Es. Over 2.5" value="${s.pronostico}" oninput="window.__updateSel(${i},'pronostico',this.value)" />
+          <input placeholder="Quota" inputmode="decimal" value="${s.quota}" oninput="window.__updateSel(${i},'quota',this.value)" />
+        </div>
+      </div>`;
+  }
+
+  function renderModal() {
+    document.getElementById('modal-root').innerHTML = `
+      <div class="modal-bg" id="modal-bg">
+        <div class="modal">
+          <button class="modal-close" onclick="window.__closeModal()">✕</button>
+          <h3>Registra giocata</h3>
+          <div class="type-toggle">
+            <button class="${tipo === 'Singola' ? 'active' : ''}" onclick="window.__setTipo('Singola')">Singola</button>
+            <button class="${tipo === 'Multipla' ? 'active' : ''}" onclick="window.__setTipo('Multipla')">Multipla</button>
+          </div>
+          <div class="field"><label class="field-label">Campionato</label><input id="f-campionato" placeholder="Serie A, Premier League..." /></div>
+          <div class="field"><label class="field-label">Data</label><input id="f-data" type="date" /></div>
+          <div id="sel-container">${selezioni.map((_, i) => selHtml(i)).join('')}</div>
+          ${tipo === 'Multipla' ? `<button class="btn-gold" style="width:100%;margin-bottom:12px;background:#0F2418;color:#8FA394;border:1px dashed #3D6249" onclick="window.__addSel()">+ Aggiungi evento</button>` : ''}
+          <div class="field"><label class="field-label">Importo puntato (€)</label><input id="f-importo" placeholder="0.00" inputmode="decimal" /></div>
+          <button class="btn-gold" style="width:100%" onclick="window.__saveBet()">Salva giocata</button>
+        </div>
+      </div>`;
+    document.getElementById('f-campionato').value = window.__campionato || '';
+    document.getElementById('f-data').value = window.__data || new Date().toISOString().slice(0, 10);
+    document.getElementById('f-importo').value = window.__importo || '';
+    document.getElementById('f-campionato').oninput = e => window.__campionato = e.target.value;
+    document.getElementById('f-data').oninput = e => window.__data = e.target.value;
+    document.getElementById('f-importo').oninput = e => window.__importo = e.target.value;
+    document.getElementById('modal-bg').addEventListener('click', e => { if (e.target.id === 'modal-bg') window.__closeModal(); });
+  }
+
+  window.__setTipo = (t) => { tipo = t; if (t === 'Singola') selezioni = [selezioni[0] || emptySel()]; renderModal(); };
+  window.__updateSel = (i, key, val) => { selezioni[i][key] = val; };
+  window.__addSel = () => { selezioni.push(emptySel()); renderModal(); };
+  window.__removeSel = (i) => { selezioni.splice(i, 1); renderModal(); };
+  window.__closeModal = () => { document.getElementById('modal-root').innerHTML = ''; window.__campionato = window.__data = window.__importo = ''; };
+  window.__saveBet = () => {
+    const valid = selezioni.every(s => s.squadre.trim() && Number(s.quota) > 0);
+    const importo = document.getElementById('f-importo').value;
+    if (!valid || !(Number(importo) > 0)) { alert('Compila squadre, quote e importo per salvare.'); return; }
+    const bets = loadBets();
+    bets.unshift({
+      id: uid(), tipo, campionato: document.getElementById('f-campionato').value,
+      data: document.getElementById('f-data').value, importo, esito: 'in_corso', selezioni,
+    });
+    saveBets(bets);
+    window.__closeModal();
+    renderStorico();
+  };
+
+  renderModal();
+}
+document.getElementById('btn-new-bet').addEventListener('click', openNewBetModal);
+
+renderStorico();
 </script>
 </body>
 </html>
