@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SchedinaAnalisi — Motore automatico</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0F2418;
+    color: #EDEAE0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+    padding: 24px 16px 64px;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  h1 {
+    font-family: 'Georgia', serif;
+    font-size: 40px;
+    letter-spacing: 0.02em;
+    margin: 0;
+  }
+  h1 span { color: #D4A537; }
+  .sub { color: #6E8A78; font-size: 12px; font-family: monospace; margin-top: 6px; }
+  .notes {
+    background: #16301F;
+    border: 1px solid #2A4A34;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 20px 0 28px;
+    font-size: 13px;
+    color: #8FA394;
+    line-height: 1.6;
+  }
+  .notes b { color: #D4A537; }
+  .filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .filters button {
+    background: #16301F;
+    border: 1px solid #2A4A34;
+    color: #8FA394;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: monospace;
+    cursor: pointer;
+  }
+  .filters button.active {
+    background: #D4A537;
+    color: #0F2418;
+    border-color: #D4A537;
+  }
+  .card {
+    background: #152A1E;
+    border: 1px solid #2A4A34;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+  }
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .match { font-size: 15px; font-weight: 600; }
+  .meta { font-size: 11px; color: #6E8A78; font-family: monospace; margin-top: 2px; }
+  .pill {
+    font-size: 10px;
+    font-family: monospace;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 999px;
+    border: 1px solid;
+  }
+  .pill.Alta { color: #6ee7b7; border-color: rgba(110,231,183,0.4); background: rgba(110,231,183,0.1); }
+  .pill.Media { color: #fcd34d; border-color: rgba(252,211,77,0.4); background: rgba(252,211,77,0.1); }
+  .market { color: #D4A537; font-family: monospace; font-size: 14px; margin: 8px 0 4px; }
+  .note { color: #8FA394; font-size: 12.5px; line-height: 1.5; }
+  .empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: #5C7A67;
+    font-size: 13px;
+    font-family: monospace;
+    border: 1px dashed #2A4A34;
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Schedina<span>Analisi</span></h1>
+  <div class="sub" id="updated">Caricamento...</div>
+
+  <div class="notes" id="notes"></div>
+
+  <div class="filters" id="filters"></div>
+  <div id="signals"></div>
+</div>
+
+<script>
+async function load() {
+  const container = document.getElementById('signals');
+  const updated = document.getElementById('updated');
+  const notes = document.getElementById('notes');
+  const filtersEl = document.getElementById('filters');
+
+  let data;
+  try {
+    const res = await fetch('data.json', { cache: 'no-store' });
+    data = await res.json();
+  } catch (e) {
+    container.innerHTML = '<div class="empty">Nessun dato ancora disponibile. Il motore deve girare almeno una volta.</div>';
+    updated.textContent = '';
+    return;
+  }
+
+  const generated = new Date(data.generated_at);
+  updated.textContent = 'Aggiornato: ' + generated.toLocaleString('it-IT');
+  notes.innerHTML = '<b>Copertura:</b> ' + data.coverage_note + '<br><br><b>Quote:</b> ' + data.odds_note;
+
+  const signals = data.signals || [];
+  if (signals.length === 0) {
+    container.innerHTML = '<div class="empty">Nessun segnale statistico forte trovato in questo momento.</div>';
+    return;
+  }
+
+  const campionati = ['Tutti', ...new Set(signals.map(s => s.campionato))];
+  let active = 'Tutti';
+
+  function render() {
+    const filtered = active === 'Tutti' ? signals : signals.filter(s => s.campionato === active);
+    container.innerHTML = filtered.map(s => `
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <div class="match">${s.partita}</div>
+            <div class="meta">${s.campionato} · ${s.data || ''}</div>
+          </div>
+          <span class="pill ${s.confidenza}">${s.confidenza} confidenza</span>
+        </div>
+        <div class="market">${s.mercato}: ${s.pronostico}${s.quota ? ' <span style="color:#8FA394;font-size:12px">(quota ' + s.quota + ')</span>' : ''}</div>
+        <div class="note">${s.nota}</div>
+      </div>
+    `).join('') || '<div class="empty">Nessun segnale per questo filtro.</div>';
+  }
+
+  filtersEl.innerHTML = campionati.map(c =>
+    `<button data-c="${c}" class="${c === active ? 'active' : ''}">${c}</button>`
+  ).join('');
+
+  filtersEl.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      active = btn.dataset.c;
+      filtersEl.querySelectorAll('button').forEach(b => b.classList.toggle('active', b === btn));
+      render();
+    });
+  });
+
+  render();
+}
+
+load();
+</script>
+</body>
+</html>
