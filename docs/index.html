@@ -108,12 +108,13 @@
 
 <script>
 /* ---------------- Tabs ---------------- */
+function switchTab(tab) {
+  document.querySelectorAll('.tabs button').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  document.getElementById('tab-home').style.display = tab === 'home' ? '' : 'none';
+  document.getElementById('tab-storico').style.display = tab === 'storico' ? '' : 'none';
+}
 document.querySelectorAll('.tabs button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tabs button').forEach(b => b.classList.toggle('active', b === btn));
-    document.getElementById('tab-home').style.display = btn.dataset.tab === 'home' ? '' : 'none';
-    document.getElementById('tab-storico').style.display = btn.dataset.tab === 'storico' ? '' : 'none';
-  });
+  btn.addEventListener('click', () => switchTab(btn.dataset.tab));
 });
 
 /* ---------------- Home: segnali automatici ---------------- */
@@ -137,6 +138,9 @@ async function loadSignals() {
   notes.innerHTML = '<b>Copertura:</b> ' + data.coverage_note + '<br><br><b>Quote:</b> ' + data.odds_note;
 
   const signals = data.signals || [];
+  signals.forEach((s, i) => s._id = i);
+  window.__signalsById = Object.fromEntries(signals.map(s => [s._id, s]));
+
   if (signals.length === 0) {
     container.innerHTML = '<div class="empty">Nessun segnale statistico forte trovato in questo momento.</div>';
     return;
@@ -158,6 +162,7 @@ async function loadSignals() {
         </div>
         <div class="market">${s.mercato}: ${s.pronostico}${s.quota ? ' <span style="color:#8FA394;font-size:12px">(quota ' + s.quota + ')</span>' : ''}</div>
         <div class="note">${s.nota}</div>
+        <button class="btn-gold" style="margin-top:10px;font-size:12px;padding:7px 12px" onclick="window.__addToSchedina(${s._id})">+ Aggiungi a schedina</button>
       </div>
     `).join('') || '<div class="empty">Nessun segnale per questo filtro.</div>';
   }
@@ -259,9 +264,20 @@ function setEsito(id, esito) {
 /* ---------------- Modal: nuova giocata ---------------- */
 function emptySel() { return { squadre: '', mercato: MERCATI[0], pronostico: '', quota: '' }; }
 
-function openNewBetModal() {
+function ddmmyyyyToInput(d) {
+  const m = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(d || '');
+  return m ? `${m[3]}-${m[2]}-${m[1]}` : new Date().toISOString().slice(0, 10);
+}
+
+function openNewBetModal(preset) {
   let tipo = 'Singola';
-  let selezioni = [emptySel()];
+  let selezioni = [preset ? {
+    squadre: preset.partita || '',
+    mercato: MERCATI.includes(preset.mercato) ? preset.mercato : MERCATI[0],
+    pronostico: preset.pronostico || '',
+    quota: preset.quota != null ? String(preset.quota) : '',
+  } : emptySel()];
+  if (preset) { window.__campionato = preset.campionato || ''; window.__data = ddmmyyyyToInput(preset.data); }
 
   function optionsHtml() { return MERCATI.map(m => `<option value="${m}">${m}</option>`).join(''); }
 
@@ -327,7 +343,14 @@ function openNewBetModal() {
 
   renderModal();
 }
-document.getElementById('btn-new-bet').addEventListener('click', openNewBetModal);
+document.getElementById('btn-new-bet').addEventListener('click', () => openNewBetModal());
+
+window.__addToSchedina = function (id) {
+  const signal = window.__signalsById ? window.__signalsById[id] : null;
+  if (!signal) return;
+  switchTab('storico');
+  openNewBetModal(signal);
+};
 
 renderStorico();
 </script>
