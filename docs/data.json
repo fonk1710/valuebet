@@ -1,8 +1,18 @@
 {
-  "generated_at": "2026-09-21T13:51:10.220816+00:00",
+  "generated_at": "2026-09-22T12:31:17.400192+00:00",
   "coverage_note": "Quote reali gratuite da football-data.co.uk: Premier League, Championship, League One, League Two, National League, Bundesliga, 2.Bundesliga, Serie A, Serie B, LaLiga, LaLiga 2, Ligue 1, Ligue 2, Eredivisie, Belgio, Irlanda, Norvegia, Svezia. Non coperti gratuitamente: Serie C, Eerste Divisie (Olanda 2).",
   "odds_note": "Le quote 'Avg' sono la media tra piu' bookmaker, raccolte il venerdi' per il turno del weekend e il martedi' per gli infrasettimanali. Per Irlanda, Norvegia e Svezia mostriamo solo il favorito di mercato: nessuno storico gratuito disponibile per calcolare segnali.",
   "signals": [
+    {
+      "partita": "Gent - Standard",
+      "campionato": "Belgio - Pro League",
+      "data": "18/09/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Gent)",
+      "quota": 1.77,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Gent (media punti 2.5 vs 1.0 nelle ultime 4/5 partite). Quota di mercato 1.77."
+    },
     {
       "partita": "Gent - Standard",
       "campionato": "Belgio - Pro League",
@@ -11,7 +21,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.91,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.91."
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.91."
     },
     {
       "partita": "Gent - Standard",
@@ -47,11 +57,21 @@
       "partita": "Charleroi - Cercle Brugge",
       "campionato": "Belgio - Pro League",
       "data": "19/09/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Charleroi)",
+      "quota": 1.73,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Charleroi (media punti 2.25 vs 0.75 nelle ultime 4/4 partite). Quota di mercato 1.73."
+    },
+    {
+      "partita": "Charleroi - Cercle Brugge",
+      "campionato": "Belgio - Pro League",
+      "data": "19/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.54,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.54."
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.54."
     },
     {
       "partita": "Charleroi - Cercle Brugge",
@@ -217,16 +237,6 @@
       "partita": "Ein Frankfurt - Freiburg",
       "campionato": "Bundesliga",
       "data": "19/09/2026",
-      "mercato": "1X2",
-      "pronostico": "2 (vittoria Freiburg)",
-      "quota": 2.62,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Freiburg (media punti 3.0 vs 1.33 nelle ultime 3/1 partite). Quota di mercato 2.62."
-    },
-    {
-      "partita": "Ein Frankfurt - Freiburg",
-      "campionato": "Bundesliga",
-      "data": "19/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.42,
@@ -242,6 +252,46 @@
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Hamburg - FC Koln",
+      "campionato": "Bundesliga",
+      "data": "19/09/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Hamburg)",
+      "quota": 2.64,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Hamburg (media punti 3.0 vs 1.0 nelle ultime 1/4 partite). Quota di mercato 2.64."
+    },
+    {
+      "partita": "Hamburg - FC Koln",
+      "campionato": "Bundesliga",
+      "data": "19/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.57,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.57."
+    },
+    {
+      "partita": "Hamburg - FC Koln",
+      "campionato": "Bundesliga",
+      "data": "19/09/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "M'gladbach - Mainz",
+      "campionato": "Bundesliga",
+      "data": "19/09/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Mainz)",
+      "quota": 2.22,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Mainz (media punti 1.5 vs 0.0 nelle ultime 2/2 partite). Quota di mercato 2.22."
     },
     {
       "partita": "M'gladbach - Mainz",
@@ -271,7 +321,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.41,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.41."
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.41."
     },
     {
       "partita": "Werder Bremen - Augsburg",
@@ -354,24 +404,34 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Greuther Furth - Magdeburg",
-      "campionato": "2. Bundesliga",
-      "data": "18/09/2026",
+      "partita": "Paderborn - Hoffenheim",
+      "campionato": "Bundesliga",
+      "data": "20/09/2026",
       "mercato": "1X2",
-      "pronostico": "1 (vittoria Greuther Furth)",
-      "quota": 2.84,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Greuther Furth (media punti 1.25 vs 0.0 nelle ultime 4/2 partite). Quota di mercato 2.84."
+      "pronostico": "1 (vittoria Paderborn)",
+      "quota": 4.31,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Paderborn (media punti 3.0 vs 0.75 nelle ultime 1/4 partite). Quota di mercato 4.31."
     },
     {
-      "partita": "Greuther Furth - Magdeburg",
-      "campionato": "2. Bundesliga",
-      "data": "18/09/2026",
+      "partita": "Paderborn - Hoffenheim",
+      "campionato": "Bundesliga",
+      "data": "20/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
-      "quota": 1.45,
+      "quota": 1.4,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.45."
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.4."
+    },
+    {
+      "partita": "Paderborn - Hoffenheim",
+      "campionato": "Bundesliga",
+      "data": "20/09/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
       "partita": "Greuther Furth - Magdeburg",
@@ -411,7 +471,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.46,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.46."
+      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.46."
     },
     {
       "partita": "Holstein Kiel - Osnabruck",
@@ -481,7 +541,7 @@
       "pronostico": "2 (vittoria Hertha)",
       "quota": 2.23,
       "confidenza": "Alta",
-      "nota": "Forma recente nettamente a favore del Hertha (media punti 3.0 vs 0.33 nelle ultime 3/4 partite). Quota di mercato 2.23."
+      "nota": "Forma recente nettamente a favore del Hertha (media punti 3.0 vs 0.25 nelle ultime 4/5 partite). Quota di mercato 2.23."
     },
     {
       "partita": "Dresden - Hertha",
@@ -511,7 +571,7 @@
       "pronostico": "2 (vittoria Heidenheim)",
       "quota": 3.1,
       "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Heidenheim (media punti 2.0 vs 0.25 nelle ultime 4/3 partite). Quota di mercato 3.1."
+      "nota": "Forma recente nettamente a favore del Heidenheim (media punti 1.75 vs 0.4 nelle ultime 5/4 partite). Quota di mercato 3.1."
     },
     {
       "partita": "Bielefeld - Heidenheim",
@@ -540,8 +600,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.41,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.41."
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 68% delle ultime partite di entrambe. Quota di mercato 1.41."
     },
     {
       "partita": "Cottbus - St Pauli",
@@ -557,21 +617,11 @@
       "partita": "Hannover - Bochum",
       "campionato": "2. Bundesliga",
       "data": "20/09/2026",
-      "mercato": "1X2",
-      "pronostico": "2 (vittoria Bochum)",
-      "quota": 3.74,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Bochum (media punti 2.0 vs 0.33 nelle ultime 3/2 partite). Quota di mercato 3.74."
-    },
-    {
-      "partita": "Hannover - Bochum",
-      "campionato": "2. Bundesliga",
-      "data": "20/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.44,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.44."
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.44."
     },
     {
       "partita": "Hannover - Bochum",
@@ -597,6 +647,36 @@
       "partita": "Brentford - Chelsea",
       "campionato": "Premier League",
       "data": "18/09/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Tottenham - Aston Villa",
+      "campionato": "Premier League",
+      "data": "19/09/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Aston Villa)",
+      "quota": 3.62,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Aston Villa (media punti 1.5 vs 0.0 nelle ultime 1/2 partite). Quota di mercato 3.62."
+    },
+    {
+      "partita": "Tottenham - Aston Villa",
+      "campionato": "Premier League",
+      "data": "19/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.78,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.78."
+    },
+    {
+      "partita": "Tottenham - Aston Villa",
+      "campionato": "Premier League",
+      "data": "19/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -721,7 +801,7 @@
       "pronostico": "1 (vittoria Man City)",
       "quota": 1.29,
       "confidenza": "Alta",
-      "nota": "Forma recente nettamente a favore del Man City (media punti 3.0 vs 0.5 nelle ultime 2/2 partite). Quota di mercato 1.29."
+      "nota": "Forma recente nettamente a favore del Man City (media punti 3.0 vs 0.33 nelle ultime 3/3 partite). Quota di mercato 1.29."
     },
     {
       "partita": "Man City - Sunderland",
@@ -731,7 +811,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.56,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.56."
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.56."
     },
     {
       "partita": "Man City - Sunderland",
@@ -750,8 +830,8 @@
       "mercato": "1X2",
       "pronostico": "2 (vittoria Man United)",
       "quota": 2.0,
-      "confidenza": "Alta",
-      "nota": "Forma recente nettamente a favore del Man United (media punti 2.0 vs 0.0 nelle ultime 2/2 partite). Quota di mercato 2.0."
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Man United (media punti 1.67 vs 0.33 nelle ultime 3/3 partite). Quota di mercato 2.0."
     },
     {
       "partita": "Fulham - Man United",
@@ -760,8 +840,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.55,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.55."
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 67% delle ultime partite di entrambe. Quota di mercato 1.55."
     },
     {
       "partita": "Fulham - Man United",
@@ -797,11 +877,11 @@
       "partita": "Cardiff - Charlton",
       "campionato": "Championship",
       "data": "19/09/2026",
-      "mercato": "1X2",
-      "pronostico": "2 (vittoria Charlton)",
-      "quota": 4.01,
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.62,
       "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Charlton (media punti 2.33 vs 0.8 nelle ultime 5/3 partite). Quota di mercato 4.01."
+      "nota": "Over 2.5 nel 71% delle ultime partite di entrambe. Quota di mercato 1.62."
     },
     {
       "partita": "Cardiff - Charlton",
@@ -817,21 +897,11 @@
       "partita": "Millwall - West Ham",
       "campionato": "Championship",
       "data": "19/09/2026",
-      "mercato": "1X2",
-      "pronostico": "2 (vittoria West Ham)",
-      "quota": 1.79,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del West Ham (media punti 1.6 vs 0.33 nelle ultime 3/5 partite). Quota di mercato 1.79."
-    },
-    {
-      "partita": "Millwall - West Ham",
-      "campionato": "Championship",
-      "data": "19/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.57,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.57."
+      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 1.57."
     },
     {
       "partita": "Millwall - West Ham",
@@ -851,7 +921,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.84,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.84."
+      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 1.84."
     },
     {
       "partita": "Stoke - Sheffield United",
@@ -871,7 +941,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.65,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 83% delle ultime partite di entrambe. Quota di mercato 1.65."
+      "nota": "Over 2.5 nel 86% delle ultime partite di entrambe. Quota di mercato 1.65."
     },
     {
       "partita": "Birmingham - Middlesbrough",
@@ -890,8 +960,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.82,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 86% delle ultime partite di entrambe. Quota di mercato 1.82."
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 68% delle ultime partite di entrambe. Quota di mercato 1.82."
     },
     {
       "partita": "Burnley - Derby",
@@ -910,8 +980,8 @@
       "mercato": "1X2",
       "pronostico": "2 (vittoria Swansea)",
       "quota": 2.43,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Swansea (media punti 2.0 vs 0.33 nelle ultime 3/3 partite). Quota di mercato 2.43."
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Swansea (media punti 2.25 vs 0.25 nelle ultime 4/4 partite). Quota di mercato 2.43."
     },
     {
       "partita": "Lincoln - Swansea",
@@ -921,7 +991,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.88,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.88."
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.88."
     },
     {
       "partita": "Lincoln - Swansea",
@@ -960,8 +1030,8 @@
       "mercato": "1X2",
       "pronostico": "1 (vittoria QPR)",
       "quota": 1.72,
-      "confidenza": "Alta",
-      "nota": "Forma recente nettamente a favore del QPR (media punti 2.5 vs 0.6 nelle ultime 4/5 partite). Quota di mercato 1.72."
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del QPR (media punti 2.2 vs 0.67 nelle ultime 5/6 partite). Quota di mercato 1.72."
     },
     {
       "partita": "QPR - Preston",
@@ -971,7 +1041,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.78,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.78."
+      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.78."
     },
     {
       "partita": "QPR - Preston",
@@ -982,16 +1052,6 @@
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Wrexham - Southampton",
-      "campionato": "Championship",
-      "data": "19/09/2026",
-      "mercato": "1X2",
-      "pronostico": "2 (vittoria Southampton)",
-      "quota": 2.28,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Southampton (media punti 2.0 vs 0.75 nelle ultime 4/7 partite). Quota di mercato 2.28."
     },
     {
       "partita": "Wrexham - Southampton",
@@ -1047,16 +1107,6 @@
       "partita": "Barnsley - Leicester",
       "campionato": "League One",
       "data": "19/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.45,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.45."
-    },
-    {
-      "partita": "Barnsley - Leicester",
-      "campionato": "League One",
-      "data": "19/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -1071,7 +1121,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.85,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.85."
+      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 1.85."
     },
     {
       "partita": "Burton - Mansfield",
@@ -1090,8 +1140,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.6,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 74% delle ultime partite di entrambe. Quota di mercato 1.6."
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 79% delle ultime partite di entrambe. Quota di mercato 1.6."
     },
     {
       "partita": "Blackpool - Plymouth",
@@ -1107,11 +1157,11 @@
       "partita": "Bromley - Huddersfield",
       "campionato": "League One",
       "data": "19/09/2026",
-      "mercato": "1X2",
-      "pronostico": "2 (vittoria Huddersfield)",
-      "quota": 1.58,
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.68,
       "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Huddersfield (media punti 2.0 vs 0.67 nelle ultime 3/4 partite). Quota di mercato 1.58."
+      "nota": "Over 2.5 nel 68% delle ultime partite di entrambe. Quota di mercato 1.68."
     },
     {
       "partita": "Bromley - Huddersfield",
@@ -1180,8 +1230,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.87,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 1.87."
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 73% delle ultime partite di entrambe. Quota di mercato 1.87."
     },
     {
       "partita": "Oxford - Cambridge",
@@ -1357,6 +1407,26 @@
       "partita": "Barnet - Fleetwood Town",
       "campionato": "League Two",
       "data": "19/09/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Barnet)",
+      "quota": 1.66,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Barnet (media punti 2.14 vs 0.75 nelle ultime 7/4 partite). Quota di mercato 1.66."
+    },
+    {
+      "partita": "Barnet - Fleetwood Town",
+      "campionato": "League Two",
+      "data": "19/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.65,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 68% delle ultime partite di entrambe. Quota di mercato 1.65."
+    },
+    {
+      "partita": "Barnet - Fleetwood Town",
+      "campionato": "League Two",
+      "data": "19/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -1390,8 +1460,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.73,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.73."
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 73% delle ultime partite di entrambe. Quota di mercato 1.73."
     },
     {
       "partita": "Colchester - Cheltenham",
@@ -1402,16 +1472,6 @@
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Crewe - Shrewsbury",
-      "campionato": "League Two",
-      "data": "19/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.92,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 1.92."
     },
     {
       "partita": "Crewe - Shrewsbury",
@@ -1517,11 +1577,21 @@
       "partita": "Yeovil - Solihull",
       "campionato": "National League",
       "data": "18/09/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Yeovil)",
+      "quota": 2.01,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Yeovil (media punti 1.5 vs 0.14 nelle ultime 8/7 partite). Quota di mercato 2.01."
+    },
+    {
+      "partita": "Yeovil - Solihull",
+      "campionato": "National League",
+      "data": "18/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.63,
       "confidenza": "Media",
-      "nota": "Over 2.5 nel 70% delle ultime partite di entrambe. Quota di mercato 1.63."
+      "nota": "Over 2.5 nel 74% delle ultime partite di entrambe. Quota di mercato 1.63."
     },
     {
       "partita": "Yeovil - Solihull",
@@ -1561,7 +1631,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.46,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.46."
+      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 1.46."
     },
     {
       "partita": "Tamworth - Wealdstone",
@@ -1601,7 +1671,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.44,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 93% delle ultime partite di entrambe. Quota di mercato 1.44."
+      "nota": "Over 2.5 nel 94% delle ultime partite di entrambe. Quota di mercato 1.44."
     },
     {
       "partita": "Boreham Wood - Harrogate",
@@ -1627,21 +1697,11 @@
       "partita": "Forest Green - Boston Utd",
       "campionato": "National League",
       "data": "19/09/2026",
-      "mercato": "1X2",
-      "pronostico": "1 (vittoria Forest Green)",
-      "quota": 1.68,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Forest Green (media punti 1.75 vs 0.4 nelle ultime 4/5 partite). Quota di mercato 1.68."
-    },
-    {
-      "partita": "Forest Green - Boston Utd",
-      "campionato": "National League",
-      "data": "19/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.56,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 78% delle ultime partite di entrambe. Quota di mercato 1.56."
+      "nota": "Over 2.5 nel 82% delle ultime partite di entrambe. Quota di mercato 1.56."
     },
     {
       "partita": "Forest Green - Boston Utd",
@@ -1680,8 +1740,8 @@
       "mercato": "1X2",
       "pronostico": "2 (vittoria Southend)",
       "quota": 1.5,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Southend (media punti 2.0 vs 0.33 nelle ultime 3/7 partite). Quota di mercato 1.5."
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Southend (media punti 2.12 vs 0.25 nelle ultime 4/8 partite). Quota di mercato 1.5."
     },
     {
       "partita": "Gateshead - Southend",
@@ -1691,7 +1751,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.65,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 76% delle ultime partite di entrambe. Quota di mercato 1.65."
+      "nota": "Over 2.5 nel 82% delle ultime partite di entrambe. Quota di mercato 1.65."
     },
     {
       "partita": "Gateshead - Southend",
@@ -1710,8 +1770,8 @@
       "mercato": "1X2",
       "pronostico": "2 (vittoria Sutton)",
       "quota": 2.83,
-      "confidenza": "Alta",
-      "nota": "Forma recente nettamente a favore del Sutton (media punti 3.0 vs 0.75 nelle ultime 4/2 partite). Quota di mercato 2.83."
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Sutton (media punti 2.33 vs 0.8 nelle ultime 5/3 partite). Quota di mercato 2.83."
     },
     {
       "partita": "Halifax - Sutton",
@@ -1720,8 +1780,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.72,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.72."
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 74% delle ultime partite di entrambe. Quota di mercato 1.72."
     },
     {
       "partita": "Halifax - Sutton",
@@ -1777,11 +1837,21 @@
       "partita": "Monaco - Lens",
       "campionato": "Ligue 1",
       "data": "18/09/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Monaco)",
+      "quota": 2.01,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Monaco (media punti 2.33 vs 1.0 nelle ultime 3/4 partite). Quota di mercato 2.01."
+    },
+    {
+      "partita": "Monaco - Lens",
+      "campionato": "Ligue 1",
+      "data": "18/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.59,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.59."
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.59."
     },
     {
       "partita": "Monaco - Lens",
@@ -1797,11 +1867,21 @@
       "partita": "Paris FC - Strasbourg",
       "campionato": "Ligue 1",
       "data": "19/09/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Paris FC)",
+      "quota": 2.0,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Paris FC (media punti 3.0 vs 1.75 nelle ultime 2/4 partite). Quota di mercato 2.0."
+    },
+    {
+      "partita": "Paris FC - Strasbourg",
+      "campionato": "Ligue 1",
+      "data": "19/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.61,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.61."
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.61."
     },
     {
       "partita": "Paris FC - Strasbourg",
@@ -1841,7 +1921,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.76,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.76."
+      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.76."
     },
     {
       "partita": "Le Mans - Lorient",
@@ -1877,11 +1957,21 @@
       "partita": "Toulouse - Le Havre",
       "campionato": "Ligue 1",
       "data": "19/09/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Toulouse)",
+      "quota": 1.71,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Toulouse (media punti 1.67 vs 0.33 nelle ultime 3/3 partite). Quota di mercato 1.71."
+    },
+    {
+      "partita": "Toulouse - Le Havre",
+      "campionato": "Ligue 1",
+      "data": "19/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.78,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.78."
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.78."
     },
     {
       "partita": "Toulouse - Le Havre",
@@ -1892,16 +1982,6 @@
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Auxerre - Brest",
-      "campionato": "Ligue 1",
-      "data": "20/09/2026",
-      "mercato": "1X2",
-      "pronostico": "2 (vittoria Brest)",
-      "quota": 2.36,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Brest (media punti 1.67 vs 0.0 nelle ultime 3/3 partite). Quota di mercato 2.36."
     },
     {
       "partita": "Auxerre - Brest",
@@ -1927,11 +2007,41 @@
       "partita": "Nice - Lille",
       "campionato": "Ligue 1",
       "data": "20/09/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Nice)",
+      "quota": 3.48,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Nice (media punti 2.0 vs 0.5 nelle ultime 2/2 partite). Quota di mercato 3.48."
+    },
+    {
+      "partita": "Nice - Lille",
+      "campionato": "Ligue 1",
+      "data": "20/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.85,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.85."
+    },
+    {
+      "partita": "Nice - Lille",
+      "campionato": "Ligue 1",
+      "data": "20/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Marseille - Paris SG",
+      "campionato": "Ligue 1",
+      "data": "20/09/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Paris SG)",
+      "quota": 1.38,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Paris SG (media punti 1.25 vs 0.0 nelle ultime 2/4 partite). Quota di mercato 1.38."
     },
     {
       "partita": "Marseille - Paris SG",
@@ -1957,21 +2067,21 @@
       "partita": "Annecy - Dijon",
       "campionato": "Ligue 2",
       "data": "18/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.87,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 65% delle ultime partite di entrambe. Quota di mercato 1.87."
+    },
+    {
+      "partita": "Annecy - Dijon",
+      "campionato": "Ligue 2",
+      "data": "18/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Grenoble - Clermont",
-      "campionato": "Ligue 2",
-      "data": "18/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 2.35,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 2.35."
     },
     {
       "partita": "Grenoble - Clermont",
@@ -2011,17 +2121,7 @@
       "pronostico": "1 (vittoria Reims)",
       "quota": 2.08,
       "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Reims (media punti 2.2 vs 0.5 nelle ultime 5/2 partite). Quota di mercato 2.08."
-    },
-    {
-      "partita": "Reims - Montpellier",
-      "campionato": "Ligue 2",
-      "data": "18/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.83,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.83."
+      "nota": "Forma recente nettamente a favore del Reims (media punti 2.0 vs 0.67 nelle ultime 6/3 partite). Quota di mercato 2.08."
     },
     {
       "partita": "Reims - Montpellier",
@@ -2032,16 +2132,6 @@
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Rodez - Nancy",
-      "campionato": "Ligue 2",
-      "data": "18/09/2026",
-      "mercato": "1X2",
-      "pronostico": "1 (vittoria Rodez)",
-      "quota": 2.31,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Rodez (media punti 1.75 vs 0.0 nelle ultime 4/1 partite). Quota di mercato 2.31."
     },
     {
       "partita": "Rodez - Nancy",
@@ -2067,61 +2157,61 @@
       "partita": "Boulogne - Nantes",
       "campionato": "Ligue 2",
       "data": "19/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Guingamp - Red Star",
-      "campionato": "Ligue 2",
-      "data": "19/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
-      "quota": 1.72,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.72."
-    },
-    {
-      "partita": "Guingamp - Red Star",
-      "campionato": "Ligue 2",
-      "data": "19/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Metz - St Etienne",
-      "campionato": "Ligue 2",
-      "data": "19/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.72,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.72."
-    },
-    {
-      "partita": "Metz - St Etienne",
-      "campionato": "Ligue 2",
-      "data": "19/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Monza - Sassuolo",
-      "campionato": "Serie A",
-      "data": "18/09/2026",
-      "mercato": "1X2",
-      "pronostico": "2 (vittoria Sassuolo)",
-      "quota": 2.53,
+      "quota": 2.11,
       "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Sassuolo (media punti 1.75 vs 0.25 nelle ultime 4/4 partite). Quota di mercato 2.53."
+      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 2.11."
+    },
+    {
+      "partita": "Boulogne - Nantes",
+      "campionato": "Ligue 2",
+      "data": "19/09/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Guingamp - Red Star",
+      "campionato": "Ligue 2",
+      "data": "19/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.72,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.72."
+    },
+    {
+      "partita": "Guingamp - Red Star",
+      "campionato": "Ligue 2",
+      "data": "19/09/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Metz - St Etienne",
+      "campionato": "Ligue 2",
+      "data": "19/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.72,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 1.72."
+    },
+    {
+      "partita": "Metz - St Etienne",
+      "campionato": "Ligue 2",
+      "data": "19/09/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
       "partita": "Monza - Sassuolo",
@@ -2131,7 +2221,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.71,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.71."
+      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.71."
     },
     {
       "partita": "Monza - Sassuolo",
@@ -2142,16 +2232,6 @@
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Bologna - Torino",
-      "campionato": "Serie A",
-      "data": "19/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.96,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.96."
     },
     {
       "partita": "Bologna - Torino",
@@ -2247,21 +2327,11 @@
       "partita": "Fiorentina - Napoli",
       "campionato": "Serie A",
       "data": "20/09/2026",
-      "mercato": "1X2",
-      "pronostico": "1 (vittoria Fiorentina)",
-      "quota": 3.15,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Fiorentina (media punti 1.5 vs 0.0 nelle ultime 2/2 partite). Quota di mercato 3.15."
-    },
-    {
-      "partita": "Fiorentina - Napoli",
-      "campionato": "Serie A",
-      "data": "20/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.84,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.84."
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 67% delle ultime partite di entrambe. Quota di mercato 1.84."
     },
     {
       "partita": "Fiorentina - Napoli",
@@ -2282,6 +2352,16 @@
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Parma - Genoa",
+      "campionato": "Serie A",
+      "data": "20/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 2.41,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 67% delle ultime partite di entrambe. Quota di mercato 2.41."
     },
     {
       "partita": "Parma - Genoa",
@@ -2391,7 +2471,17 @@
       "pronostico": "1 (vittoria Palermo)",
       "quota": 1.55,
       "confidenza": "Alta",
-      "nota": "Forma recente nettamente a favore del Palermo (media punti 2.33 vs 0.5 nelle ultime 3/2 partite). Quota di mercato 1.55."
+      "nota": "Forma recente nettamente a favore del Palermo (media punti 2.5 vs 0.33 nelle ultime 4/3 partite). Quota di mercato 1.55."
+    },
+    {
+      "partita": "Palermo - Padova",
+      "campionato": "Serie B",
+      "data": "19/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.69,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 71% delle ultime partite di entrambe. Quota di mercato 1.69."
     },
     {
       "partita": "Palermo - Padova",
@@ -2411,7 +2501,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.98,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.98."
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.98."
     },
     {
       "partita": "Sampdoria - Catanzaro",
@@ -2430,8 +2520,18 @@
       "mercato": "1X2",
       "pronostico": "1 (vittoria Ascoli)",
       "quota": 2.06,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Ascoli (media punti 2.33 vs 0.33 nelle ultime 3/3 partite). Quota di mercato 2.06."
+    },
+    {
+      "partita": "Ascoli - Avellino",
+      "campionato": "Serie B",
+      "data": "19/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.9,
       "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Ascoli (media punti 2.0 vs 0.5 nelle ultime 2/2 partite). Quota di mercato 2.06."
+      "nota": "Over 2.5 nel 67% delle ultime partite di entrambe. Quota di mercato 1.9."
     },
     {
       "partita": "Ascoli - Avellino",
@@ -2447,6 +2547,16 @@
       "partita": "Arezzo - Sudtirol",
       "campionato": "Serie B",
       "data": "20/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 2.28,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 2.28."
+    },
+    {
+      "partita": "Arezzo - Sudtirol",
+      "campionato": "Serie B",
+      "data": "20/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -2457,21 +2567,11 @@
       "partita": "Verona - Vicenza",
       "campionato": "Serie B",
       "data": "20/09/2026",
-      "mercato": "1X2",
-      "pronostico": "2 (vittoria Vicenza)",
-      "quota": 3.75,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Vicenza (media punti 1.67 vs 0.33 nelle ultime 3/3 partite). Quota di mercato 3.75."
-    },
-    {
-      "partita": "Verona - Vicenza",
-      "campionato": "Serie B",
-      "data": "20/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.8,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 67% delle ultime partite di entrambe. Quota di mercato 1.8."
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.8."
     },
     {
       "partita": "Verona - Vicenza",
@@ -2491,7 +2591,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.92,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.92."
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.92."
     },
     {
       "partita": "Mantova - Pisa",
@@ -2511,7 +2611,7 @@
       "pronostico": "1 (vittoria Modena)",
       "quota": 1.65,
       "confidenza": "Alta",
-      "nota": "Forma recente nettamente a favore del Modena (media punti 2.0 vs 0.0 nelle ultime 2/1 partite). Quota di mercato 1.65."
+      "nota": "Forma recente nettamente a favore del Modena (media punti 2.33 vs 0.0 nelle ultime 3/2 partite). Quota di mercato 1.65."
     },
     {
       "partita": "Modena - Empoli",
@@ -2521,7 +2621,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.85,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.85."
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.85."
     },
     {
       "partita": "Modena - Empoli",
@@ -2561,7 +2661,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.46,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.46."
+      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 1.46."
     },
     {
       "partita": "Den Haag - Cambuur",
@@ -2711,7 +2811,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.33,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 1.33."
+      "nota": "Over 2.5 nel 77% delle ultime partite di entrambe. Quota di mercato 1.33."
     },
     {
       "partita": "Nijmegen - Go Ahead Eagles",
@@ -2731,7 +2831,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.78,
       "confidenza": "Media",
-      "nota": "Over 2.5 nel 68% delle ultime partite di entrambe. Quota di mercato 1.78."
+      "nota": "Over 2.5 nel 74% delle ultime partite di entrambe. Quota di mercato 1.78."
     },
     {
       "partita": "Espanol - Elche",
@@ -2750,8 +2850,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 2.01,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 2.01."
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 69% delle ultime partite di entrambe. Quota di mercato 2.01."
     },
     {
       "partita": "Osasuna - Vallecano",
@@ -2801,7 +2901,7 @@
       "pronostico": "2 (vittoria Barcelona)",
       "quota": 1.19,
       "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Barcelona (media punti 3.0 vs 1.75 nelle ultime 4/3 partite). Quota di mercato 1.19."
+      "nota": "Forma recente nettamente a favore del Barcelona (media punti 3.0 vs 1.4 nelle ultime 5/4 partite). Quota di mercato 1.19."
     },
     {
       "partita": "Sevilla - Barcelona",
@@ -2811,7 +2911,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.24,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.24."
+      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.24."
     },
     {
       "partita": "Sevilla - Barcelona",
@@ -2867,16 +2967,6 @@
       "partita": "La Coruna - Betis",
       "campionato": "LaLiga",
       "data": "20/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.79,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 70% delle ultime partite di entrambe. Quota di mercato 1.79."
-    },
-    {
-      "partita": "La Coruna - Betis",
-      "campionato": "LaLiga",
-      "data": "20/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -2911,7 +3001,7 @@
       "pronostico": "2 (vittoria Sociedad)",
       "quota": 2.52,
       "confidenza": "Alta",
-      "nota": "Forma recente nettamente a favore del Sociedad (media punti 2.0 vs 0.0 nelle ultime 1/3 partite). Quota di mercato 2.52."
+      "nota": "Forma recente nettamente a favore del Sociedad (media punti 2.25 vs 0.0 nelle ultime 2/4 partite). Quota di mercato 2.52."
     },
     {
       "partita": "Valencia - Sociedad",
@@ -2941,12 +3031,42 @@
       "pronostico": "Over 2.5",
       "quota": 1.63,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.63."
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.63."
     },
     {
       "partita": "Albacete - Cordoba",
       "campionato": "LaLiga 2",
       "data": "18/09/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Andorra - Sp Gijon",
+      "campionato": "LaLiga 2",
+      "data": "19/09/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Sp Gijon)",
+      "quota": 3.45,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Sp Gijon (media punti 3.0 vs 0.75 nelle ultime 4/1 partite). Quota di mercato 3.45."
+    },
+    {
+      "partita": "Andorra - Sp Gijon",
+      "campionato": "LaLiga 2",
+      "data": "19/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.88,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.88."
+    },
+    {
+      "partita": "Andorra - Sp Gijon",
+      "campionato": "LaLiga 2",
+      "data": "19/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -3000,13 +3120,43 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.87,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 71% delle ultime partite di entrambe. Quota di mercato 1.87."
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 78% delle ultime partite di entrambe. Quota di mercato 1.87."
     },
     {
       "partita": "Cadiz - Girona",
       "campionato": "LaLiga 2",
       "data": "19/09/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Sabadell - Oviedo",
+      "campionato": "LaLiga 2",
+      "data": "20/09/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Sabadell)",
+      "quota": 2.29,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Sabadell (media punti 3.0 vs 0.0 nelle ultime 2/1 partite). Quota di mercato 2.29."
+    },
+    {
+      "partita": "Sabadell - Oviedo",
+      "campionato": "LaLiga 2",
+      "data": "20/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 2.61,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 2.61."
+    },
+    {
+      "partita": "Sabadell - Oviedo",
+      "campionato": "LaLiga 2",
+      "data": "20/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -3057,6 +3207,16 @@
       "partita": "Las Palmas - Burgos",
       "campionato": "LaLiga 2",
       "data": "20/09/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Burgos)",
+      "quota": 3.62,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Burgos (media punti 2.5 vs 1.0 nelle ultime 3/4 partite). Quota di mercato 3.62."
+    },
+    {
+      "partita": "Las Palmas - Burgos",
+      "campionato": "LaLiga 2",
+      "data": "20/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 2.11,
@@ -3072,16 +3232,6 @@
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Leganes - Granada",
-      "campionato": "LaLiga 2",
-      "data": "20/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Under 2.5",
-      "quota": 1.57,
-      "confidenza": "Media",
-      "nota": "Solo il 25% delle ultime partite di entrambe sopra i 2.5 gol. Quota di mercato 1.57."
     },
     {
       "partita": "Leganes - Granada",
