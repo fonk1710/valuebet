@@ -1,28 +1,8 @@
 {
-  "generated_at": "2026-09-27T12:54:51.602571+00:00",
+  "generated_at": "2026-09-28T15:15:09.400592+00:00",
   "coverage_note": "Quote reali gratuite da football-data.co.uk: Premier League, Championship, League One, League Two, National League, Bundesliga, 2.Bundesliga, Serie A, Serie B, LaLiga, LaLiga 2, Ligue 1, Ligue 2, Eredivisie, Belgio, Irlanda, Norvegia, Svezia. Non coperti gratuitamente: Serie C, Eerste Divisie (Olanda 2).",
   "odds_note": "Le quote 'Avg' sono la media tra piu' bookmaker, raccolte il venerdi' per il turno del weekend e il martedi' per gli infrasettimanali. Per Irlanda, Norvegia e Svezia mostriamo solo il favorito di mercato: nessuno storico gratuito disponibile per calcolare segnali.",
   "signals": [
-    {
-      "partita": "Cambridge - AFC Wimbledon",
-      "campionato": "League One",
-      "data": "26/09/2026",
-      "mercato": "1X2",
-      "pronostico": "1 (vittoria Cambridge)",
-      "quota": 1.82,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Cambridge (media punti 1.71 vs 0.0 nelle ultime 7/1 partite). Quota di mercato 1.82."
-    },
-    {
-      "partita": "Cambridge - AFC Wimbledon",
-      "campionato": "League One",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 2.01,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 86% delle ultime partite di entrambe. Quota di mercato 2.01."
-    },
     {
       "partita": "Cambridge - AFC Wimbledon",
       "campionato": "League One",
@@ -81,7 +61,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.65,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.65."
+      "nota": "Over 2.5 nel 86% delle ultime partite di entrambe. Quota di mercato 1.65."
     },
     {
       "partita": "Wycombe - Reading",
@@ -121,7 +101,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.66,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 1.66."
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.66."
     },
     {
       "partita": "Cheltenham - Chesterfield",
@@ -141,7 +121,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.86,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.86."
+      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 1.86."
     },
     {
       "partita": "Fleetwood Town - Rochdale",
@@ -161,7 +141,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.79,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.79."
+      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.79."
     },
     {
       "partita": "Newport County - Grimsby",
@@ -187,6 +167,16 @@
       "partita": "Shrewsbury - Colchester",
       "campionato": "League Two",
       "data": "26/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.98,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 67% delle ultime partite di entrambe. Quota di mercato 1.98."
+    },
+    {
+      "partita": "Shrewsbury - Colchester",
+      "campionato": "League Two",
+      "data": "26/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -200,8 +190,8 @@
       "mercato": "1X2",
       "pronostico": "1 (vittoria Swindon)",
       "quota": 2.17,
-      "confidenza": "Alta",
-      "nota": "Forma recente nettamente a favore del Swindon (media punti 3.0 vs 1.0 nelle ultime 3/5 partite). Quota di mercato 2.17."
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Swindon (media punti 2.5 vs 1.0 nelle ultime 4/6 partite). Quota di mercato 2.17."
     },
     {
       "partita": "Swindon - Accrington",
@@ -211,7 +201,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.77,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.77."
+      "nota": "Over 2.5 nel 79% delle ultime partite di entrambe. Quota di mercato 1.77."
     },
     {
       "partita": "Swindon - Accrington",
@@ -222,16 +212,6 @@
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Tranmere - Walsall",
-      "campionato": "League Two",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.86,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.86."
     },
     {
       "partita": "Tranmere - Walsall",
@@ -257,11 +237,21 @@
       "partita": "Oldham - Salford",
       "campionato": "League Two",
       "data": "26/09/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Salford)",
+      "quota": 2.66,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Salford (media punti 1.75 vs 0.25 nelle ultime 4/4 partite). Quota di mercato 2.66."
+    },
+    {
+      "partita": "Oldham - Salford",
+      "campionato": "League Two",
+      "data": "26/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.71,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.71."
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.71."
     },
     {
       "partita": "Oldham - Salford",
@@ -280,8 +270,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.5,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 70% delle ultime partite di entrambe. Quota di mercato 1.5."
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.5."
     },
     {
       "partita": "Aldershot - Tamworth",
@@ -351,7 +341,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.64,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.64."
+      "nota": "Over 2.5 nel 86% delle ultime partite di entrambe. Quota di mercato 1.64."
     },
     {
       "partita": "Harrogate - Eastleigh",
@@ -381,7 +371,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.68,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.68."
+      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 1.68."
     },
     {
       "partita": "Scunthorpe - Hartlepool",
@@ -427,21 +417,11 @@
       "partita": "Southend - Barrow",
       "campionato": "National League",
       "data": "26/09/2026",
-      "mercato": "1X2",
-      "pronostico": "1 (vittoria Southend)",
-      "quota": 1.71,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Southend (media punti 2.12 vs 0.6 nelle ultime 8/5 partite). Quota di mercato 1.71."
-    },
-    {
-      "partita": "Southend - Barrow",
-      "campionato": "National League",
-      "data": "26/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.59,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.59."
+      "nota": "Over 2.5 nel 86% delle ultime partite di entrambe. Quota di mercato 1.59."
     },
     {
       "partita": "Southend - Barrow",
@@ -460,8 +440,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.82,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 74% delle ultime partite di entrambe. Quota di mercato 1.82."
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 79% delle ultime partite di entrambe. Quota di mercato 1.82."
     },
     {
       "partita": "Sutton - Forest Green",
@@ -501,7 +481,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.56,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.56."
+      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 1.56."
     },
     {
       "partita": "Worthing - Halifax",
@@ -537,21 +517,11 @@
       "partita": "Ceuta - Sociedad B",
       "campionato": "LaLiga 2",
       "data": "26/09/2026",
-      "mercato": "1X2",
-      "pronostico": "2 (vittoria Sociedad B)",
-      "quota": 2.96,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Sociedad B (media punti 2.0 vs 0.33 nelle ultime 3/4 partite). Quota di mercato 2.96."
-    },
-    {
-      "partita": "Ceuta - Sociedad B",
-      "campionato": "LaLiga 2",
-      "data": "26/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.73,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 71% delle ultime partite di entrambe. Quota di mercato 1.73."
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 78% delle ultime partite di entrambe. Quota di mercato 1.73."
     },
     {
       "partita": "Ceuta - Sociedad B",
@@ -571,7 +541,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.96,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.96."
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.96."
     },
     {
       "partita": "Granada - Andorra",
@@ -587,21 +557,11 @@
       "partita": "Celta B - Sabadell",
       "campionato": "LaLiga 2",
       "data": "26/09/2026",
-      "mercato": "1X2",
-      "pronostico": "2 (vittoria Sabadell)",
-      "quota": 2.24,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Sabadell (media punti 3.0 vs 1.5 nelle ultime 2/2 partite). Quota di mercato 2.24."
-    },
-    {
-      "partita": "Celta B - Sabadell",
-      "campionato": "LaLiga 2",
-      "data": "26/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.96,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.96."
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 67% delle ultime partite di entrambe. Quota di mercato 1.96."
     },
     {
       "partita": "Celta B - Sabadell",
@@ -617,21 +577,21 @@
       "partita": "Tenerife - Cadiz",
       "campionato": "LaLiga 2",
       "data": "26/09/2026",
-      "mercato": "1X2",
-      "pronostico": "1 (vittoria Tenerife)",
-      "quota": 1.9,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Tenerife (media punti 2.0 vs 0.5 nelle ultime 2/4 partite). Quota di mercato 1.9."
-    },
-    {
-      "partita": "Tenerife - Cadiz",
-      "campionato": "LaLiga 2",
-      "data": "26/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Valladolid - Cordoba",
+      "campionato": "LaLiga 2",
+      "data": "27/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.81,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 1.81."
     },
     {
       "partita": "Valladolid - Cordoba",
@@ -672,6 +632,16 @@
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Eibar - Las Palmas",
+      "campionato": "LaLiga 2",
+      "data": "27/09/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Eibar)",
+      "quota": 1.92,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Eibar (media punti 2.0 vs 0.75 nelle ultime 3/4 partite). Quota di mercato 1.92."
     },
     {
       "partita": "Eibar - Las Palmas",
