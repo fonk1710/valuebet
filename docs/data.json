@@ -1,182 +1,22 @@
 {
-  "generated_at": "2026-09-28T15:15:09.400592+00:00",
+  "generated_at": "2026-09-29T13:55:55.322285+00:00",
   "coverage_note": "Quote reali gratuite da football-data.co.uk: Premier League, Championship, League One, League Two, National League, Bundesliga, 2.Bundesliga, Serie A, Serie B, LaLiga, LaLiga 2, Ligue 1, Ligue 2, Eredivisie, Belgio, Irlanda, Norvegia, Svezia. Non coperti gratuitamente: Serie C, Eerste Divisie (Olanda 2).",
   "odds_note": "Le quote 'Avg' sono la media tra piu' bookmaker, raccolte il venerdi' per il turno del weekend e il martedi' per gli infrasettimanali. Per Irlanda, Norvegia e Svezia mostriamo solo il favorito di mercato: nessuno storico gratuito disponibile per calcolare segnali.",
   "signals": [
     {
-      "partita": "Cambridge - AFC Wimbledon",
-      "campionato": "League One",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Plymouth - Burton",
-      "campionato": "League One",
-      "data": "26/09/2026",
+      "partita": "Boreham Wood - Kidderminster",
+      "campionato": "National League",
+      "data": "29/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
-      "quota": 1.64,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 79% delle ultime partite di entrambe. Quota di mercato 1.64."
-    },
-    {
-      "partita": "Plymouth - Burton",
-      "campionato": "League One",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Stockport - Peterboro",
-      "campionato": "League One",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.37,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.37."
-    },
-    {
-      "partita": "Stockport - Peterboro",
-      "campionato": "League One",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Wycombe - Reading",
-      "campionato": "League One",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.65,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 86% delle ultime partite di entrambe. Quota di mercato 1.65."
-    },
-    {
-      "partita": "Wycombe - Reading",
-      "campionato": "League One",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Bristol Rvs - Exeter",
-      "campionato": "League Two",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.78,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.78."
-    },
-    {
-      "partita": "Bristol Rvs - Exeter",
-      "campionato": "League Two",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Cheltenham - Chesterfield",
-      "campionato": "League Two",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.66,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.66."
-    },
-    {
-      "partita": "Cheltenham - Chesterfield",
-      "campionato": "League Two",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Fleetwood Town - Rochdale",
-      "campionato": "League Two",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.86,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 1.86."
-    },
-    {
-      "partita": "Fleetwood Town - Rochdale",
-      "campionato": "League Two",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Newport County - Grimsby",
-      "campionato": "League Two",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.79,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.79."
-    },
-    {
-      "partita": "Newport County - Grimsby",
-      "campionato": "League Two",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Rotherham - Crewe",
-      "campionato": "League Two",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Shrewsbury - Colchester",
-      "campionato": "League Two",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.98,
+      "quota": 1.46,
       "confidenza": "Media",
-      "nota": "Over 2.5 nel 67% delle ultime partite di entrambe. Quota di mercato 1.98."
+      "nota": "Over 2.5 nel 69% delle ultime partite di entrambe. Quota di mercato 1.46."
     },
     {
-      "partita": "Shrewsbury - Colchester",
-      "campionato": "League Two",
-      "data": "26/09/2026",
+      "partita": "Boreham Wood - Kidderminster",
+      "campionato": "National League",
+      "data": "29/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -184,29 +24,89 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Swindon - Accrington",
-      "campionato": "League Two",
-      "data": "26/09/2026",
+      "partita": "Barrow - Scunthorpe",
+      "campionato": "National League",
+      "data": "29/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.62,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 83% delle ultime partite di entrambe. Quota di mercato 1.62."
+    },
+    {
+      "partita": "Barrow - Scunthorpe",
+      "campionato": "National League",
+      "data": "29/09/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Forest Green - Wealdstone",
+      "campionato": "National League",
+      "data": "29/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.45,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 83% delle ultime partite di entrambe. Quota di mercato 1.45."
+    },
+    {
+      "partita": "Forest Green - Wealdstone",
+      "campionato": "National League",
+      "data": "29/09/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Fylde - Carlisle",
+      "campionato": "National League",
+      "data": "29/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.43,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 81% delle ultime partite di entrambe. Quota di mercato 1.43."
+    },
+    {
+      "partita": "Fylde - Carlisle",
+      "campionato": "National League",
+      "data": "29/09/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Gateshead - Altrincham",
+      "campionato": "National League",
+      "data": "29/09/2026",
       "mercato": "1X2",
-      "pronostico": "1 (vittoria Swindon)",
-      "quota": 2.17,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Swindon (media punti 2.5 vs 1.0 nelle ultime 4/6 partite). Quota di mercato 2.17."
+      "pronostico": "2 (vittoria Altrincham)",
+      "quota": 1.68,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Altrincham (media punti 2.14 vs 0.25 nelle ultime 4/7 partite). Quota di mercato 1.68."
     },
     {
-      "partita": "Swindon - Accrington",
-      "campionato": "League Two",
-      "data": "26/09/2026",
+      "partita": "Gateshead - Altrincham",
+      "campionato": "National League",
+      "data": "29/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
-      "quota": 1.77,
+      "quota": 1.59,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 79% delle ultime partite di entrambe. Quota di mercato 1.77."
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.59."
     },
     {
-      "partita": "Swindon - Accrington",
-      "campionato": "League Two",
-      "data": "26/09/2026",
+      "partita": "Gateshead - Altrincham",
+      "campionato": "National League",
+      "data": "29/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -214,49 +114,19 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Tranmere - Walsall",
-      "campionato": "League Two",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "York - Gillingham",
-      "campionato": "League Two",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Oldham - Salford",
-      "campionato": "League Two",
-      "data": "26/09/2026",
-      "mercato": "1X2",
-      "pronostico": "2 (vittoria Salford)",
-      "quota": 2.66,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Salford (media punti 1.75 vs 0.25 nelle ultime 4/4 partite). Quota di mercato 2.66."
-    },
-    {
-      "partita": "Oldham - Salford",
-      "campionato": "League Two",
-      "data": "26/09/2026",
+      "partita": "Halifax - Boston Utd",
+      "campionato": "National League",
+      "data": "29/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.71,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.71."
+      "nota": "Over 2.5 nel 83% delle ultime partite di entrambe. Quota di mercato 1.71."
     },
     {
-      "partita": "Oldham - Salford",
-      "campionato": "League Two",
-      "data": "26/09/2026",
+      "partita": "Halifax - Boston Utd",
+      "campionato": "National League",
+      "data": "29/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -264,29 +134,19 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Aldershot - Tamworth",
+      "partita": "Hartlepool - Harrogate",
       "campionato": "National League",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.5,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.5."
+      "data": "29/09/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Harrogate)",
+      "quota": 1.84,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Harrogate (media punti 1.62 vs 0.0 nelle ultime 4/8 partite). Quota di mercato 1.84."
     },
     {
-      "partita": "Aldershot - Tamworth",
+      "partita": "Hartlepool - Harrogate",
       "campionato": "National League",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Altrincham - Hornchurch",
-      "campionato": "National League",
-      "data": "26/09/2026",
+      "data": "29/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.69,
@@ -294,9 +154,9 @@
       "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.69."
     },
     {
-      "partita": "Altrincham - Hornchurch",
+      "partita": "Hartlepool - Harrogate",
       "campionato": "National League",
-      "data": "26/09/2026",
+      "data": "29/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -304,19 +164,69 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Boston Utd - Fylde",
+      "partita": "Hornchurch - Aldershot",
       "campionato": "National League",
-      "data": "26/09/2026",
+      "data": "29/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.66,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.66."
+    },
+    {
+      "partita": "Hornchurch - Aldershot",
+      "campionato": "National League",
+      "data": "29/09/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Woking - Solihull",
+      "campionato": "National League",
+      "data": "29/09/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Woking)",
+      "quota": 1.86,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Woking (media punti 2.2 vs 0.14 nelle ultime 5/7 partite). Quota di mercato 1.86."
+    },
+    {
+      "partita": "Woking - Solihull",
+      "campionato": "National League",
+      "data": "29/09/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.56,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 73% delle ultime partite di entrambe. Quota di mercato 1.56."
+    },
+    {
+      "partita": "Woking - Solihull",
+      "campionato": "National League",
+      "data": "29/09/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Yeovil - Worthing",
+      "campionato": "National League",
+      "data": "29/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.48,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 1.48."
+      "nota": "Over 2.5 nel 81% delle ultime partite di entrambe. Quota di mercato 1.48."
     },
     {
-      "partita": "Boston Utd - Fylde",
+      "partita": "Yeovil - Worthing",
       "campionato": "National League",
-      "data": "26/09/2026",
+      "data": "29/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -324,29 +234,19 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Carlisle - Woking",
+      "partita": "Eastleigh - Southend",
       "campionato": "National League",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Harrogate - Eastleigh",
-      "campionato": "National League",
-      "data": "26/09/2026",
+      "data": "30/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
-      "quota": 1.64,
+      "quota": 1.6,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 86% delle ultime partite di entrambe. Quota di mercato 1.64."
+      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 1.6."
     },
     {
-      "partita": "Harrogate - Eastleigh",
+      "partita": "Eastleigh - Southend",
       "campionato": "National League",
-      "data": "26/09/2026",
+      "data": "30/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -354,359 +254,19 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Kidderminster - Yeovil",
+      "partita": "Tamworth - Sutton",
       "campionato": "National League",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Scunthorpe - Hartlepool",
-      "campionato": "National League",
-      "data": "26/09/2026",
+      "data": "30/09/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
-      "quota": 1.68,
+      "quota": 1.62,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 1.68."
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.62."
     },
     {
-      "partita": "Scunthorpe - Hartlepool",
+      "partita": "Tamworth - Sutton",
       "campionato": "National League",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Solihull - Boreham Wood",
-      "campionato": "National League",
-      "data": "26/09/2026",
-      "mercato": "1X2",
-      "pronostico": "2 (vittoria Boreham Wood)",
-      "quota": 1.56,
-      "confidenza": "Alta",
-      "nota": "Forma recente nettamente a favore del Boreham Wood (media punti 2.5 vs 0.14 nelle ultime 7/8 partite). Quota di mercato 1.56."
-    },
-    {
-      "partita": "Solihull - Boreham Wood",
-      "campionato": "National League",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.33,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 87% delle ultime partite di entrambe. Quota di mercato 1.33."
-    },
-    {
-      "partita": "Solihull - Boreham Wood",
-      "campionato": "National League",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Southend - Barrow",
-      "campionato": "National League",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.59,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 86% delle ultime partite di entrambe. Quota di mercato 1.59."
-    },
-    {
-      "partita": "Southend - Barrow",
-      "campionato": "National League",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Sutton - Forest Green",
-      "campionato": "National League",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.82,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 79% delle ultime partite di entrambe. Quota di mercato 1.82."
-    },
-    {
-      "partita": "Sutton - Forest Green",
-      "campionato": "National League",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Wealdstone - Gateshead",
-      "campionato": "National League",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.63,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 79% delle ultime partite di entrambe. Quota di mercato 1.63."
-    },
-    {
-      "partita": "Wealdstone - Gateshead",
-      "campionato": "National League",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Worthing - Halifax",
-      "campionato": "National League",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.56,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 1.56."
-    },
-    {
-      "partita": "Worthing - Halifax",
-      "campionato": "National League",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Girona - Albacete",
-      "campionato": "LaLiga 2",
-      "data": "25/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.57,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 78% delle ultime partite di entrambe. Quota di mercato 1.57."
-    },
-    {
-      "partita": "Girona - Albacete",
-      "campionato": "LaLiga 2",
-      "data": "25/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Ceuta - Sociedad B",
-      "campionato": "LaLiga 2",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.73,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 78% delle ultime partite di entrambe. Quota di mercato 1.73."
-    },
-    {
-      "partita": "Ceuta - Sociedad B",
-      "campionato": "LaLiga 2",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Granada - Andorra",
-      "campionato": "LaLiga 2",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.96,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.96."
-    },
-    {
-      "partita": "Granada - Andorra",
-      "campionato": "LaLiga 2",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Celta B - Sabadell",
-      "campionato": "LaLiga 2",
-      "data": "26/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.96,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 67% delle ultime partite di entrambe. Quota di mercato 1.96."
-    },
-    {
-      "partita": "Celta B - Sabadell",
-      "campionato": "LaLiga 2",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Tenerife - Cadiz",
-      "campionato": "LaLiga 2",
-      "data": "26/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Valladolid - Cordoba",
-      "campionato": "LaLiga 2",
-      "data": "27/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.81,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 1.81."
-    },
-    {
-      "partita": "Valladolid - Cordoba",
-      "campionato": "LaLiga 2",
-      "data": "27/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Burgos - Eldense",
-      "campionato": "LaLiga 2",
-      "data": "27/09/2026",
-      "mercato": "1X2",
-      "pronostico": "1 (vittoria Burgos)",
-      "quota": 1.9,
-      "confidenza": "Alta",
-      "nota": "Forma recente nettamente a favore del Burgos (media punti 2.5 vs 0.5 nelle ultime 4/2 partite). Quota di mercato 1.9."
-    },
-    {
-      "partita": "Burgos - Eldense",
-      "campionato": "LaLiga 2",
-      "data": "27/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 2.1,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 2.1."
-    },
-    {
-      "partita": "Burgos - Eldense",
-      "campionato": "LaLiga 2",
-      "data": "27/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Eibar - Las Palmas",
-      "campionato": "LaLiga 2",
-      "data": "27/09/2026",
-      "mercato": "1X2",
-      "pronostico": "1 (vittoria Eibar)",
-      "quota": 1.92,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Eibar (media punti 2.0 vs 0.75 nelle ultime 3/4 partite). Quota di mercato 1.92."
-    },
-    {
-      "partita": "Eibar - Las Palmas",
-      "campionato": "LaLiga 2",
-      "data": "27/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.91,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.91."
-    },
-    {
-      "partita": "Eibar - Las Palmas",
-      "campionato": "LaLiga 2",
-      "data": "27/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Oviedo - Sp Gijon",
-      "campionato": "LaLiga 2",
-      "data": "27/09/2026",
-      "mercato": "1X2",
-      "pronostico": "2 (vittoria Sp Gijon)",
-      "quota": 3.74,
-      "confidenza": "Alta",
-      "nota": "Forma recente nettamente a favore del Sp Gijon (media punti 3.0 vs 0.0 nelle ultime 1/1 partite). Quota di mercato 3.74."
-    },
-    {
-      "partita": "Oviedo - Sp Gijon",
-      "campionato": "LaLiga 2",
-      "data": "27/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 2.29,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 2.29."
-    },
-    {
-      "partita": "Oviedo - Sp Gijon",
-      "campionato": "LaLiga 2",
-      "data": "27/09/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Leganes - Castellon",
-      "campionato": "LaLiga 2",
-      "data": "28/09/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.83,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.83."
-    },
-    {
-      "partita": "Leganes - Castellon",
-      "campionato": "LaLiga 2",
-      "data": "28/09/2026",
+      "data": "30/09/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
