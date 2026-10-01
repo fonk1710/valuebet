@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T13:32:53.352978+00:00",
+  "generated_at": "2026-10-01T14:22:50.123465+00:00",
   "coverage_note": "Quote reali gratuite da football-data.co.uk: Premier League, Championship, League One, League Two, National League, Bundesliga, 2.Bundesliga, Serie A, Serie B, LaLiga, LaLiga 2, Ligue 1, Ligue 2, Eredivisie, Belgio, Irlanda, Norvegia, Svezia. Non coperti gratuitamente: Serie C, Eerste Divisie (Olanda 2).",
   "odds_note": "Le quote 'Avg' sono la media tra piu' bookmaker, raccolte il venerdi' per il turno del weekend e il martedi' per gli infrasettimanali. Per Irlanda, Norvegia e Svezia mostriamo solo il favorito di mercato: nessuno storico gratuito disponibile per calcolare segnali.",
   "signals": [
@@ -11,7 +11,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.46,
       "confidenza": "Media",
-      "nota": "Over 2.5 nel 69% delle ultime partite di entrambe. Quota di mercato 1.46."
+      "nota": "Over 2.5 nel 74% delle ultime partite di entrambe. Quota di mercato 1.46."
     },
     {
       "partita": "Boreham Wood - Kidderminster",
@@ -50,8 +50,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.45,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 83% delle ultime partite di entrambe. Quota di mercato 1.45."
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 71% delle ultime partite di entrambe. Quota di mercato 1.45."
     },
     {
       "partita": "Forest Green - Wealdstone",
@@ -120,8 +120,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.71,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 83% delle ultime partite di entrambe. Quota di mercato 1.71."
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 71% delle ultime partite di entrambe. Quota di mercato 1.71."
     },
     {
       "partita": "Halifax - Boston Utd",
@@ -171,7 +171,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.66,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.66."
+      "nota": "Over 2.5 nel 78% delle ultime partite di entrambe. Quota di mercato 1.66."
     },
     {
       "partita": "Hornchurch - Aldershot",
@@ -190,8 +190,8 @@
       "mercato": "1X2",
       "pronostico": "1 (vittoria Woking)",
       "quota": 1.86,
-      "confidenza": "Alta",
-      "nota": "Forma recente nettamente a favore del Woking (media punti 2.2 vs 0.14 nelle ultime 5/7 partite). Quota di mercato 1.86."
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Woking (media punti 1.83 vs 0.5 nelle ultime 6/8 partite). Quota di mercato 1.86."
     },
     {
       "partita": "Woking - Solihull",
@@ -200,8 +200,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.56,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 73% delle ultime partite di entrambe. Quota di mercato 1.56."
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 78% delle ultime partite di entrambe. Quota di mercato 1.56."
     },
     {
       "partita": "Woking - Solihull",
@@ -221,7 +221,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.48,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 81% delle ultime partite di entrambe. Quota di mercato 1.48."
+      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.48."
     },
     {
       "partita": "Yeovil - Worthing",
@@ -240,8 +240,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.6,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 1.6."
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 68% delle ultime partite di entrambe. Quota di mercato 1.6."
     },
     {
       "partita": "Eastleigh - Southend",
