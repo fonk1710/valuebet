@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T13:08:28.134364+00:00",
+  "generated_at": "2026-10-05T15:48:38.497719+00:00",
   "coverage_note": "Quote reali gratuite da football-data.co.uk: Premier League, Championship, League One, League Two, National League, Bundesliga, 2.Bundesliga, Serie A, Serie B, LaLiga, LaLiga 2, Ligue 1, Ligue 2, Eredivisie, Belgio, Irlanda, Norvegia, Svezia. Non coperti gratuitamente: Serie C, Eerste Divisie (Olanda 2).",
   "odds_note": "Le quote 'Avg' sono la media tra piu' bookmaker, raccolte il venerdi' per il turno del weekend e il martedi' per gli infrasettimanali. Per Irlanda, Norvegia e Svezia mostriamo solo il favorito di mercato: nessuno storico gratuito disponibile per calcolare segnali.",
   "signals": [
@@ -10,8 +10,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.78,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 72% delle ultime partite di entrambe. Quota di mercato 1.78."
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 76% delle ultime partite di entrambe. Quota di mercato 1.78."
     },
     {
       "partita": "Burton - Huddersfield",
@@ -60,8 +60,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.93,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.93."
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 65% delle ultime partite di entrambe. Quota di mercato 1.93."
     },
     {
       "partita": "Reading - Bradford",
@@ -81,7 +81,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.65,
       "confidenza": "Media",
-      "nota": "Over 2.5 nel 65% delle ultime partite di entrambe. Quota di mercato 1.65."
+      "nota": "Over 2.5 nel 72% delle ultime partite di entrambe. Quota di mercato 1.65."
     },
     {
       "partita": "Chesterfield - Tranmere",
@@ -112,6 +112,16 @@
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Crewe - Bristol Rvs",
+      "campionato": "League Two",
+      "data": "03/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.78,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 1.78."
     },
     {
       "partita": "Crewe - Bristol Rvs",
@@ -151,7 +161,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.74,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.74."
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.74."
     },
     {
       "partita": "Grimsby - Shrewsbury",
@@ -217,6 +227,16 @@
       "partita": "Aldershot - Carlisle",
       "campionato": "National League",
       "data": "03/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.49,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 68% delle ultime partite di entrambe. Quota di mercato 1.49."
+    },
+    {
+      "partita": "Aldershot - Carlisle",
+      "campionato": "National League",
+      "data": "03/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -231,7 +251,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.63,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 77% delle ultime partite di entrambe. Quota di mercato 1.63."
+      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 1.63."
     },
     {
       "partita": "Barrow - Wealdstone",
@@ -267,6 +287,26 @@
       "partita": "Eastleigh - Woking",
       "campionato": "National League",
       "data": "03/10/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Woking)",
+      "quota": 2.22,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Woking (media punti 2.0 vs 0.75 nelle ultime 8/7 partite). Quota di mercato 2.22."
+    },
+    {
+      "partita": "Eastleigh - Woking",
+      "campionato": "National League",
+      "data": "03/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.65,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 1.65."
+    },
+    {
+      "partita": "Eastleigh - Woking",
+      "campionato": "National League",
+      "data": "03/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -277,11 +317,21 @@
       "partita": "Gateshead - Worthing",
       "campionato": "National League",
       "data": "03/10/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Worthing)",
+      "quota": 1.48,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Worthing (media punti 1.5 vs 0.2 nelle ultime 5/8 partite). Quota di mercato 1.48."
+    },
+    {
+      "partita": "Gateshead - Worthing",
+      "campionato": "National League",
+      "data": "03/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.49,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 82% delle ultime partite di entrambe. Quota di mercato 1.49."
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.49."
     },
     {
       "partita": "Gateshead - Worthing",
@@ -332,16 +382,6 @@
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Kidderminster - Sutton",
-      "campionato": "National League",
-      "data": "03/10/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 2.02,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 68% delle ultime partite di entrambe. Quota di mercato 2.02."
     },
     {
       "partita": "Kidderminster - Sutton",
@@ -417,6 +457,16 @@
       "partita": "Eldense - Oviedo",
       "campionato": "LaLiga 2",
       "data": "02/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Eldense)",
+      "quota": 2.43,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Eldense (media punti 1.33 vs 0.0 nelle ultime 3/2 partite). Quota di mercato 2.43."
+    },
+    {
+      "partita": "Eldense - Oviedo",
+      "campionato": "LaLiga 2",
+      "data": "02/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 2.48,
@@ -440,8 +490,8 @@
       "mercato": "1X2",
       "pronostico": "2 (vittoria Eibar)",
       "quota": 2.44,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Eibar (media punti 2.0 vs 0.25 nelle ultime 4/3 partite). Quota di mercato 2.44."
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Eibar (media punti 2.25 vs 0.2 nelle ultime 5/4 partite). Quota di mercato 2.44."
     },
     {
       "partita": "Albacete - Eibar",
@@ -451,7 +501,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.87,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.87."
+      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.87."
     },
     {
       "partita": "Albacete - Eibar",
@@ -531,7 +581,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.91,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 78% delle ultime partite di entrambe. Quota di mercato 1.91."
+      "nota": "Over 2.5 nel 82% delle ultime partite di entrambe. Quota di mercato 1.91."
     },
     {
       "partita": "Sociedad B - Granada",
@@ -550,8 +600,8 @@
       "mercato": "1X2",
       "pronostico": "1 (vittoria Sp Gijon)",
       "quota": 1.52,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Sp Gijon (media punti 3.0 vs 1.33 nelle ultime 1/3 partite). Quota di mercato 1.52."
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Sp Gijon (media punti 3.0 vs 1.0 nelle ultime 2/4 partite). Quota di mercato 1.52."
     },
     {
       "partita": "Sp Gijon - Celta B",
@@ -561,7 +611,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.72,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.72."
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.72."
     },
     {
       "partita": "Sp Gijon - Celta B",
@@ -580,18 +630,8 @@
       "mercato": "1X2",
       "pronostico": "1 (vittoria Castellon)",
       "quota": 1.24,
-      "confidenza": "Alta",
-      "nota": "Forma recente nettamente a favore del Castellon (media punti 3.0 vs 1.0 nelle ultime 2/4 partite). Quota di mercato 1.24."
-    },
-    {
-      "partita": "Castellon - Ceuta",
-      "campionato": "LaLiga 2",
-      "data": "04/10/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.35,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.35."
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Castellon (media punti 2.33 vs 1.0 nelle ultime 3/5 partite). Quota di mercato 1.24."
     },
     {
       "partita": "Castellon - Ceuta",
@@ -610,8 +650,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.99,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 1.99."
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.99."
     },
     {
       "partita": "Las Palmas - Valladolid",
