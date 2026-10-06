@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T15:48:38.497719+00:00",
+  "generated_at": "2026-10-06T14:05:29.134057+00:00",
   "coverage_note": "Quote reali gratuite da football-data.co.uk: Premier League, Championship, League One, League Two, National League, Bundesliga, 2.Bundesliga, Serie A, Serie B, LaLiga, LaLiga 2, Ligue 1, Ligue 2, Eredivisie, Belgio, Irlanda, Norvegia, Svezia. Non coperti gratuitamente: Serie C, Eerste Divisie (Olanda 2).",
   "odds_note": "Le quote 'Avg' sono la media tra piu' bookmaker, raccolte il venerdi' per il turno del weekend e il martedi' per gli infrasettimanali. Per Irlanda, Norvegia e Svezia mostriamo solo il favorito di mercato: nessuno storico gratuito disponibile per calcolare segnali.",
   "signals": [
@@ -670,8 +670,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.82,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 1.82."
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.82."
     },
     {
       "partita": "Cordoba - Tenerife",
@@ -684,12 +684,12 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Dundalk - Bohemians",
+      "partita": "Shamrock Rovers - Drogheda",
       "campionato": "Irlanda - Premier Division",
-      "data": "02/10/2026",
+      "data": "08/10/2026",
       "mercato": "1X2",
-      "pronostico": "Favorita di mercato: 2 (vittoria Bohemians)",
-      "quota": 1.85,
+      "pronostico": "Favorita di mercato: 1 (vittoria Shamrock Rovers)",
+      "quota": 1.38,
       "confidenza": "Bassa",
       "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
     }
