@@ -1,22 +1,12 @@
 {
-  "generated_at": "2026-10-08T14:30:36.638103+00:00",
+  "generated_at": "2026-10-09T14:17:27.570234+00:00",
   "coverage_note": "Quote reali gratuite da football-data.co.uk: Premier League, Championship, League One, League Two, National League, Bundesliga, 2.Bundesliga, Serie A, Serie B, LaLiga, LaLiga 2, Ligue 1, Ligue 2, Eredivisie, Belgio, Irlanda, Norvegia, Svezia. Non coperti gratuitamente: Serie C, Eerste Divisie (Olanda 2).",
   "odds_note": "Le quote 'Avg' sono la media tra piu' bookmaker, raccolte il venerdi' per il turno del weekend e il martedi' per gli infrasettimanali. Per Irlanda, Norvegia e Svezia mostriamo solo il favorito di mercato: nessuno storico gratuito disponibile per calcolare segnali.",
   "signals": [
     {
-      "partita": "Burton - Huddersfield",
-      "campionato": "League One",
-      "data": "03/10/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.78,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 76% delle ultime partite di entrambe. Quota di mercato 1.78."
-    },
-    {
-      "partita": "Burton - Huddersfield",
-      "campionato": "League One",
-      "data": "03/10/2026",
+      "partita": "Beveren - Lommel SK",
+      "campionato": "Belgio - Pro League",
+      "data": "09/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -24,29 +14,29 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Leyton Orient - Plymouth",
-      "campionato": "League One",
-      "data": "03/10/2026",
+      "partita": "Cercle Brugge - Anderlecht",
+      "campionato": "Belgio - Pro League",
+      "data": "10/10/2026",
       "mercato": "1X2",
-      "pronostico": "2 (vittoria Plymouth)",
-      "quota": 1.97,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Plymouth (media punti 1.75 vs 0.25 nelle ultime 4/4 partite). Quota di mercato 1.97."
+      "pronostico": "2 (vittoria Anderlecht)",
+      "quota": 1.95,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Anderlecht (media punti 3.0 vs 0.75 nelle ultime 4/1 partite). Quota di mercato 1.95."
     },
     {
-      "partita": "Leyton Orient - Plymouth",
-      "campionato": "League One",
-      "data": "03/10/2026",
+      "partita": "Cercle Brugge - Anderlecht",
+      "campionato": "Belgio - Pro League",
+      "data": "10/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
-      "quota": 1.64,
+      "quota": 1.62,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.64."
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.62."
     },
     {
-      "partita": "Leyton Orient - Plymouth",
-      "campionato": "League One",
-      "data": "03/10/2026",
+      "partita": "Cercle Brugge - Anderlecht",
+      "campionato": "Belgio - Pro League",
+      "data": "10/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -54,19 +44,19 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Reading - Bradford",
-      "campionato": "League One",
-      "data": "03/10/2026",
+      "partita": "RAAL La Louviere - Club Brugge",
+      "campionato": "Belgio - Pro League",
+      "data": "10/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
-      "quota": 1.93,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 65% delle ultime partite di entrambe. Quota di mercato 1.93."
+      "quota": 1.47,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.47."
     },
     {
-      "partita": "Reading - Bradford",
-      "campionato": "League One",
-      "data": "03/10/2026",
+      "partita": "RAAL La Louviere - Club Brugge",
+      "campionato": "Belgio - Pro League",
+      "data": "10/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -74,129 +64,79 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Chesterfield - Tranmere",
-      "campionato": "League Two",
-      "data": "03/10/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.65,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 72% delle ultime partite di entrambe. Quota di mercato 1.65."
-    },
-    {
-      "partita": "Chesterfield - Tranmere",
-      "campionato": "League Two",
-      "data": "03/10/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Accrington - Cheltenham",
-      "campionato": "League Two",
-      "data": "03/10/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.73,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 86% delle ultime partite di entrambe. Quota di mercato 1.73."
-    },
-    {
-      "partita": "Accrington - Cheltenham",
-      "campionato": "League Two",
-      "data": "03/10/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Crewe - Bristol Rvs",
-      "campionato": "League Two",
-      "data": "03/10/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.78,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 1.78."
-    },
-    {
-      "partita": "Crewe - Bristol Rvs",
-      "campionato": "League Two",
-      "data": "03/10/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Exeter - Rotherham",
-      "campionato": "League Two",
-      "data": "03/10/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Gillingham - Newport County",
-      "campionato": "League Two",
-      "data": "03/10/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Grimsby - Shrewsbury",
-      "campionato": "League Two",
-      "data": "03/10/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.74,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.74."
-    },
-    {
-      "partita": "Grimsby - Shrewsbury",
-      "campionato": "League Two",
-      "data": "03/10/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Rochdale - Swindon",
-      "campionato": "League Two",
-      "data": "03/10/2026",
+      "partita": "Genk - Kortrijk",
+      "campionato": "Belgio - Pro League",
+      "data": "10/10/2026",
       "mercato": "1X2",
-      "pronostico": "2 (vittoria Swindon)",
-      "quota": 2.94,
+      "pronostico": "1 (vittoria Genk)",
+      "quota": 1.42,
       "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Swindon (media punti 2.5 vs 1.0 nelle ultime 3/4 partite). Quota di mercato 2.94."
+      "nota": "Forma recente nettamente a favore del Genk (media punti 1.25 vs 0.0 nelle ultime 4/1 partite). Quota di mercato 1.42."
     },
     {
-      "partita": "Rochdale - Swindon",
-      "campionato": "League Two",
-      "data": "03/10/2026",
+      "partita": "Genk - Kortrijk",
+      "campionato": "Belgio - Pro League",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.53,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.53."
+    },
+    {
+      "partita": "Genk - Kortrijk",
+      "campionato": "Belgio - Pro League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Waregem - Gent",
+      "campionato": "Belgio - Pro League",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.88,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.88."
+    },
+    {
+      "partita": "Waregem - Gent",
+      "campionato": "Belgio - Pro League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Standard - Charleroi",
+      "campionato": "Belgio - Pro League",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Charleroi)",
+      "quota": 2.28,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Charleroi (media punti 2.25 vs 1.0 nelle ultime 5/4 partite). Quota di mercato 2.28."
+    },
+    {
+      "partita": "Standard - Charleroi",
+      "campionato": "Belgio - Pro League",
+      "data": "11/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.76,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.76."
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.76."
     },
     {
-      "partita": "Rochdale - Swindon",
-      "campionato": "League Two",
-      "data": "03/10/2026",
+      "partita": "Standard - Charleroi",
+      "campionato": "Belgio - Pro League",
+      "data": "11/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -204,19 +144,29 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Salford - Fleetwood Town",
-      "campionato": "League Two",
-      "data": "03/10/2026",
+      "partita": "St. Gilloise - Oud-Heverlee Leuven",
+      "campionato": "Belgio - Pro League",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria St. Gilloise)",
+      "quota": 1.23,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del St. Gilloise (media punti 3.0 vs 0.33 nelle ultime 2/3 partite). Quota di mercato 1.23."
+    },
+    {
+      "partita": "St. Gilloise - Oud-Heverlee Leuven",
+      "campionato": "Belgio - Pro League",
+      "data": "11/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
-      "quota": 1.7,
+      "quota": 1.42,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 1.7."
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.42."
     },
     {
-      "partita": "Salford - Fleetwood Town",
-      "campionato": "League Two",
-      "data": "03/10/2026",
+      "partita": "St. Gilloise - Oud-Heverlee Leuven",
+      "campionato": "Belgio - Pro League",
+      "data": "11/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -224,19 +174,19 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Aldershot - Carlisle",
-      "campionato": "National League",
-      "data": "03/10/2026",
+      "partita": "Westerlo - Antwerp",
+      "campionato": "Belgio - Pro League",
+      "data": "11/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
-      "quota": 1.49,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 68% delle ultime partite di entrambe. Quota di mercato 1.49."
+      "quota": 1.47,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.47."
     },
     {
-      "partita": "Aldershot - Carlisle",
-      "campionato": "National League",
-      "data": "03/10/2026",
+      "partita": "Westerlo - Antwerp",
+      "campionato": "Belgio - Pro League",
+      "data": "11/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -244,19 +194,19 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Barrow - Wealdstone",
-      "campionato": "National League",
-      "data": "03/10/2026",
+      "partita": "Mechelen - St Truiden",
+      "campionato": "Belgio - Pro League",
+      "data": "11/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.63,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 1.63."
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.63."
     },
     {
-      "partita": "Barrow - Wealdstone",
-      "campionato": "National League",
-      "data": "03/10/2026",
+      "partita": "Mechelen - St Truiden",
+      "campionato": "Belgio - Pro League",
+      "data": "11/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -264,19 +214,139 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Boreham Wood - Altrincham",
-      "campionato": "National League",
-      "data": "03/10/2026",
+      "partita": "Dortmund - Werder Bremen",
+      "campionato": "Bundesliga",
+      "data": "09/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Dortmund)",
+      "quota": 1.32,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Dortmund (media punti 3.0 vs 1.75 nelle ultime 1/4 partite). Quota di mercato 1.32."
+    },
+    {
+      "partita": "Dortmund - Werder Bremen",
+      "campionato": "Bundesliga",
+      "data": "09/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.37,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.37."
+    },
+    {
+      "partita": "Dortmund - Werder Bremen",
+      "campionato": "Bundesliga",
+      "data": "09/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Augsburg - Bayern Munich",
+      "campionato": "Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Bayern Munich)",
+      "quota": 1.17,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Bayern Munich (media punti 3.0 vs 1.33 nelle ultime 3/2 partite). Quota di mercato 1.17."
+    },
+    {
+      "partita": "Augsburg - Bayern Munich",
+      "campionato": "Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.13,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.13."
+    },
+    {
+      "partita": "Augsburg - Bayern Munich",
+      "campionato": "Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Hoffenheim - Hamburg",
+      "campionato": "Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Hamburg)",
+      "quota": 6.39,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Hamburg (media punti 3.0 vs 0.75 nelle ultime 4/1 partite). Quota di mercato 6.39."
+    },
+    {
+      "partita": "Hoffenheim - Hamburg",
+      "campionato": "Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.38,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.38."
+    },
+    {
+      "partita": "Hoffenheim - Hamburg",
+      "campionato": "Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Mainz - Leverkusen",
+      "campionato": "Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.42,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.42."
+    },
+    {
+      "partita": "Mainz - Leverkusen",
+      "campionato": "Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Paderborn - Stuttgart",
+      "campionato": "Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Paderborn)",
+      "quota": 4.65,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Paderborn (media punti 3.0 vs 1.0 nelle ultime 1/3 partite). Quota di mercato 4.65."
+    },
+    {
+      "partita": "Paderborn - Stuttgart",
+      "campionato": "Bundesliga",
+      "data": "10/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.36,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 94% delle ultime partite di entrambe. Quota di mercato 1.36."
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.36."
     },
     {
-      "partita": "Boreham Wood - Altrincham",
-      "campionato": "National League",
-      "data": "03/10/2026",
+      "partita": "Paderborn - Stuttgart",
+      "campionato": "Bundesliga",
+      "data": "10/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -284,29 +354,29 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Eastleigh - Woking",
-      "campionato": "National League",
-      "data": "03/10/2026",
+      "partita": "Union Berlin - Elversberg",
+      "campionato": "Bundesliga",
+      "data": "10/10/2026",
       "mercato": "1X2",
-      "pronostico": "2 (vittoria Woking)",
-      "quota": 2.22,
+      "pronostico": "2 (vittoria Elversberg)",
+      "quota": 2.77,
       "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Woking (media punti 2.0 vs 0.75 nelle ultime 8/7 partite). Quota di mercato 2.22."
+      "nota": "Forma recente nettamente a favore del Elversberg (media punti 2.0 vs 0.5 nelle ultime 2/3 partite). Quota di mercato 2.77."
     },
     {
-      "partita": "Eastleigh - Woking",
-      "campionato": "National League",
-      "data": "03/10/2026",
+      "partita": "Union Berlin - Elversberg",
+      "campionato": "Bundesliga",
+      "data": "10/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
-      "quota": 1.65,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 1.65."
+      "quota": 1.52,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.52."
     },
     {
-      "partita": "Eastleigh - Woking",
-      "campionato": "National League",
-      "data": "03/10/2026",
+      "partita": "Union Berlin - Elversberg",
+      "campionato": "Bundesliga",
+      "data": "10/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -314,19 +384,399 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Gateshead - Worthing",
-      "campionato": "National League",
-      "data": "03/10/2026",
+      "partita": "RB Leipzig - Ein Frankfurt",
+      "campionato": "Bundesliga",
+      "data": "10/10/2026",
       "mercato": "1X2",
-      "pronostico": "2 (vittoria Worthing)",
-      "quota": 1.48,
+      "pronostico": "2 (vittoria Ein Frankfurt)",
+      "quota": 4.74,
       "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Worthing (media punti 1.5 vs 0.2 nelle ultime 5/8 partite). Quota di mercato 1.48."
+      "nota": "Forma recente nettamente a favore del Ein Frankfurt (media punti 1.25 vs 0.0 nelle ultime 1/4 partite). Quota di mercato 4.74."
     },
     {
-      "partita": "Gateshead - Worthing",
-      "campionato": "National League",
-      "data": "03/10/2026",
+      "partita": "RB Leipzig - Ein Frankfurt",
+      "campionato": "Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.28,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.28."
+    },
+    {
+      "partita": "RB Leipzig - Ein Frankfurt",
+      "campionato": "Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "FC Koln - M'gladbach",
+      "campionato": "Bundesliga",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.47,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.47."
+    },
+    {
+      "partita": "FC Koln - M'gladbach",
+      "campionato": "Bundesliga",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Freiburg - Schalke 04",
+      "campionato": "Bundesliga",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.58,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.58."
+    },
+    {
+      "partita": "Freiburg - Schalke 04",
+      "campionato": "Bundesliga",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Braunschweig - Holstein Kiel",
+      "campionato": "2. Bundesliga",
+      "data": "09/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.46,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.46."
+    },
+    {
+      "partita": "Braunschweig - Holstein Kiel",
+      "campionato": "2. Bundesliga",
+      "data": "09/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Heidenheim - Kaiserslautern",
+      "campionato": "2. Bundesliga",
+      "data": "09/10/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Kaiserslautern)",
+      "quota": 3.48,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Kaiserslautern (media punti 3.0 vs 1.75 nelle ultime 4/1 partite). Quota di mercato 3.48."
+    },
+    {
+      "partita": "Heidenheim - Kaiserslautern",
+      "campionato": "2. Bundesliga",
+      "data": "09/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.48,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.48."
+    },
+    {
+      "partita": "Heidenheim - Kaiserslautern",
+      "campionato": "2. Bundesliga",
+      "data": "09/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Darmstadt - Cottbus",
+      "campionato": "2. Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.37,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.37."
+    },
+    {
+      "partita": "Darmstadt - Cottbus",
+      "campionato": "2. Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Magdeburg - Hannover",
+      "campionato": "2. Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.34,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.34."
+    },
+    {
+      "partita": "Magdeburg - Hannover",
+      "campionato": "2. Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Osnabruck - Dresden",
+      "campionato": "2. Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.51,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.51."
+    },
+    {
+      "partita": "Osnabruck - Dresden",
+      "campionato": "2. Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Nurnberg - Wolfsburg",
+      "campionato": "2. Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.37,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.37."
+    },
+    {
+      "partita": "Nurnberg - Wolfsburg",
+      "campionato": "2. Bundesliga",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Bochum - Bielefeld",
+      "campionato": "2. Bundesliga",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.64,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.64."
+    },
+    {
+      "partita": "Bochum - Bielefeld",
+      "campionato": "2. Bundesliga",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Hertha - Greuther Furth",
+      "campionato": "2. Bundesliga",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Hertha)",
+      "quota": 1.55,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Hertha (media punti 3.0 vs 1.2 nelle ultime 5/5 partite). Quota di mercato 1.55."
+    },
+    {
+      "partita": "Hertha - Greuther Furth",
+      "campionato": "2. Bundesliga",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.37,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 70% delle ultime partite di entrambe. Quota di mercato 1.37."
+    },
+    {
+      "partita": "Hertha - Greuther Furth",
+      "campionato": "2. Bundesliga",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "St Pauli - Karlsruhe",
+      "campionato": "2. Bundesliga",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.42,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 1.42."
+    },
+    {
+      "partita": "St Pauli - Karlsruhe",
+      "campionato": "2. Bundesliga",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Arsenal - Leeds",
+      "campionato": "Premier League",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Arsenal)",
+      "quota": 1.38,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Arsenal (media punti 3.0 vs 1.67 nelle ultime 1/3 partite). Quota di mercato 1.38."
+    },
+    {
+      "partita": "Arsenal - Leeds",
+      "campionato": "Premier League",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.79,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 1.79."
+    },
+    {
+      "partita": "Arsenal - Leeds",
+      "campionato": "Premier League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Aston Villa - Brentford",
+      "campionato": "Premier League",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.67,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 1.67."
+    },
+    {
+      "partita": "Aston Villa - Brentford",
+      "campionato": "Premier League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Chelsea - Bournemouth",
+      "campionato": "Premier League",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.47,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.47."
+    },
+    {
+      "partita": "Chelsea - Bournemouth",
+      "campionato": "Premier League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Ipswich - Fulham",
+      "campionato": "Premier League",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Ipswich)",
+      "quota": 2.75,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Ipswich (media punti 2.0 vs 0.33 nelle ultime 3/3 partite). Quota di mercato 2.75."
+    },
+    {
+      "partita": "Ipswich - Fulham",
+      "campionato": "Premier League",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.71,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.71."
+    },
+    {
+      "partita": "Ipswich - Fulham",
+      "campionato": "Premier League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Sunderland - Brighton",
+      "campionato": "Premier League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Man United - Tottenham",
+      "campionato": "Premier League",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Man United)",
+      "quota": 1.69,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Man United (media punti 1.67 vs 0.0 nelle ultime 3/1 partite). Quota di mercato 1.69."
+    },
+    {
+      "partita": "Man United - Tottenham",
+      "campionato": "Premier League",
+      "data": "10/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.49,
@@ -334,9 +784,9 @@
       "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.49."
     },
     {
-      "partita": "Gateshead - Worthing",
-      "campionato": "National League",
-      "data": "03/10/2026",
+      "partita": "Man United - Tottenham",
+      "campionato": "Premier League",
+      "data": "10/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -344,19 +794,19 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Harrogate - Hornchurch",
-      "campionato": "National League",
-      "data": "03/10/2026",
+      "partita": "Crystal Palace - Nott'm Forest",
+      "campionato": "Premier League",
+      "data": "11/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
-      "quota": 1.63,
+      "quota": 1.86,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.63."
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.86."
     },
     {
-      "partita": "Harrogate - Hornchurch",
-      "campionato": "National League",
-      "data": "03/10/2026",
+      "partita": "Crystal Palace - Nott'm Forest",
+      "campionato": "Premier League",
+      "data": "11/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -364,19 +814,19 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Hartlepool - Tamworth",
-      "campionato": "National League",
-      "data": "03/10/2026",
+      "partita": "Hull - Everton",
+      "campionato": "Premier League",
+      "data": "11/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
-      "quota": 1.56,
+      "quota": 1.96,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.56."
+      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.96."
     },
     {
-      "partita": "Hartlepool - Tamworth",
-      "campionato": "National League",
-      "data": "03/10/2026",
+      "partita": "Hull - Everton",
+      "campionato": "Premier League",
+      "data": "11/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -384,129 +834,29 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Kidderminster - Sutton",
-      "campionato": "National League",
-      "data": "03/10/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Solihull - Halifax",
-      "campionato": "National League",
-      "data": "03/10/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.57,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 1.57."
-    },
-    {
-      "partita": "Solihull - Halifax",
-      "campionato": "National League",
-      "data": "03/10/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Southend - Fylde",
-      "campionato": "National League",
-      "data": "03/10/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.42,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.42."
-    },
-    {
-      "partita": "Southend - Fylde",
-      "campionato": "National League",
-      "data": "03/10/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Yeovil - Boston Utd",
-      "campionato": "National League",
-      "data": "03/10/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 1.65,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 1.65."
-    },
-    {
-      "partita": "Yeovil - Boston Utd",
-      "campionato": "National League",
-      "data": "03/10/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Eldense - Oviedo",
-      "campionato": "LaLiga 2",
-      "data": "02/10/2026",
+      "partita": "Liverpool - Man City",
+      "campionato": "Premier League",
+      "data": "11/10/2026",
       "mercato": "1X2",
-      "pronostico": "1 (vittoria Eldense)",
-      "quota": 2.43,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Eldense (media punti 1.33 vs 0.0 nelle ultime 3/2 partite). Quota di mercato 2.43."
-    },
-    {
-      "partita": "Eldense - Oviedo",
-      "campionato": "LaLiga 2",
-      "data": "02/10/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 2.48,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 2.48."
-    },
-    {
-      "partita": "Eldense - Oviedo",
-      "campionato": "LaLiga 2",
-      "data": "02/10/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Albacete - Eibar",
-      "campionato": "LaLiga 2",
-      "data": "03/10/2026",
-      "mercato": "1X2",
-      "pronostico": "2 (vittoria Eibar)",
+      "pronostico": "2 (vittoria Man City)",
       "quota": 2.44,
       "confidenza": "Alta",
-      "nota": "Forma recente nettamente a favore del Eibar (media punti 2.25 vs 0.2 nelle ultime 5/4 partite). Quota di mercato 2.44."
+      "nota": "Forma recente nettamente a favore del Man City (media punti 3.0 vs 1.0 nelle ultime 2/3 partite). Quota di mercato 2.44."
     },
     {
-      "partita": "Albacete - Eibar",
-      "campionato": "LaLiga 2",
-      "data": "03/10/2026",
+      "partita": "Liverpool - Man City",
+      "campionato": "Premier League",
+      "data": "11/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
-      "quota": 1.87,
+      "quota": 1.54,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.87."
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.54."
     },
     {
-      "partita": "Albacete - Eibar",
-      "campionato": "LaLiga 2",
-      "data": "03/10/2026",
+      "partita": "Liverpool - Man City",
+      "campionato": "Premier League",
+      "data": "11/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -514,19 +864,19 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Almeria - Burgos",
-      "campionato": "LaLiga 2",
-      "data": "03/10/2026",
+      "partita": "West Ham - QPR",
+      "campionato": "Championship",
+      "data": "09/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
-      "quota": 1.87,
+      "quota": 1.51,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.87."
+      "nota": "Over 2.5 nel 82% delle ultime partite di entrambe. Quota di mercato 1.51."
     },
     {
-      "partita": "Almeria - Burgos",
-      "campionato": "LaLiga 2",
-      "data": "03/10/2026",
+      "partita": "West Ham - QPR",
+      "campionato": "Championship",
+      "data": "09/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -534,39 +884,19 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Cadiz - Leganes",
-      "campionato": "LaLiga 2",
-      "data": "03/10/2026",
-      "mercato": "1X2",
-      "pronostico": "2 (vittoria Leganes)",
-      "quota": 2.44,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Leganes (media punti 2.0 vs 0.6 nelle ultime 5/2 partite). Quota di mercato 2.44."
-    },
-    {
-      "partita": "Cadiz - Leganes",
-      "campionato": "LaLiga 2",
-      "data": "03/10/2026",
-      "mercato": "GG/NG",
-      "pronostico": "Gol (GG)",
-      "quota": null,
-      "confidenza": "Alta",
-      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Sabadell - Andorra",
-      "campionato": "LaLiga 2",
-      "data": "03/10/2026",
+      "partita": "Charlton - Bristol City",
+      "campionato": "Championship",
+      "data": "10/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 2.04,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 2.04."
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 2.04."
     },
     {
-      "partita": "Sabadell - Andorra",
-      "campionato": "LaLiga 2",
-      "data": "03/10/2026",
+      "partita": "Charlton - Bristol City",
+      "campionato": "Championship",
+      "data": "10/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -574,19 +904,529 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Sociedad B - Granada",
-      "campionato": "LaLiga 2",
-      "data": "04/10/2026",
+      "partita": "Swansea - Norwich",
+      "campionato": "Championship",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.7,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.7."
+    },
+    {
+      "partita": "Swansea - Norwich",
+      "campionato": "Championship",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "West Brom - Birmingham",
+      "campionato": "Championship",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.94,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 73% delle ultime partite di entrambe. Quota di mercato 1.94."
+    },
+    {
+      "partita": "West Brom - Birmingham",
+      "campionato": "Championship",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Blackburn - Cardiff",
+      "campionato": "Championship",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.6,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.6."
+    },
+    {
+      "partita": "Blackburn - Cardiff",
+      "campionato": "Championship",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Bolton - Stoke",
+      "campionato": "Championship",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.83,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 1.83."
+    },
+    {
+      "partita": "Bolton - Stoke",
+      "campionato": "Championship",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Derby - Wrexham",
+      "campionato": "Championship",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Middlesbrough - Wolves",
+      "campionato": "Championship",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.6,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 93% delle ultime partite di entrambe. Quota di mercato 1.6."
+    },
+    {
+      "partita": "Middlesbrough - Wolves",
+      "campionato": "Championship",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Preston - Millwall",
+      "campionato": "Championship",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.8,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.8."
+    },
+    {
+      "partita": "Preston - Millwall",
+      "campionato": "Championship",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Sheffield United - Lincoln",
+      "campionato": "Championship",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.98,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.98."
+    },
+    {
+      "partita": "Sheffield United - Lincoln",
+      "campionato": "Championship",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Watford - Burnley",
+      "campionato": "Championship",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Southampton - Portsmouth",
+      "campionato": "Championship",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.63,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.63."
+    },
+    {
+      "partita": "Southampton - Portsmouth",
+      "campionato": "Championship",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Notts County - Oxford",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Plymouth - AFC Wimbledon",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Plymouth)",
+      "quota": 1.5,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Plymouth (media punti 1.75 vs 0.5 nelle ultime 4/2 partite). Quota di mercato 1.5."
+    },
+    {
+      "partita": "Plymouth - AFC Wimbledon",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Bradford - Leyton Orient",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Cambridge - Blackpool",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.68,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 72% delle ultime partite di entrambe. Quota di mercato 1.68."
+    },
+    {
+      "partita": "Cambridge - Blackpool",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Doncaster - Burton",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.75,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 1.75."
+    },
+    {
+      "partita": "Doncaster - Burton",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Huddersfield - Sheffield Weds",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.57,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.57."
+    },
+    {
+      "partita": "Huddersfield - Sheffield Weds",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Leicester - Peterboro",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Mansfield - Bromley",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.64,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.64."
+    },
+    {
+      "partita": "Mansfield - Bromley",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Milton Keynes Dons - Reading",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.66,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 70% delle ultime partite di entrambe. Quota di mercato 1.66."
+    },
+    {
+      "partita": "Milton Keynes Dons - Reading",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Stevenage - Wigan",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 2.13,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 2.13."
+    },
+    {
+      "partita": "Stevenage - Wigan",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Stockport - Barnsley",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.39,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.39."
+    },
+    {
+      "partita": "Stockport - Barnsley",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Wycombe - Luton",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.64,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 76% delle ultime partite di entrambe. Quota di mercato 1.64."
+    },
+    {
+      "partita": "Wycombe - Luton",
+      "campionato": "League One",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Oldham - Accrington",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.75,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 79% delle ultime partite di entrambe. Quota di mercato 1.75."
+    },
+    {
+      "partita": "Oldham - Accrington",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Swindon - Crewe",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Bristol Rvs - Barnet",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.67,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 93% delle ultime partite di entrambe. Quota di mercato 1.67."
+    },
+    {
+      "partita": "Bristol Rvs - Barnet",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Cheltenham - Salford",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.67,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 94% delle ultime partite di entrambe. Quota di mercato 1.67."
+    },
+    {
+      "partita": "Cheltenham - Salford",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Crawley Town - Chesterfield",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.54,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 79% delle ultime partite di entrambe. Quota di mercato 1.54."
+    },
+    {
+      "partita": "Crawley Town - Chesterfield",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Fleetwood Town - Walsall",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Newport County - Colchester",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.78,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 74% delle ultime partite di entrambe. Quota di mercato 1.78."
+    },
+    {
+      "partita": "Newport County - Colchester",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Port Vale - Grimsby",
+      "campionato": "League Two",
+      "data": "10/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.91,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 82% delle ultime partite di entrambe. Quota di mercato 1.91."
+      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.91."
     },
     {
-      "partita": "Sociedad B - Granada",
-      "campionato": "LaLiga 2",
-      "data": "04/10/2026",
+      "partita": "Port Vale - Grimsby",
+      "campionato": "League Two",
+      "data": "10/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -594,29 +1434,369 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Sp Gijon - Celta B",
-      "campionato": "LaLiga 2",
-      "data": "04/10/2026",
-      "mercato": "1X2",
-      "pronostico": "1 (vittoria Sp Gijon)",
-      "quota": 1.52,
+      "partita": "Rotherham - Gillingham",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
       "confidenza": "Alta",
-      "nota": "Forma recente nettamente a favore del Sp Gijon (media punti 3.0 vs 1.0 nelle ultime 2/4 partite). Quota di mercato 1.52."
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Sp Gijon - Celta B",
-      "campionato": "LaLiga 2",
-      "data": "04/10/2026",
+      "partita": "Shrewsbury - Exeter",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Tranmere - Rochdale",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.88,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 1.88."
+    },
+    {
+      "partita": "Tranmere - Rochdale",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "York - Northampton",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Under 2.5",
+      "quota": 1.96,
+      "confidenza": "Media",
+      "nota": "Solo il 30% delle ultime partite di entrambe sopra i 2.5 gol. Quota di mercato 1.96."
+    },
+    {
+      "partita": "York - Northampton",
+      "campionato": "League Two",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Sutton - Boreham Wood",
+      "campionato": "National League",
+      "data": "09/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.73,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 74% delle ultime partite di entrambe. Quota di mercato 1.73."
+    },
+    {
+      "partita": "Sutton - Boreham Wood",
+      "campionato": "National League",
+      "data": "09/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Altrincham - Aldershot",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.56,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 81% delle ultime partite di entrambe. Quota di mercato 1.56."
+    },
+    {
+      "partita": "Altrincham - Aldershot",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Carlisle - Kidderminster",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Boston Utd - Southend",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.42,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 73% delle ultime partite di entrambe. Quota di mercato 1.42."
+    },
+    {
+      "partita": "Boston Utd - Southend",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Fylde - Scunthorpe",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.32,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 1.32."
+    },
+    {
+      "partita": "Fylde - Scunthorpe",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Halifax - Gateshead",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.61,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 76% delle ultime partite di entrambe. Quota di mercato 1.61."
+    },
+    {
+      "partita": "Halifax - Gateshead",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Hornchurch - Eastleigh",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Hornchurch)",
+      "quota": 2.0,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Hornchurch (media punti 2.25 vs 0.75 nelle ultime 4/8 partite). Quota di mercato 2.0."
+    },
+    {
+      "partita": "Hornchurch - Eastleigh",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.7,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 81% delle ultime partite di entrambe. Quota di mercato 1.7."
+    },
+    {
+      "partita": "Hornchurch - Eastleigh",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Tamworth - Barrow",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.6,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 93% delle ultime partite di entrambe. Quota di mercato 1.6."
+    },
+    {
+      "partita": "Tamworth - Barrow",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Wealdstone - Yeovil",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.59,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 68% delle ultime partite di entrambe. Quota di mercato 1.59."
+    },
+    {
+      "partita": "Wealdstone - Yeovil",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Woking - Harrogate",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.7,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 86% delle ultime partite di entrambe. Quota di mercato 1.7."
+    },
+    {
+      "partita": "Woking - Harrogate",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Worthing - Solihull",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.41,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.41."
+    },
+    {
+      "partita": "Worthing - Solihull",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Forest Green - Hartlepool",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Forest Green)",
+      "quota": 1.62,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Forest Green (media punti 1.29 vs 0.0 nelle ultime 7/4 partite). Quota di mercato 1.62."
+    },
+    {
+      "partita": "Forest Green - Hartlepool",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.56,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 86% delle ultime partite di entrambe. Quota di mercato 1.56."
+    },
+    {
+      "partita": "Forest Green - Hartlepool",
+      "campionato": "National League",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Lens - Lyon",
+      "campionato": "Ligue 1",
+      "data": "09/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.51,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.51."
+    },
+    {
+      "partita": "Lens - Lyon",
+      "campionato": "Ligue 1",
+      "data": "09/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Lille - Le Havre",
+      "campionato": "Ligue 1",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.6,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.6."
+    },
+    {
+      "partita": "Lille - Le Havre",
+      "campionato": "Ligue 1",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Brest - Angers",
+      "campionato": "Ligue 1",
+      "data": "10/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.72,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.72."
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.72."
     },
     {
-      "partita": "Sp Gijon - Celta B",
-      "campionato": "LaLiga 2",
-      "data": "04/10/2026",
+      "partita": "Brest - Angers",
+      "campionato": "Ligue 1",
+      "data": "10/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -624,19 +1804,29 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Castellon - Ceuta",
-      "campionato": "LaLiga 2",
-      "data": "04/10/2026",
+      "partita": "Lorient - Paris FC",
+      "campionato": "Ligue 1",
+      "data": "10/10/2026",
       "mercato": "1X2",
-      "pronostico": "1 (vittoria Castellon)",
-      "quota": 1.24,
-      "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Castellon (media punti 2.33 vs 1.0 nelle ultime 3/5 partite). Quota di mercato 1.24."
+      "pronostico": "2 (vittoria Paris FC)",
+      "quota": 2.23,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Paris FC (media punti 3.0 vs 0.33 nelle ultime 3/2 partite). Quota di mercato 2.23."
     },
     {
-      "partita": "Castellon - Ceuta",
-      "campionato": "LaLiga 2",
-      "data": "04/10/2026",
+      "partita": "Lorient - Paris FC",
+      "campionato": "Ligue 1",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.88,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.88."
+    },
+    {
+      "partita": "Lorient - Paris FC",
+      "campionato": "Ligue 1",
+      "data": "10/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -644,19 +1834,1059 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Las Palmas - Valladolid",
-      "campionato": "LaLiga 2",
-      "data": "04/10/2026",
+      "partita": "Monaco - Toulouse",
+      "campionato": "Ligue 1",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.55,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.55."
+    },
+    {
+      "partita": "Monaco - Toulouse",
+      "campionato": "Ligue 1",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Paris SG - Le Mans",
+      "campionato": "Ligue 1",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.2,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.2."
+    },
+    {
+      "partita": "Paris SG - Le Mans",
+      "campionato": "Ligue 1",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Nice - Strasbourg",
+      "campionato": "Ligue 1",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Rennes - Auxerre",
+      "campionato": "Ligue 1",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Rennes)",
+      "quota": 1.42,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Rennes (media punti 2.33 vs 0.75 nelle ultime 3/4 partite). Quota di mercato 1.42."
+    },
+    {
+      "partita": "Rennes - Auxerre",
+      "campionato": "Ligue 1",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.47,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.47."
+    },
+    {
+      "partita": "Rennes - Auxerre",
+      "campionato": "Ligue 1",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Troyes - Marseille",
+      "campionato": "Ligue 1",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Troyes)",
+      "quota": 3.66,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Troyes (media punti 1.5 vs 0.0 nelle ultime 2/2 partite). Quota di mercato 3.66."
+    },
+    {
+      "partita": "Troyes - Marseille",
+      "campionato": "Ligue 1",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.57,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.57."
+    },
+    {
+      "partita": "Troyes - Marseille",
+      "campionato": "Ligue 1",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Dunkerque - Annecy",
+      "campionato": "Ligue 2",
+      "data": "09/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Dunkerque)",
+      "quota": 2.18,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Dunkerque (media punti 2.0 vs 0.8 nelle ultime 4/5 partite). Quota di mercato 2.18."
+    },
+    {
+      "partita": "Dunkerque - Annecy",
+      "campionato": "Ligue 2",
+      "data": "09/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.76,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 78% delle ultime partite di entrambe. Quota di mercato 1.76."
+    },
+    {
+      "partita": "Dunkerque - Annecy",
+      "campionato": "Ligue 2",
+      "data": "09/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Montpellier - Grenoble",
+      "campionato": "Ligue 2",
+      "data": "09/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Nancy - Guingamp",
+      "campionato": "Ligue 2",
+      "data": "09/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.78,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.78."
+    },
+    {
+      "partita": "Nancy - Guingamp",
+      "campionato": "Ligue 2",
+      "data": "09/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Pau FC - Laval",
+      "campionato": "Ligue 2",
+      "data": "09/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Sochaux - Boulogne",
+      "campionato": "Ligue 2",
+      "data": "09/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Under 2.5",
+      "quota": 1.61,
+      "confidenza": "Alta",
+      "nota": "Solo il 16% delle ultime partite di entrambe sopra i 2.5 gol. Quota di mercato 1.61."
+    },
+    {
+      "partita": "Sochaux - Boulogne",
+      "campionato": "Ligue 2",
+      "data": "09/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Clermont - Red Star",
+      "campionato": "Ligue 2",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Nantes - Reims",
+      "campionato": "Ligue 2",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.83,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 1.83."
+    },
+    {
+      "partita": "Nantes - Reims",
+      "campionato": "Ligue 2",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "St Etienne - Rodez",
+      "campionato": "Ligue 2",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.41,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.41."
+    },
+    {
+      "partita": "St Etienne - Rodez",
+      "campionato": "Ligue 2",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Dijon - Metz",
+      "campionato": "Ligue 2",
+      "data": "12/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Genoa - Fiorentina",
+      "campionato": "Serie A",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 2.02,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 67% delle ultime partite di entrambe. Quota di mercato 2.02."
+    },
+    {
+      "partita": "Genoa - Fiorentina",
+      "campionato": "Serie A",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Inter - Parma",
+      "campionato": "Serie A",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.33,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.33."
+    },
+    {
+      "partita": "Inter - Parma",
+      "campionato": "Serie A",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Napoli - Frosinone",
+      "campionato": "Serie A",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Frosinone)",
+      "quota": 6.44,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Frosinone (media punti 2.0 vs 0.33 nelle ultime 3/2 partite). Quota di mercato 6.44."
+    },
+    {
+      "partita": "Napoli - Frosinone",
+      "campionato": "Serie A",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Como - Roma",
+      "campionato": "Serie A",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.61,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.61."
+    },
+    {
+      "partita": "Como - Roma",
+      "campionato": "Serie A",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Lazio - Monza",
+      "campionato": "Serie A",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Lazio)",
+      "quota": 1.57,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Lazio (media punti 2.0 vs 0.8 nelle ultime 2/5 partite). Quota di mercato 1.57."
+    },
+    {
+      "partita": "Lazio - Monza",
+      "campionato": "Serie A",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.84,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.84."
+    },
+    {
+      "partita": "Lazio - Monza",
+      "campionato": "Serie A",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Lecce - Bologna",
+      "campionato": "Serie A",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Lecce)",
+      "quota": 4.1,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Lecce (media punti 3.0 vs 1.0 nelle ultime 1/2 partite). Quota di mercato 4.1."
+    },
+    {
+      "partita": "Lecce - Bologna",
+      "campionato": "Serie A",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 2.07,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 2.07."
+    },
+    {
+      "partita": "Lecce - Bologna",
+      "campionato": "Serie A",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Sassuolo - Milan",
+      "campionato": "Serie A",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.72,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.72."
+    },
+    {
+      "partita": "Sassuolo - Milan",
+      "campionato": "Serie A",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Cagliari - Juventus",
+      "campionato": "Serie A",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Cagliari)",
+      "quota": 6.13,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Cagliari (media punti 3.0 vs 0.5 nelle ultime 1/2 partite). Quota di mercato 6.13."
+    },
+    {
+      "partita": "Cagliari - Juventus",
+      "campionato": "Serie A",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.95,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.95."
+    },
+    {
+      "partita": "Cagliari - Juventus",
+      "campionato": "Serie A",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Atalanta - Venezia",
+      "campionato": "Serie A",
+      "data": "12/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.54,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.54."
+    },
+    {
+      "partita": "Atalanta - Venezia",
+      "campionato": "Serie A",
+      "data": "12/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Torino - Udinese",
+      "campionato": "Serie A",
+      "data": "12/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 2.09,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 2.09."
+    },
+    {
+      "partita": "Torino - Udinese",
+      "campionato": "Serie A",
+      "data": "12/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Avellino - Sampdoria",
+      "campionato": "Serie B",
+      "data": "09/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.96,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 71% delle ultime partite di entrambe. Quota di mercato 1.96."
+    },
+    {
+      "partita": "Avellino - Sampdoria",
+      "campionato": "Serie B",
+      "data": "09/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Benevento - Cesena",
+      "campionato": "Serie B",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Empoli - Palermo",
+      "campionato": "Serie B",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Palermo)",
+      "quota": 1.94,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Palermo (media punti 2.5 vs 0.0 nelle ultime 2/4 partite). Quota di mercato 1.94."
+    },
+    {
+      "partita": "Empoli - Palermo",
+      "campionato": "Serie B",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.74,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.74."
+    },
+    {
+      "partita": "Empoli - Palermo",
+      "campionato": "Serie B",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Sudtirol - Ascoli",
+      "campionato": "Serie B",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Virtus Entella - Juve Stabia",
+      "campionato": "Serie B",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 2.07,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 2.07."
+    },
+    {
+      "partita": "Virtus Entella - Juve Stabia",
+      "campionato": "Serie B",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Vicenza - Pisa",
+      "campionato": "Serie B",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.74,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.74."
+    },
+    {
+      "partita": "Vicenza - Pisa",
+      "campionato": "Serie B",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Arezzo - Cremonese",
+      "campionato": "Serie B",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 2.05,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 2.05."
+    },
+    {
+      "partita": "Arezzo - Cremonese",
+      "campionato": "Serie B",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Catanzaro - Mantova",
+      "campionato": "Serie B",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Mantova)",
+      "quota": 2.81,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Mantova (media punti 2.0 vs 0.0 nelle ultime 3/4 partite). Quota di mercato 2.81."
+    },
+    {
+      "partita": "Catanzaro - Mantova",
+      "campionato": "Serie B",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.73,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.73."
+    },
+    {
+      "partita": "Catanzaro - Mantova",
+      "campionato": "Serie B",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Padova - Carrarese",
+      "campionato": "Serie B",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Modena - Verona",
+      "campionato": "Serie B",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Modena)",
+      "quota": 1.95,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Modena (media punti 2.33 vs 1.0 nelle ultime 3/4 partite). Quota di mercato 1.95."
+    },
+    {
+      "partita": "Modena - Verona",
+      "campionato": "Serie B",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.97,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 71% delle ultime partite di entrambe. Quota di mercato 1.97."
+    },
+    {
+      "partita": "Modena - Verona",
+      "campionato": "Serie B",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "PSV Eindhoven - Heerenveen",
+      "campionato": "Eredivisie",
+      "data": "09/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria PSV Eindhoven)",
+      "quota": 1.26,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del PSV Eindhoven (media punti 2.29 vs 0.67 nelle ultime 7/3 partite). Quota di mercato 1.26."
+    },
+    {
+      "partita": "PSV Eindhoven - Heerenveen",
+      "campionato": "Eredivisie",
+      "data": "09/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.16,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.16."
+    },
+    {
+      "partita": "PSV Eindhoven - Heerenveen",
+      "campionato": "Eredivisie",
+      "data": "09/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Go Ahead Eagles - Sparta Rotterdam",
+      "campionato": "Eredivisie",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.37,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 86% delle ultime partite di entrambe. Quota di mercato 1.37."
+    },
+    {
+      "partita": "Go Ahead Eagles - Sparta Rotterdam",
+      "campionato": "Eredivisie",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Feyenoord - AZ Alkmaar",
+      "campionato": "Eredivisie",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.39,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.39."
+    },
+    {
+      "partita": "Feyenoord - AZ Alkmaar",
+      "campionato": "Eredivisie",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "For Sittard - Twente",
+      "campionato": "Eredivisie",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.35,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.35."
+    },
+    {
+      "partita": "For Sittard - Twente",
+      "campionato": "Eredivisie",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Ajax - Nijmegen",
+      "campionato": "Eredivisie",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.29,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 1.29."
+    },
+    {
+      "partita": "Ajax - Nijmegen",
+      "campionato": "Eredivisie",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Utrecht - Willem II",
+      "campionato": "Eredivisie",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.44,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.44."
+    },
+    {
+      "partita": "Utrecht - Willem II",
+      "campionato": "Eredivisie",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Telstar - Den Haag",
+      "campionato": "Eredivisie",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.51,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.51."
+    },
+    {
+      "partita": "Telstar - Den Haag",
+      "campionato": "Eredivisie",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Zwolle - Cambuur",
+      "campionato": "Eredivisie",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.48,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.48."
+    },
+    {
+      "partita": "Zwolle - Cambuur",
+      "campionato": "Eredivisie",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Excelsior - Groningen",
+      "campionato": "Eredivisie",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.53,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 1.53."
+    },
+    {
+      "partita": "Excelsior - Groningen",
+      "campionato": "Eredivisie",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Malaga - Espanol",
+      "campionato": "LaLiga",
+      "data": "09/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Vallecano - Ath Bilbao",
+      "campionato": "LaLiga",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Alaves - Ath Madrid",
+      "campionato": "LaLiga",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.8,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.8."
+    },
+    {
+      "partita": "Alaves - Ath Madrid",
+      "campionato": "LaLiga",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Barcelona - Getafe",
+      "campionato": "LaLiga",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Barcelona)",
+      "quota": 1.08,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Barcelona (media punti 3.0 vs 1.0 nelle ultime 4/2 partite). Quota di mercato 1.08."
+    },
+    {
+      "partita": "Barcelona - Getafe",
+      "campionato": "LaLiga",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Real Madrid - Villarreal",
+      "campionato": "LaLiga",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.26,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.26."
+    },
+    {
+      "partita": "Real Madrid - Villarreal",
+      "campionato": "LaLiga",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Elche - Celta",
+      "campionato": "LaLiga",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Sociedad - La Coruna",
+      "campionato": "LaLiga",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.72,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 1.72."
+    },
+    {
+      "partita": "Sociedad - La Coruna",
+      "campionato": "LaLiga",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Betis - Osasuna",
+      "campionato": "LaLiga",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.72,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 67% delle ultime partite di entrambe. Quota di mercato 1.72."
+    },
+    {
+      "partita": "Betis - Osasuna",
+      "campionato": "LaLiga",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Santander - Valencia",
+      "campionato": "LaLiga",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Santander)",
+      "quota": 2.28,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Santander (media punti 1.4 vs 0.0 nelle ultime 5/2 partite). Quota di mercato 2.28."
+    },
+    {
+      "partita": "Santander - Valencia",
+      "campionato": "LaLiga",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.64,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.64."
+    },
+    {
+      "partita": "Santander - Valencia",
+      "campionato": "LaLiga",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Levante - Sevilla",
+      "campionato": "LaLiga",
+      "data": "12/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.99,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.99."
+      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.99."
     },
     {
-      "partita": "Las Palmas - Valladolid",
-      "campionato": "LaLiga 2",
-      "data": "04/10/2026",
+      "partita": "Levante - Sevilla",
+      "campionato": "LaLiga",
+      "data": "12/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -664,19 +2894,39 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Cordoba - Tenerife",
+      "partita": "Ceuta - Sabadell",
       "campionato": "LaLiga 2",
-      "data": "05/10/2026",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Sabadell)",
+      "quota": 2.2,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Sabadell (media punti 2.33 vs 1.0 nelle ultime 5/3 partite). Quota di mercato 2.2."
+    },
+    {
+      "partita": "Ceuta - Sabadell",
+      "campionato": "LaLiga 2",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Eldense - Cordoba",
+      "campionato": "LaLiga 2",
+      "data": "10/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
-      "quota": 1.82,
+      "quota": 1.57,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.82."
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.57."
     },
     {
-      "partita": "Cordoba - Tenerife",
+      "partita": "Eldense - Cordoba",
       "campionato": "LaLiga 2",
-      "data": "05/10/2026",
+      "data": "10/10/2026",
       "mercato": "GG/NG",
       "pronostico": "Gol (GG)",
       "quota": null,
@@ -684,12 +2934,372 @@
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
     },
     {
-      "partita": "Shamrock Rovers - Drogheda",
+      "partita": "Celta B - Sociedad B",
+      "campionato": "LaLiga 2",
+      "data": "10/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.7,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 79% delle ultime partite di entrambe. Quota di mercato 1.7."
+    },
+    {
+      "partita": "Celta B - Sociedad B",
+      "campionato": "LaLiga 2",
+      "data": "10/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Andorra - Castellon",
+      "campionato": "LaLiga 2",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.6,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.6."
+    },
+    {
+      "partita": "Andorra - Castellon",
+      "campionato": "LaLiga 2",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Almeria - Leganes",
+      "campionato": "LaLiga 2",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.65,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.65."
+    },
+    {
+      "partita": "Almeria - Leganes",
+      "campionato": "LaLiga 2",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Cadiz - Sp Gijon",
+      "campionato": "LaLiga 2",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Sp Gijon)",
+      "quota": 2.74,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Sp Gijon (media punti 3.0 vs 0.6 nelle ultime 5/2 partite). Quota di mercato 2.74."
+    },
+    {
+      "partita": "Cadiz - Sp Gijon",
+      "campionato": "LaLiga 2",
+      "data": "11/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 2.05,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 2.05."
+    },
+    {
+      "partita": "Cadiz - Sp Gijon",
+      "campionato": "LaLiga 2",
+      "data": "11/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Valladolid - Albacete",
+      "campionato": "LaLiga 2",
+      "data": "12/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Valladolid)",
+      "quota": 1.94,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Valladolid (media punti 1.5 vs 0.2 nelle ultime 4/5 partite). Quota di mercato 1.94."
+    },
+    {
+      "partita": "Valladolid - Albacete",
+      "campionato": "LaLiga 2",
+      "data": "12/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 1.88,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 65% delle ultime partite di entrambe. Quota di mercato 1.88."
+    },
+    {
+      "partita": "Valladolid - Albacete",
+      "campionato": "LaLiga 2",
+      "data": "12/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Burgos - Granada",
+      "campionato": "LaLiga 2",
+      "data": "12/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 2.11,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 2.11."
+    },
+    {
+      "partita": "Burgos - Granada",
+      "campionato": "LaLiga 2",
+      "data": "12/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Oviedo - Eibar",
+      "campionato": "LaLiga 2",
+      "data": "12/10/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Eibar)",
+      "quota": 3.14,
+      "confidenza": "Alta",
+      "nota": "Forma recente nettamente a favore del Eibar (media punti 2.25 vs 0.0 nelle ultime 2/4 partite). Quota di mercato 3.14."
+    },
+    {
+      "partita": "Oviedo - Eibar",
+      "campionato": "LaLiga 2",
+      "data": "12/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 2.15,
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 2.15."
+    },
+    {
+      "partita": "Oviedo - Eibar",
+      "campionato": "LaLiga 2",
+      "data": "12/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Tenerife - Girona",
+      "campionato": "LaLiga 2",
+      "data": "12/10/2026",
+      "mercato": "Over/Under",
+      "pronostico": "Over 2.5",
+      "quota": 2.11,
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 65% delle ultime partite di entrambe. Quota di mercato 2.11."
+    },
+    {
+      "partita": "Tenerife - Girona",
+      "campionato": "LaLiga 2",
+      "data": "12/10/2026",
+      "mercato": "GG/NG",
+      "pronostico": "Gol (GG)",
+      "quota": null,
+      "confidenza": "Alta",
+      "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Shelbourne - Sligo Rovers",
       "campionato": "Irlanda - Premier Division",
-      "data": "08/10/2026",
+      "data": "09/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Shelbourne)",
+      "quota": 1.29,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Shamrock Rovers - Bohemians",
+      "campionato": "Irlanda - Premier Division",
+      "data": "12/10/2026",
       "mercato": "1X2",
       "pronostico": "Favorita di mercato: 1 (vittoria Shamrock Rovers)",
-      "quota": 1.38,
+      "quota": 2.07,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Brann - Viking",
+      "campionato": "Norvegia - Eliteserien",
+      "data": "09/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 2 (vittoria Viking)",
+      "quota": 1.93,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Bodo/Glimt - Kristiansund",
+      "campionato": "Norvegia - Eliteserien",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Bodo/Glimt)",
+      "quota": 1.07,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Rosenborg - Sandefjord",
+      "campionato": "Norvegia - Eliteserien",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Rosenborg)",
+      "quota": 1.34,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Fredrikstad - Tromso",
+      "campionato": "Norvegia - Eliteserien",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 2 (vittoria Tromso)",
+      "quota": 2.37,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Aalesund - Sarpsborg 08",
+      "campionato": "Norvegia - Eliteserien",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 2 (vittoria Sarpsborg 08)",
+      "quota": 2.42,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Start - HamKam",
+      "campionato": "Norvegia - Eliteserien",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Start)",
+      "quota": 1.9,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Lillestrom - Molde",
+      "campionato": "Norvegia - Eliteserien",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 2 (vittoria Molde)",
+      "quota": 2.06,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "KFUM Oslo - Valerenga",
+      "campionato": "Norvegia - Eliteserien",
+      "data": "12/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 2 (vittoria Valerenga)",
+      "quota": 2.24,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Goteborg - Vasteras SK",
+      "campionato": "Svezia - Allsvenskan",
+      "data": "09/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Goteborg)",
+      "quota": 1.7,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "AIK - Brommapojkarna",
+      "campionato": "Svezia - Allsvenskan",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria AIK)",
+      "quota": 1.9,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "GAIS - Sirius",
+      "campionato": "Svezia - Allsvenskan",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria GAIS)",
+      "quota": 2.42,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Mjallby - Degerfors",
+      "campionato": "Svezia - Allsvenskan",
+      "data": "10/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Mjallby)",
+      "quota": 1.86,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Hammarby - Djurgarden",
+      "campionato": "Svezia - Allsvenskan",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Hammarby)",
+      "quota": 1.72,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Hacken - Orgryte",
+      "campionato": "Svezia - Allsvenskan",
+      "data": "11/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Hacken)",
+      "quota": 1.3,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Elfsborg - Halmstad",
+      "campionato": "Svezia - Allsvenskan",
+      "data": "12/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Elfsborg)",
+      "quota": 1.31,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Malmo FF - Kalmar",
+      "campionato": "Svezia - Allsvenskan",
+      "data": "12/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Malmo FF)",
+      "quota": 1.75,
       "confidenza": "Bassa",
       "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
     }
