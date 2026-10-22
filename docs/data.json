@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T12:50:54.540476+00:00",
+  "generated_at": "2026-10-22T12:53:37.365284+00:00",
   "coverage_note": "Quote reali gratuite da football-data.co.uk: Premier League, Championship, League One, League Two, National League, Bundesliga, 2.Bundesliga, Serie A, Serie B, LaLiga, LaLiga 2, Ligue 1, Ligue 2, Eredivisie, Belgio, Irlanda, Norvegia, Svezia. Non coperti gratuitamente: Serie C, Eerste Divisie (Olanda 2).",
   "odds_note": "Le quote 'Avg' sono la media tra piu' bookmaker, raccolte il venerdi' per il turno del weekend e il martedi' per gli infrasettimanali. Per Irlanda, Norvegia e Svezia mostriamo solo il favorito di mercato: nessuno storico gratuito disponibile per calcolare segnali.",
   "signals": [
@@ -11,7 +11,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.74,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 100% delle ultime partite di entrambe. Quota di mercato 1.74."
+      "nota": "Over 2.5 nel 86% delle ultime partite di entrambe. Quota di mercato 1.74."
     },
     {
       "partita": "Wolves - Portsmouth",
@@ -120,8 +120,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.71,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 68% delle ultime partite di entrambe. Quota di mercato 1.71."
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 82% delle ultime partite di entrambe. Quota di mercato 1.71."
     },
     {
       "partita": "Cambridge - Wycombe",
@@ -171,7 +171,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.43,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 76% delle ultime partite di entrambe. Quota di mercato 1.43."
+      "nota": "Over 2.5 nel 79% delle ultime partite di entrambe. Quota di mercato 1.43."
     },
     {
       "partita": "Huddersfield - Peterboro",
@@ -191,7 +191,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.39,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.39."
+      "nota": "Over 2.5 nel 87% delle ultime partite di entrambe. Quota di mercato 1.39."
     },
     {
       "partita": "Luton - Barnsley",
@@ -241,7 +241,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.82,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.82."
+      "nota": "Over 2.5 nel 86% delle ultime partite di entrambe. Quota di mercato 1.82."
     },
     {
       "partita": "Oxford - Wigan",
@@ -300,8 +300,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.47,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 74% delle ultime partite di entrambe. Quota di mercato 1.47."
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 78% delle ultime partite di entrambe. Quota di mercato 1.47."
     },
     {
       "partita": "Barnet - Swindon",
@@ -321,7 +321,7 @@
       "pronostico": "2 (vittoria Salford)",
       "quota": 2.54,
       "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Salford (media punti 2.0 vs 0.75 nelle ultime 4/5 partite). Quota di mercato 2.54."
+      "nota": "Forma recente nettamente a favore del Salford (media punti 2.17 vs 0.6 nelle ultime 5/6 partite). Quota di mercato 2.54."
     },
     {
       "partita": "Bristol Rvs - Salford",
@@ -347,11 +347,21 @@
       "partita": "Cheltenham - Fleetwood Town",
       "campionato": "League Two",
       "data": "20/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Cheltenham)",
+      "quota": 3.08,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Cheltenham (media punti 1.88 vs 0.57 nelle ultime 8/7 partite). Quota di mercato 3.08."
+    },
+    {
+      "partita": "Cheltenham - Fleetwood Town",
+      "campionato": "League Two",
+      "data": "20/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.8,
       "confidenza": "Media",
-      "nota": "Over 2.5 nel 69% delle ultime partite di entrambe. Quota di mercato 1.8."
+      "nota": "Over 2.5 nel 72% delle ultime partite di entrambe. Quota di mercato 1.8."
     },
     {
       "partita": "Cheltenham - Fleetwood Town",
@@ -370,8 +380,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.62,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 76% delle ultime partite di entrambe. Quota di mercato 1.62."
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 66% delle ultime partite di entrambe. Quota di mercato 1.62."
     },
     {
       "partita": "Chesterfield - Colchester",
@@ -391,7 +401,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.82,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 79% delle ultime partite di entrambe. Quota di mercato 1.82."
+      "nota": "Over 2.5 nel 83% delle ultime partite di entrambe. Quota di mercato 1.82."
     },
     {
       "partita": "Crawley Town - Shrewsbury",
@@ -441,7 +451,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.7,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.7."
+      "nota": "Over 2.5 nel 92% delle ultime partite di entrambe. Quota di mercato 1.7."
     },
     {
       "partita": "Rochdale - Grimsby",
@@ -461,7 +471,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.89,
       "confidenza": "Media",
-      "nota": "Over 2.5 nel 69% delle ultime partite di entrambe. Quota di mercato 1.89."
+      "nota": "Over 2.5 nel 73% delle ultime partite di entrambe. Quota di mercato 1.89."
     },
     {
       "partita": "Rotherham - Newport County",
@@ -510,8 +520,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.91,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 65% delle ultime partite di entrambe. Quota di mercato 1.91."
+      "confidenza": "Alta",
+      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.91."
     },
     {
       "partita": "Levante - Ath Bilbao",
