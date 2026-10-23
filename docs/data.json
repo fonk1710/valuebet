@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T12:53:37.365284+00:00",
+  "generated_at": "2026-10-23T12:32:19.341867+00:00",
   "coverage_note": "Quote reali gratuite da football-data.co.uk: Premier League, Championship, League One, League Two, National League, Bundesliga, 2.Bundesliga, Serie A, Serie B, LaLiga, LaLiga 2, Ligue 1, Ligue 2, Eredivisie, Belgio, Irlanda, Norvegia, Svezia. Non coperti gratuitamente: Serie C, Eerste Divisie (Olanda 2).",
   "odds_note": "Le quote 'Avg' sono la media tra piu' bookmaker, raccolte il venerdi' per il turno del weekend e il martedi' per gli infrasettimanali. Per Irlanda, Norvegia e Svezia mostriamo solo il favorito di mercato: nessuno storico gratuito disponibile per calcolare segnali.",
   "signals": [
@@ -532,6 +532,216 @@
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Bohemians - Shelbourne",
+      "campionato": "Irlanda - Premier Division",
+      "data": "23/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Bohemians)",
+      "quota": 1.6,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Derry City - Dundalk",
+      "campionato": "Irlanda - Premier Division",
+      "data": "23/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Derry City)",
+      "quota": 1.75,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Galway - St. Patricks",
+      "campionato": "Irlanda - Premier Division",
+      "data": "23/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 2 (vittoria St. Patricks)",
+      "quota": 1.58,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Waterford - Drogheda",
+      "campionato": "Irlanda - Premier Division",
+      "data": "23/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Waterford)",
+      "quota": 1.7,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Shamrock Rovers - Sligo Rovers",
+      "campionato": "Irlanda - Premier Division",
+      "data": "23/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Shamrock Rovers)",
+      "quota": 1.14,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Bodo/Glimt - Valerenga",
+      "campionato": "Norvegia - Eliteserien",
+      "data": "24/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Bodo/Glimt)",
+      "quota": 1.13,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "HamKam - Rosenborg",
+      "campionato": "Norvegia - Eliteserien",
+      "data": "24/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 2 (vittoria Rosenborg)",
+      "quota": 1.57,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Viking - Tromso",
+      "campionato": "Norvegia - Eliteserien",
+      "data": "25/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Viking)",
+      "quota": 1.48,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Kristiansund - KFUM Oslo",
+      "campionato": "Norvegia - Eliteserien",
+      "data": "25/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Kristiansund)",
+      "quota": 2.26,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Lillestrom - Brann",
+      "campionato": "Norvegia - Eliteserien",
+      "data": "25/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Lillestrom)",
+      "quota": 2.24,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Sarpsborg 08 - Aalesund",
+      "campionato": "Norvegia - Eliteserien",
+      "data": "25/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Sarpsborg 08)",
+      "quota": 1.81,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Start - Sandefjord",
+      "campionato": "Norvegia - Eliteserien",
+      "data": "25/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Start)",
+      "quota": 2.08,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Molde - Fredrikstad",
+      "campionato": "Norvegia - Eliteserien",
+      "data": "25/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Molde)",
+      "quota": 1.45,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Elfsborg - Malmo FF",
+      "campionato": "Svezia - Allsvenskan",
+      "data": "23/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Elfsborg)",
+      "quota": 2.0,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Vasteras SK - Halmstad",
+      "campionato": "Svezia - Allsvenskan",
+      "data": "23/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Vasteras SK)",
+      "quota": 1.63,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Hacken - Degerfors",
+      "campionato": "Svezia - Allsvenskan",
+      "data": "24/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Hacken)",
+      "quota": 1.39,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Sirius - AIK",
+      "campionato": "Svezia - Allsvenskan",
+      "data": "24/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Sirius)",
+      "quota": 1.55,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Djurgarden - Orgryte",
+      "campionato": "Svezia - Allsvenskan",
+      "data": "24/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Djurgarden)",
+      "quota": 1.14,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Kalmar - Brommapojkarna",
+      "campionato": "Svezia - Allsvenskan",
+      "data": "24/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria Kalmar)",
+      "quota": 1.84,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "GAIS - Goteborg",
+      "campionato": "Svezia - Allsvenskan",
+      "data": "25/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 1 (vittoria GAIS)",
+      "quota": 2.27,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
+    },
+    {
+      "partita": "Mjallby - Hammarby",
+      "campionato": "Svezia - Allsvenskan",
+      "data": "25/10/2026",
+      "mercato": "1X2",
+      "pronostico": "Favorita di mercato: 2 (vittoria Hammarby)",
+      "quota": 1.47,
+      "confidenza": "Bassa",
+      "nota": "Solo quadro di mercato: per questo campionato non e' disponibile uno storico gratuito per i segnali statistici."
     }
   ]
 }
