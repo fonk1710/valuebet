@@ -89,3 +89,10 @@ forma recente, non un modello predittivo validato.
 - **Sistemi** integrali (2 su 3, 3 su 4, 3 su 5, 4 su 5, 4 su 6) con probabilità di incasso, ritorno minimo/massimo ed EV calcolati esattamente (eventi supposti indipendenti). Non sono ancora registrati nella scheda Verifica.
 
 Non ancora implementati: Serie C e Eerste Divisie (non disponibili gratis).
+
+## Novità (v3)
+
+- **Backtest** (`engine/backtest.py`): simulazione walk-forward sulle ultime 4 stagioni (il modello conosce solo le partite precedenti), puntata fissa su ogni value bet. Mostra ROI con intervallo di confidenza al 95%, qualità delle probabilità (Brier) contro il mercato, ROI al variare di peso del mercato e soglia di valore, e dettaglio per mercato/stagione/campionato. Si ricalcola una volta al mese dentro `analyze.py` (qualche minuto) e il risultato sta in `data.json` sotto `backtest`. Le quote sono medie di mercato della fonte, non quelle reali di un bookmaker.
+- **Movimento quote**: per ogni segnale registrato si tiene l'ultima quota vista prima della partita (`q_last`) e la scheda Verifica mostra quanto spesso la quota scende dopo il segnale.
+- **Handicap asiatico** (linee intere e con mezzo punto; i quarti sono saltati): segnali value con rimborso gestito. Non entra in schedine e sistemi.
+- **Limiti di gioco** nello Storico: spesa massima e perdita massima mensili, avvisi e conferma prima di registrare giocate oltre il limite (salvati nel browser).

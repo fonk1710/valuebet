@@ -258,14 +258,67 @@ def outcome_probs(lam_h, lam_a, max_goals=10):
     }
 
 
-def kelly_fraction(p, odds, cap):
-    """Kelly frazionato: 0 se il valore atteso non e' positivo."""
+def kelly_fraction(p, odds, cap, p_lose=None):
+    """Kelly frazionato: 0 se il valore atteso non e' positivo.
+    p_lose serve quando esiste il rimborso (handicap con linea intera)."""
     if not odds or odds <= 1 or p <= 0:
         return 0.0
-    f = (p * odds - 1) / (odds - 1)
+    lose = (1 - p) if p_lose is None else p_lose
+    f = (p * (odds - 1) - lose) / (odds - 1)
     if f <= 0:
         return 0.0
     return round(min(f * KELLY_FRACTION, cap), 4)
+
+
+# ----------------------------------------------------------------------------
+# Handicap asiatico (solo linee intere o con mezzo punto; niente quarti)
+# ----------------------------------------------------------------------------
+
+AH_KEYS = ("AHH", "AHA")
+
+
+def fmt_line(x):
+    return "0" if x == 0 else f"{x:+g}"
+
+
+def ah_line_value(text):
+    """Linea dell'handicap per la squadra di casa, o None se assente/non supportata."""
+    try:
+        v = float(text)
+    except (TypeError, ValueError):
+        return None
+    return v if (v * 2) == int(v * 2) else None
+
+
+def goal_diff_probs(lam_h, lam_a, max_goals=10):
+    dist = {}
+    for i in range(max_goals + 1):
+        pi = poisson_pmf(i, lam_h)
+        for j in range(max_goals + 1):
+            d = i - j
+            dist[d] = dist.get(d, 0.0) + pi * poisson_pmf(j, lam_a)
+    tot = sum(dist.values())
+    return {d: v / tot for d, v in dist.items()}
+
+
+def ah_win_push_lose(dist, line, side):
+    """side 'AHH' = casa con handicap `line`; 'AHA' = trasferta con handicap opposto."""
+    pw = pp = pl = 0.0
+    for d, pr in dist.items():
+        adj = d + line if side == "AHH" else -(d + line)
+        if adj > 0:
+            pw += pr
+        elif adj == 0:
+            pp += pr
+        else:
+            pl += pr
+    return pw, pp, pl
+
+
+def ah_outcome(key, line, fh, fa):
+    """'W', 'L' oppure 'V' (rimborso) per un handicap asiatico."""
+    adj = (fh - fa + line) if key == "AHH" else -(fh - fa + line)
+    return "W" if adj > 0 else "V" if adj == 0 else "L"
 
 
 # ----------------------------------------------------------------------------
@@ -279,6 +332,8 @@ LABELS = {
     "O25": ("Over/Under", "Over 2.5"),
     "U25": ("Over/Under", "Under 2.5"),
     "BTTS": ("GG/NG", "Gol (GG)"),
+    "AHH": ("Handicap", "{home} {line} (handicap asiatico)"),
+    "AHA": ("Handicap", "{away} {aline} (handicap asiatico)"),
 }
 CONF_DOWN = {"Alta": "Media", "Media": "Bassa", "Bassa": "Bassa"}
 
@@ -310,7 +365,9 @@ def analyze_fixture(row, code, league_name, form, model, played, today):
     odds = {
         "H": num(row.get("AvgH")), "D": num(row.get("AvgD")), "A": num(row.get("AvgA")),
         "O25": num(row.get("Avg>2.5")), "U25": num(row.get("Avg<2.5")),
+        "AHH": num(row.get("AvgAHH")), "AHA": num(row.get("AvgAHA")),
     }
+    ah_line = ah_line_value(row.get("AHh"))
 
     # 1) segnali statistici dalla forma recente
     stat = {}   # key -> (confidenza, motivo)
@@ -352,6 +409,15 @@ def analyze_fixture(row, code, league_name, form, model, played, today):
                 p = (1 - MARKET_WEIGHT) * pm[key] + MARKET_WEIGHT * pk[key]
                 est[key] = {"p": p, "pm": pm[key], "pk": pk[key], "ev": p * odds[key] - 1}
         est["BTTS"] = {"p": pm["BTTS"], "pm": pm["BTTS"], "pk": None, "ev": None}
+        if ah_line is not None and odds["AHH"] and odds["AHA"]:
+            dist = goal_diff_probs(lam_h, lam_a)
+            mk = dict(zip(AH_KEYS, devig([odds["AHH"], odds["AHA"]])))
+            for key in AH_KEYS:
+                pw, pp, pl = ah_win_push_lose(dist, ah_line, key)
+                pw_b = (1 - MARKET_WEIGHT) * pw + MARKET_WEIGHT * mk[key] * (1 - pp)
+                pl_b = max(0.0, 1 - pp - pw_b)
+                est[key] = {"p": pw_b, "pm": pw, "pk": mk[key] * (1 - pp), "pl": pl_b,
+                            "ev": pw_b * (odds[key] - 1) - pl_b}
 
     # 3) elenco finale: statistici + value (il pareggio non viene mai proposto)
     keys = set(stat) | {
@@ -362,6 +428,8 @@ def analyze_fixture(row, code, league_name, form, model, played, today):
     signals = []
     for key in sorted(keys):
         mercato, pron_tpl = LABELS[key]
+        line_txt = fmt_line(ah_line) if ah_line is not None else ""
+        aline_txt = fmt_line(-ah_line) if ah_line is not None else ""
         e = est.get(key)
         is_value = bool(e and e["ev"] is not None and e["ev"] >= VALUE_MIN_EV and e["p"] >= VALUE_MIN_P)
         in_stat = key in stat
@@ -370,7 +438,12 @@ def analyze_fixture(row, code, league_name, form, model, played, today):
         if in_stat:
             parts.append(stat[key][1])
         if e:
-            if e["pk"] is not None:
+            if key in AH_KEYS:
+                parts.append(
+                    f"Probabilita' di vincere la puntata {e['p']:.0%} (modello {e['pm']:.0%}); "
+                    f"quota {odds[key]:.2f} → valore atteso {e['ev']:+.0%}. Con linea intera il pareggio rimborsa."
+                )
+            elif e["pk"] is not None:
                 parts.append(
                     f"Stima {e['p']:.0%} (modello {e['pm']:.0%}, mercato {e['pk']:.0%}) · "
                     f"quota {odds[key]:.2f} → valore atteso {e['ev']:+.0%}."
@@ -397,17 +470,34 @@ def analyze_fixture(row, code, league_name, form, model, played, today):
             "campionato": league_name, "lg": code,
             "data": row.get("Date", ""), "day": day.isoformat(),
             "mercato": mercato, "key": key,
-            "pronostico": pron_tpl.format(home=home, away=away),
+            "pronostico": pron_tpl.format(home=home, away=away, line=line_txt, aline=aline_txt),
+            "line": ah_line if key in AH_KEYS else None,
             "quota": quota,
             "p": round(e["p"], 3) if e else None,
             "pm": round(e["pm"], 3) if e else None,
             "pk": round(e["pk"], 3) if e and e["pk"] is not None else None,
             "ev": round(e["ev"], 3) if e and e["ev"] is not None else None,
-            "kelly": kelly_fraction(e["p"], quota, cap) if e and e["ev"] is not None and quota else 0.0,
+            "kelly": kelly_fraction(e["p"], quota, cap, e.get("pl")) if e and e["ev"] is not None and quota else 0.0,
             "value": is_value, "tipo": tipo, "confidenza": conf,
             "nota": " ".join(parts),
         })
     return signals
+
+
+def fixture_odds(row, today):
+    """Quote correnti di una partita futura, per chiave dell'id del registro."""
+    home, away = row.get("HomeTeam"), row.get("AwayTeam")
+    day = parse_day(row.get("Date"))
+    if not home or not away or day is None or day < today:
+        return {}
+    cols = {"H": "AvgH", "D": "AvgD", "A": "AvgA", "O25": "Avg>2.5", "U25": "Avg<2.5",
+            "AHH": "AvgAHH", "AHA": "AvgAHA"}
+    out = {}
+    for key, col in cols.items():
+        q = num(row.get(col))
+        if q and (key not in AH_KEYS or ah_line_value(row.get("AHh")) is not None):
+            out[f"{day.isoformat()}|{home}|{away}|{key}"] = q
+    return out
 
 
 def analyze_extra_leagues(today):
@@ -445,6 +535,8 @@ def pick_legs(signals, today):
     horizon = today + timedelta(days=SLIP_WINDOW_DAYS)
     pool = []
     for s in signals:
+        if s.get("key") in AH_KEYS:      # per l'handicap "p" e' solo la prob. di vincita: fuori da schedine e sistemi
+            continue
         if not (s.get("key") and s.get("quota") and s.get("p") is not None and s.get("ev") is not None):
             continue
         day = parse_day(s["day"])
@@ -549,7 +641,36 @@ def load_previous_history(path):
     return {"signals": hist.get("signals", []), "slips": hist.get("slips", [])}
 
 
-def update_history(history, signals, slips, results_by_league, today):
+BACKTEST_REFRESH_DAYS = 30
+
+
+def load_previous_backtest(path):
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f).get("backtest")
+    except (OSError, ValueError):
+        return None
+
+
+def get_backtest(previous, today):
+    """Riusa il backtest salvato se e' recente; altrimenti lo rifa (impiega qualche minuto)."""
+    if previous and previous.get("generated_at"):
+        try:
+            age = (today - datetime.fromisoformat(previous["generated_at"]).date()).days
+            if age < BACKTEST_REFRESH_DAYS:
+                return previous
+        except ValueError:
+            pass
+    try:
+        import backtest  # noqa: PLC0415
+        print("Backtest sulle stagioni passate (una volta al mese)...")
+        return backtest.run(today, list(MAIN_LEAGUES), datetime.now(timezone.utc).isoformat())
+    except Exception as exc:  # noqa: BLE001
+        print(f"  Backtest non riuscito: {exc}")
+        return previous
+
+
+def update_history(history, signals, slips, results_by_league, today, current_odds=None):
     played = {}
     for code, results in results_by_league.items():
         idx = played.setdefault(code, {})
@@ -566,9 +687,17 @@ def update_history(history, signals, slips, results_by_league, today):
         result = played.get(entry["lg"], {}).get((entry["home"], entry["away"], day))
         if result:
             entry["score"] = f"{result[0]}-{result[1]}"
-            entry["status"] = "W" if outcome_for_key(entry["key"], *result) else "L"
+            if entry["key"] in AH_KEYS:
+                entry["status"] = ah_outcome(entry["key"], entry["line"], *result)
+            else:
+                entry["status"] = "W" if outcome_for_key(entry["key"], *result) else "L"
         elif (today - day).days > PENDING_VOID_AFTER_DAYS:
             entry["status"] = "V"
+
+    # 1b) movimento delle quote: ultima quota vista prima della partita
+    for entry in history["signals"]:
+        if entry["status"] == "P" and current_odds and entry["id"] in current_odds:
+            entry["q_last"] = current_odds[entry["id"]]
 
     # 2) registra i segnali nuovi (la prima quota pubblicata resta quella valida)
     known = {e["id"] for e in history["signals"]}
@@ -579,7 +708,8 @@ def update_history(history, signals, slips, results_by_league, today):
             "id": s["id"], "day": s["day"], "lg": s["lg"], "campionato": s["campionato"],
             "home": s["home"], "away": s["away"], "key": s["key"],
             "mercato": s["mercato"], "pronostico": s["pronostico"],
-            "quota": s["quota"], "p": s["p"], "tipo": s["tipo"], "conf": s["confidenza"],
+            "quota": s["quota"], "q_last": s["quota"], "line": s.get("line"),
+            "p": s["p"], "tipo": s["tipo"], "conf": s["confidenza"],
             "status": "P", "score": None,
         })
         known.add(s["id"])
@@ -634,6 +764,10 @@ def main():
     fixtures = fetch_csv(FIXTURES_MAIN_URL)
 
     signals = []
+    current_odds = {}
+    for row in fixtures:
+        if row.get("Div") in MAIN_LEAGUES:
+            current_odds.update(fixture_odds(row, today))
     for code, name in MAIN_LEAGUES.items():
         results = results_by_league[code]
         form = form_stats(results)
@@ -650,7 +784,7 @@ def main():
 
     slips = build_slips(signals, today)
     systems = build_systems(pick_legs(signals, today))
-    history = update_history(load_previous_history(OUTPUT_PATH), signals, slips, results_by_league, today)
+    history = update_history(load_previous_history(OUTPUT_PATH), signals, slips, results_by_league, today, current_odds)
 
     output = {
         "schema": 2,
@@ -676,6 +810,7 @@ def main():
         "slips": slips,
         "systems": systems,
         "history": history,
+        "backtest": get_backtest(load_previous_backtest(OUTPUT_PATH), today),
     }
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)

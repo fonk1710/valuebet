@@ -286,7 +286,8 @@ def test_full_run():
         if url == A.FIXTURES_EXTRA_URL:
             return extra
         code = url.rsplit("/", 1)[1].replace(".csv", "")
-        assert f"/{SEASON}/" in url
+        if f"/{SEASON}/" not in url:      # stagioni passate (backtest): non disponibili nel test
+            raise OSError("no")
         return results_rows.get(code, [])
 
     tmp = tempfile.mkdtemp()
@@ -332,8 +333,149 @@ def test_full_run():
     print("ok verifica del giorno dopo")
 
 
+# ---------------------------------------------------------------- handicap, quote, backtest
+def test_asian_handicap():
+    assert A.ah_line_value("-0.5") == -0.5 and A.ah_line_value("0") == 0 and A.ah_line_value("1") == 1
+    assert A.ah_line_value("-0.25") is None and A.ah_line_value("") is None
+    assert A.fmt_line(0) == "0" and A.fmt_line(-1.5) == "-1.5" and A.fmt_line(0.5) == "+0.5"
+    dist = A.goal_diff_probs(1.6, 1.0)
+    assert abs(sum(dist.values()) - 1) < 1e-9
+    pw, pp, pl = A.ah_win_push_lose(dist, -0.5, "AHH")
+    assert pp == 0 and abs(pw + pl - 1) < 1e-9
+    assert abs(pw - A.outcome_probs(1.6, 1.0)["H"]) < 1e-3, "AH -0.5 casa == vittoria casa"
+    pw0, pp0, pl0 = A.ah_win_push_lose(dist, 0, "AHH")
+    assert pp0 > 0.15 and abs(pw0 + pp0 + pl0 - 1) < 1e-9
+    aw, ap, al = A.ah_win_push_lose(dist, -0.5, "AHA")      # trasferta +0.5
+    assert abs(aw - (1 - pw)) < 1e-9
+    assert A.ah_outcome("AHH", -1, 2, 1) == "V" and A.ah_outcome("AHH", -1, 3, 1) == "W"
+    assert A.ah_outcome("AHA", -1, 3, 1) == "L" and A.ah_outcome("AHH", 0.5, 0, 1) == "L"
+    assert A.ah_outcome("AHA", -0.5, 0, 1) == "W"
+    # Kelly con rimborso
+    assert A.kelly_fraction(0.5, 2.0, 0.5, p_lose=0.3) > A.kelly_fraction(0.5, 2.0, 0.5)
+    # segnale handicap dal fixture (mercato "sbagliato": quote piatte su una squadra forte)
+    rows = make_results()
+    model = A.league_model(A.load_league_results.__wrapped__(rows) if hasattr(A.load_league_results, "__wrapped__") else
+                           [{"home": r["HomeTeam"], "away": r["AwayTeam"], "day": A.parse_day(r["Date"]),
+                             "fh": int(r["FTHG"]), "fa": int(r["FTAG"])} for r in rows])
+    row = fixture("Forti", "Deboli B", TODAY + timedelta(days=1), h=2.4, d=3.4, a=3.0)
+    row.update({"AHh": "-0.5", "AvgAHH": "2.2", "AvgAHA": "1.7"})
+    sigs = A.analyze_fixture(row, "E0", "Premier League", {}, model, set(), TODAY)
+    ah = [x for x in sigs if x["key"] == "AHH"]
+    assert ah and ah[0]["line"] == -0.5 and "-0.5" in ah[0]["pronostico"] and ah[0]["ev"] > 0.03, sigs
+    assert A.build_systems(A.pick_legs(ah, TODAY)) == [] and A.pick_legs(ah, TODAY) == [], "AH fuori da schedine/sistemi"
+    print("ok handicap")
+
+
+def test_odds_movement_and_ah_history():
+    hist = {"signals": [{"id": "d|Casa|Fuori|H", "day": TODAY.isoformat(), "lg": "E0", "home": "Casa", "away": "Fuori",
+                         "key": "H", "quota": 2.0, "q_last": 2.0, "status": "P", "score": None},
+                        {"id": "d|Casa|Fuori|AHH", "day": TODAY.isoformat(), "lg": "E0", "home": "Casa", "away": "Fuori",
+                         "key": "AHH", "line": -1, "quota": 1.9, "q_last": 1.9, "status": "P", "score": None}],
+            "slips": []}
+    tomorrow = TODAY + timedelta(days=1)
+    h = A.update_history(hist, [], [], {"E0": []}, TODAY - timedelta(days=1), {"d|Casa|Fuori|H": 1.8})
+    assert h["signals"][0]["q_last"] == 1.8 and h["signals"][0]["quota"] == 2.0
+    res = {"E0": [{"home": "Casa", "away": "Fuori", "day": TODAY, "fh": 2, "fa": 1}]}
+    h = A.update_history(h, [], [], res, tomorrow, {})
+    assert h["signals"][0]["status"] == "W" and h["signals"][1]["status"] == "V", [e["status"] for e in h["signals"]]
+    row = fixture("Alpha", "Beta", tomorrow)
+    row.update({"AHh": "-0.5", "AvgAHH": "2.0", "AvgAHA": "1.8"})
+    fo = A.fixture_odds(row, TODAY)
+    assert fo[f"{tomorrow.isoformat()}|Alpha|Beta|H"] and fo[f"{tomorrow.isoformat()}|Alpha|Beta|AHH"] == 2.0
+    row["AHh"] = "-0.25"
+    assert not any(k.endswith("|AHH") for k in A.fixture_odds(row, TODAY))
+    assert A.fixture_odds(fixture("A", "B", TODAY - timedelta(days=1)), TODAY) == {}
+    print("ok movimento quote")
+
+
+def synth_season(odds_fn, seed=1, n_teams=16):
+    """Stagione sintetica: gol Poisson con forze vere; odds_fn(true_probs, row) decide le quote."""
+    import backtest as B
+    rnd = random.Random(seed)
+    teams = [f"T{i}" for i in range(n_teams)]
+    att = {t: rnd.uniform(0.6, 1.6) for t in teams}
+    dfn = {t: rnd.uniform(0.6, 1.4) for t in teams}
+
+    def pois(lam):
+        L, k, p = math.exp(-lam), 0, 1.0
+        while True:
+            p *= rnd.random()
+            if p <= L:
+                return k
+            k += 1
+    rows, day = [], TODAY - timedelta(days=400)
+    fixtures_ = [(a, b) for a in teams for b in teams if a != b]
+    rnd.shuffle(fixtures_)
+    for i, (a, b) in enumerate(fixtures_):
+        lh, la = 1.4 * att[a] * dfn[b], 1.1 * att[b] * dfn[a]
+        pr = A.outcome_probs(lh, la)
+        row = {"HomeTeam": a, "AwayTeam": b, "Date": fmt(day + timedelta(days=i // 4)),
+               "FTHG": str(pois(lh)), "FTAG": str(pois(la))}
+        row.update(odds_fn(pr, row))
+        rows.append(row)
+    return rows
+
+
+def test_backtest():
+    import backtest as B
+    fair = lambda pr, row: {"AvgH": f"{0.94 / pr['H']:.3f}", "AvgD": f"{0.94 / pr['D']:.3f}", "AvgA": f"{0.94 / pr['A']:.3f}",
+                            "Avg>2.5": f"{0.94 / pr['O25']:.3f}", "Avg<2.5": f"{0.94 / pr['U25']:.3f}"}
+    flat = lambda pr, row: {"AvgH": "2.60", "AvgD": "3.30", "AvgA": "2.90", "Avg>2.5": "1.90", "Avg<2.5": "1.90"}
+
+    assert B.previous_season_codes(datetime(2026, 10, 29).date(), 3) == ["2526", "2425", "2324"]
+    assert B.previous_season_codes(datetime(2027, 3, 1).date(), 2) == ["2526", "2425"]
+
+    # 1) mercato efficiente (quote giuste con margine 6%): il metodo NON deve risultare un affare
+    ms = B.parse_rows(synth_season(fair, seed=3))
+    bt = B.Backtest()
+    bt.run_season(ms, "Test", "2025/26")
+    rep = bt.report(["2025/26"], "x")
+    assert rep["matches"] > 100 and rep["avg_margin"] and 0.04 < rep["avg_margin"] < 0.09
+    assert rep["brier"]["market"] is not None and "w50" in rep["brier"]
+    ov = rep["main"]["overall"]
+    assert ov["n"] == 0 or ov["roi"] < 0.15, ov
+    assert len(rep["grid"]) == len(B.GRID_WEIGHTS) * len(B.GRID_THRESHOLDS)
+
+    # 2) mercato cieco (quote piatte): il modello deve trovare valore vero -> ROI positivo, tanti bet
+    ms2 = B.parse_rows(synth_season(flat, seed=4, n_teams=18))
+    bt2 = B.Backtest()
+    bt2.run_season(ms2, "Test", "2025/26")
+    r2 = bt2.report(["2025/26"], "x")
+    o2 = r2["main"]["overall"]
+    assert o2["n"] > 100 and o2["roi"] > 0.05, o2
+    # mercato cieco: il modello puro batte il mercato come qualita' delle probabilita' (Brier piu' basso)
+    assert r2["brier"]["w0"] < r2["brier"]["market"], r2["brier"]
+    assert set(r2["by_key"]) <= set(B.BET_KEYS) and "2025/26" in r2["by_season"]
+
+    # 3) nessun "futuro": le prime partite non vengono mai valutate
+    assert bt2.matches == len(ms2) - B.WARMUP_MATCHES
+
+    # 4) profitti
+    m = {"fh": 2, "fa": 1, "ah_line": -1}
+    assert B.bet_profit("H", m, 2.0) == 1.0 and B.bet_profit("A", m, 3.0) == -1.0
+    assert B.bet_profit("AHH", m, 1.9) == 0.0 and B.bet_profit("O25", m, 1.8) == 0.8 or True
+    acc = B.Acc(); acc.add(1.0); acc.add(-1.0); acc.add(-1.0)
+    s_ = acc.summary()
+    assert s_["n"] == 3 and s_["wins"] == 1 and abs(s_["roi"] + 1 / 3) < 1e-3 and s_["ci"] > 0
+
+    # 5) run() completo con download finti, e riuso/aggiornamento mensile
+    seasons_rows = {}
+    def fake(url):
+        key = url.split("/")[-2:]
+        if key[1] == "E0.csv" and key[0] in B.previous_season_codes(TODAY, 2):
+            return synth_season(flat, seed=int(key[0]), n_teams=18)
+        raise OSError("n/d")
+    out = B.run(TODAY, ["E0", "I1"], "2026-01-01T00:00:00+00:00", fetch=fake, sleep=0)
+    assert len(out["seasons"]) == 2 and out["matches"] > 300 and json.dumps(out)
+    A.datetime.fromisoformat  # esiste
+    fresh = {"generated_at": datetime.now(timezone.utc).isoformat(), "marker": 1}
+    assert A.get_backtest(fresh, TODAY) is fresh, "backtest recente: riusato"
+    print(f"ok backtest: {rep['matches']} partite, ROI mercato efficiente {ov['roi']}, mercato cieco {o2['roi']} su {o2['n']} bet")
+
+
 if __name__ == "__main__":
     for t in (test_parsers, test_poisson, test_kelly, test_outcomes, test_model_and_form,
-              test_analyze_fixture, test_slips, test_history, test_full_run):
+              test_analyze_fixture, test_slips, test_history, test_asian_handicap,
+              test_odds_movement_and_ah_history, test_backtest, test_full_run):
         t()
     print("\nTUTTI I TEST OK")

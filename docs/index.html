@@ -96,6 +96,13 @@
   .modal-close { float: right; background: none; border: none; color: #6E8A78; font-size: 18px; cursor: pointer; }
   .total-line { display: flex; justify-content: space-between; font-family: monospace; font-size: 13px; color: #8FA394; margin: 4px 0 14px; }
   .total-line b { color: #D4A537; }
+  .bar { height: 8px; background: #0F2418; border: 1px solid #2A4A34; border-radius: 99px; overflow: hidden; margin-top: 8px; }
+  .bar > i { display: block; height: 100%; background: #D4A537; }
+  .bar.over > i { background: #fca5a5; }
+  .limits { background: #16301F; border: 1px solid #2A4A34; border-radius: 10px; padding: 14px 18px; margin-bottom: 18px; }
+  .limits .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .limits input { margin-top: 4px; }
+  .banner.red { background: rgba(252,165,165,.08); border-color: rgba(252,165,165,.4); color: #fca5a5; }
   .foot { margin-top: 30px; font-size: 11.5px; color: #5C7A67; line-height: 1.6; border-top: 1px solid #1d3a29; padding-top: 14px; }
 </style>
 </head>
@@ -112,6 +119,7 @@
 
   <!-- ============ HOME ============ -->
   <div id="tab-home">
+    <div id="limit-banner"></div>
     <details class="notes" id="notes"><summary>Come leggere i numeri</summary></details>
 
     <div class="row">
@@ -138,6 +146,7 @@
 
   <!-- ============ STORICO ============ -->
   <div id="tab-storico" style="display:none">
+    <div class="limits" id="limits"></div>
     <div class="stats-grid" id="stats-grid"></div>
     <div class="tablewrap" id="chart-wrap" style="display:none"></div>
     <div class="row" style="justify-content:space-between;margin-top:6px">
@@ -387,7 +396,7 @@ function presetFromSlip(sl) {
 }
 
 /* ============================================================ verifica */
-const KEY_LABEL = { H: '1 (vittoria casa)', A: '2 (vittoria trasferta)', O25: 'Over 2.5', U25: 'Under 2.5', BTTS: 'Gol (GG)', D: 'X (pareggio)' };
+const KEY_LABEL = { H: '1 (vittoria casa)', A: '2 (vittoria trasferta)', O25: 'Over 2.5', U25: 'Under 2.5', BTTS: 'Gol (GG)', D: 'X (pareggio)', AHH: 'Handicap asiatico (casa)', AHA: 'Handicap asiatico (trasferta)' };
 const TIPO_LABEL = { value: 'Value (solo modello)', entrambi: 'Statistico + value', statistico: 'Solo statistico' };
 
 function agg(arr) {
@@ -408,11 +417,58 @@ function tableHtml(title, groups, labelFn) {
     '</table></div>';
 }
 
+function oddsMovementHtml(sig) {
+  const rows = sig.filter(e => e.quota && e.q_last);
+  if (!rows.length) return '';
+  const moved = rows.filter(e => Math.abs(e.q_last - e.quota) > 0.005);
+  const better = moved.filter(e => e.q_last < e.quota);       // quota scesa dopo il segnale: avevamo il prezzo migliore
+  const clv = rows.reduce((a, e) => a + (e.quota / e.q_last - 1), 0) / rows.length;
+  return `<h2 class="sec">Movimento delle quote</h2>
+    <div class="note" style="margin:-4px 0 10px">Se dopo un segnale la quota scende, il mercato si è mosso verso la tua scelta: è un buon indizio che il modello ci vedeva giusto, anche prima di sapere il risultato. La fonte aggiorna le quote solo due volte a settimana, quindi molte restano ferme.</div>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-label">Segnali seguiti</div><div class="stat-value">${rows.length}</div><div class="stat-sub">${moved.length} con quota cambiata</div></div>
+      <div class="stat-card"><div class="stat-label">Quota scesa</div><div class="stat-value">${moved.length ? pct(better.length / moved.length) : '–'}</div><div class="stat-sub">${better.length} su ${moved.length} mosse</div></div>
+      <div class="stat-card"><div class="stat-label">Vantaggio medio</div><div class="stat-value ${clv >= 0 ? 'pos' : 'neg'}">${sgn(clv)}</div><div class="stat-sub">quota presa vs ultima</div></div>
+    </div>`;
+}
+
+function backtestHtml(bt) {
+  if (!bt || !bt.matches) return '<div class="empty">Il backtest sulle stagioni passate comparirà dopo la prossima esecuzione del motore (richiede qualche minuto e si aggiorna una volta al mese).</div>';
+  const o = bt.main.overall;
+  let verdict;
+  if (!o.n) verdict = 'Nessuna giocata simulata.';
+  else if (o.roi - o.ci > 0) verdict = `Nel passato il metodo avrebbe guadagnato in modo statisticamente significativo (ROI ${sgn(o.roi)} ± ${(o.ci * 100).toFixed(0)}%). Non è una garanzia per il futuro.`;
+  else if (o.roi + o.ci < 0) verdict = `Nel passato il metodo avrebbe perso in modo significativo (ROI ${sgn(o.roi)} ± ${(o.ci * 100).toFixed(0)}%). Prendi i segnali con molta cautela.`;
+  else verdict = `Risultato non dimostrato: il ROI simulato è ${sgn(o.roi)} ma con un margine di errore di ±${(o.ci * 100).toFixed(0)}%, che include lo zero. Non si può dire né che guadagni né che perda.`;
+  const bt3 = (title, obj, labelFn) => {
+    const rows = Object.entries(obj || {});
+    if (!rows.length) return '';
+    return `<div class="tablewrap"><h3>${esc(title)}</h3><table class="t"><tr><th>Gruppo</th><th>Puntate</th><th>% vinte</th><th>ROI</th><th>±</th></tr>` +
+      rows.map(([k, a]) => `<tr><td>${esc(labelFn ? labelFn(k) : k)}</td><td>${a.n}</td><td>${a.n ? pct(a.wins / a.n) : '–'}</td><td class="${a.roi == null ? '' : a.roi >= 0 ? 'pos' : 'neg'}">${a.roi == null ? 'n/d' : sgn(a.roi)}</td><td>${a.ci == null ? '–' : (a.ci * 100).toFixed(0) + '%'}</td></tr>`).join('') + '</table></div>';
+  };
+  const ws = [...new Set(bt.grid.map(g => g.weight))], ts = [...new Set(bt.grid.map(g => g.threshold))];
+  const grid = `<div class="tablewrap"><h3>ROI al variare delle impostazioni</h3><table class="t"><tr><th>Peso del mercato \\ valore atteso minimo</th>${ts.map(t => `<th>≥ ${(t * 100).toFixed(0)}%</th>`).join('')}</tr>` +
+    ws.map(w => `<tr><td>${(w * 100).toFixed(0)}%${w === bt.main.weight ? ' (in uso)' : ''}</td>${ts.map(t => { const g = bt.grid.find(x => x.weight === w && x.threshold === t); return `<td class="${g.roi == null ? '' : g.roi >= 0 ? 'pos' : 'neg'}">${g.roi == null ? 'n/d' : sgn(g.roi)} <span class="meta">(${g.n})</span></td>`; }).join('')}</tr>`).join('') + '</table></div>';
+  const br = bt.brier || {};
+  const brier = br.market == null ? '' : `<div class="tablewrap"><h3>Qualità delle probabilità 1X2 (errore medio: più basso è meglio)</h3><table class="t"><tr><th>Stima</th><th>Errore</th></tr>
+    <tr><td>Solo mercato (quote senza margine)</td><td>${br.market}</td></tr>
+    ${Object.entries(br).filter(([k]) => k !== 'market').map(([k, v]) => `<tr><td>Modello + mercato, peso mercato ${k.slice(1)}%${Number(k.slice(1)) === bt.main.weight * 100 ? ' (in uso)' : ''}</td><td class="${v < br.market ? 'pos' : 'neg'}">${v}</td></tr>`).join('')}</table>
+    <div class="note" style="padding:4px 8px 8px">Se il modello non batte il mercato su questo errore, difficilmente troverà valore vero. Margine medio dei bookmaker: ${bt.avg_margin == null ? 'n/d' : pct(bt.avg_margin, 1)}.</div></div>`;
+  return `<div class="banner">${esc(verdict)}</div>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-label">Partite simulate</div><div class="stat-value">${bt.matches}</div><div class="stat-sub">${esc((bt.seasons || []).join(', '))}</div></div>
+      <div class="stat-card"><div class="stat-label">Value bet simulati</div><div class="stat-value">${o.n}</div><div class="stat-sub">${o.n ? pct(o.wins / o.n) + ' vinti' : ''}</div></div>
+      <div class="stat-card"><div class="stat-label">ROI (1 unità a puntata)</div><div class="stat-value ${o.roi == null ? '' : o.roi >= 0 ? 'pos' : 'neg'}">${o.roi == null ? 'n/d' : sgn(o.roi)}</div><div class="stat-sub">± ${o.ci == null ? '–' : (o.ci * 100).toFixed(0) + '%'} (95%)</div></div>
+    </div>` + brier + grid + bt3('Per mercato', bt.by_key, k => KEY_LABEL[k] || k) + bt3('Per stagione', bt.by_season) + bt3('Per fascia di valore atteso', bt.by_bucket) + bt3('Per campionato', bt.by_lg) +
+    `<div class="note">${esc(bt.note || '')}</div>`;
+}
+
 function renderVerifica() {
   const el = $('#tab-verifica');
   const h = DATA && DATA.history;
   if (!h || !(h.signals || []).length) {
-    el.innerHTML = '<div class="empty">Il tabellone si riempie da solo: dal prossimo aggiornamento il motore registra ogni segnale pubblicato e, a partita finita, controlla se è uscito.<br>Dopo qualche settimana vedrai qui quanto funziona davvero ciascun tipo di segnale.</div>';
+    el.innerHTML = '<div class="empty">Il tabellone si riempie da solo: dal prossimo aggiornamento il motore registra ogni segnale pubblicato e, a partita finita, controlla se è uscito.<br>Dopo qualche settimana vedrai qui quanto funziona davvero ciascun tipo di segnale.</div>' +
+      '<h2 class="sec">Backtest: come sarebbe andata negli anni scorsi</h2>' + backtestHtml(DATA && DATA.backtest);
     return;
   }
   const sig = h.signals, slips = h.slips || [];
@@ -442,12 +498,14 @@ function renderVerifica() {
   });
   if (slRows.length) html += `<div class="tablewrap"><h3>Schedine consigliate</h3><table class="t"><tr><th>Tipo</th><th>Giocate</th><th>Vinte</th><th>% vinte</th><th>Attesa</th><th>ROI</th></tr>${slRows.join('')}</table></div>`;
 
+  html += oddsMovementHtml(sig);
   const recent = [...done].sort((a, b) => b.day.localeCompare(a.day)).slice(0, 15);
   html += '<h2 class="sec">Ultime verificate</h2>' + recent.map(e => `
     <div class="card" style="padding:10px 14px"><div class="card-top" style="margin:0">
       <div><div class="match" style="font-size:14px">${esc(e.home)} - ${esc(e.away)} <span class="meta">${esc(e.score || '')}</span></div>
       <div class="meta">${esc(e.campionato || '')} · ${esc(e.day)} · ${esc(e.pronostico)}${e.quota ? ' @ ' + Number(e.quota).toFixed(2) : ''}</div></div>
       <span class="pill ${e.status}">${e.status === 'W' ? 'uscita' : 'non uscita'}</span></div></div>`).join('');
+  html += '<h2 class="sec">Backtest: come sarebbe andata negli anni scorsi</h2>' + backtestHtml(DATA && DATA.backtest);
   el.innerHTML = html;
 }
 
@@ -498,7 +556,46 @@ function chartSvg(bets) {
     <div class="stat-sub" style="padding:0 8px 6px">Ora: <b class="${cum >= 0 ? 'pos' : 'neg'}">${cum >= 0 ? '+' : ''}${fmtEuro(cum)}</b></div>`;
 }
 
+const LIMITS_KEY = 'schedina-limits';
+const getLimits = () => Object.assign({ budget: 0, loss: 0 }, lsGet(LIMITS_KEY, {}));
+function monthStats() {
+  const ym = isoLocal(new Date()).slice(0, 7);
+  const bets = loadBets().filter(b => String(b.data || '').slice(0, 7) === ym);
+  const spent = bets.reduce((a, b) => a + (Number(b.importo) || 0), 0);
+  const net = bets.reduce((a, b) => a + profitto(b), 0);
+  return { spent, loss: Math.max(0, -net), net };
+}
+function limitState() {
+  const L = getLimits(), m = monthStats();
+  return { L, m, overBudget: L.budget > 0 && m.spent >= L.budget, overLoss: L.loss > 0 && m.loss >= L.loss,
+    nearBudget: L.budget > 0 && m.spent >= 0.8 * L.budget, nearLoss: L.loss > 0 && m.loss >= 0.8 * L.loss };
+}
+function renderLimits() {
+  const { L, m } = limitState();
+  const bar = (v, max) => max > 0 ? `<div class="bar ${v >= max ? 'over' : ''}"><i style="width:${Math.min(100, v / max * 100).toFixed(0)}%"></i></div>` : '';
+  $('#limits').innerHTML = `<div style="font-weight:600;margin-bottom:10px">Limiti di gioco del mese</div><div class="cols">
+    <div><label class="field-label">Spesa massima (€)</label><input type="number" min="0" step="10" id="lim-budget" value="${L.budget || ''}" placeholder="es. 100" />
+      <div class="stat-sub" style="margin-top:6px">Puntato questo mese: <b>${fmtEuro(m.spent)}</b>${L.budget ? ' su ' + fmtEuro(L.budget) : ''}</div>${bar(m.spent, L.budget)}</div>
+    <div><label class="field-label">Perdita massima (€)</label><input type="number" min="0" step="10" id="lim-loss" value="${L.loss || ''}" placeholder="es. 50" />
+      <div class="stat-sub" style="margin-top:6px">Perdita netta del mese: <b>${fmtEuro(m.loss)}</b>${L.loss ? ' su ' + fmtEuro(L.loss) : ''}</div>${bar(m.loss, L.loss)}</div></div>
+    <div class="note" style="margin-top:10px">Conta le giocate con data nel mese in corso. Raggiunto un limite, il sito ti avvisa e ti chiede conferma prima di registrare altre giocate. Decidi i limiti adesso, quando sei lucido, e rispettali.</div>`;
+  renderLimitBanner();
+}
+function renderLimitBanner() {
+  const st = limitState(), el = $('#limit-banner');
+  if (st.overBudget || st.overLoss) el.innerHTML = `<div class="banner red">Hai raggiunto il tuo limite mensile (${st.overBudget ? 'spesa ' + fmtEuro(st.m.spent) + ' su ' + fmtEuro(st.L.budget) : 'perdita ' + fmtEuro(st.m.loss) + ' su ' + fmtEuro(st.L.loss)}). Per questo mese è meglio fermarsi.</div>`;
+  else if (st.nearBudget || st.nearLoss) el.innerHTML = `<div class="banner">Sei oltre l'80% di un tuo limite mensile (spesa ${fmtEuro(st.m.spent)}, perdita ${fmtEuro(st.m.loss)}).</div>`;
+  else el.innerHTML = '';
+}
+$('#limits').addEventListener('change', e => {
+  const L = getLimits();
+  if (e.target.id === 'lim-budget') L.budget = Math.max(0, Number(e.target.value) || 0);
+  if (e.target.id === 'lim-loss') L.loss = Math.max(0, Number(e.target.value) || 0);
+  lsSet(LIMITS_KEY, L); renderLimits();
+});
+
 function renderStorico() {
+  renderLimits();
   const bets = loadBets();
   const s = betStats(bets);
   const pending = bets.filter(b => b.esito === 'in_corso').length;
@@ -628,6 +725,10 @@ $('#modal-root').addEventListener('click', e => {
   else if (act === 'save') {
     const ok = M.selezioni.every(s => s.squadre.trim() && Number(s.quota) > 0) && Number(M.importo) > 0;
     if (!ok) { alert('Compila squadre, quote e importo per salvare.'); return; }
+    const st = limitState(), amount = Number(M.importo) || 0;
+    if (st.overLoss || st.overBudget || (st.L.budget > 0 && st.m.spent + amount > st.L.budget)) {
+      if (!confirm('Questa giocata supera un limite mensile che ti sei dato (spesa ' + fmtEuro(st.m.spent + amount) + (st.L.budget ? ' su ' + fmtEuro(st.L.budget) : '') + '). Vuoi registrarla comunque?')) return;
+    }
     const bets = loadBets();
     bets.unshift({ id: uid(), tipo: M.tipo, campionato: M.campionato, data: M.data, importo: M.importo, esito: 'in_corso', selezioni: M.selezioni });
     saveBets(bets); M = null; renderModal(); renderStorico(); switchTab('storico');
