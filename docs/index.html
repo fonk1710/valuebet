@@ -6,81 +6,97 @@
 <title>SchedinaAnalisi</title>
 <style>
   * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: #0F2418;
-    color: #EDEAE0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
-    padding: 24px 16px 90px;
-  }
-  .wrap { max-width: 880px; margin: 0 auto; }
-  h1 {
-    font-family: 'Georgia', serif;
-    font-size: 40px;
-    letter-spacing: 0.02em;
-    margin: 0;
-  }
+  body { margin: 0; background: #0F2418; color: #EDEAE0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif; padding: 24px 16px 70px; }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  h1 { font-family: Georgia, serif; font-size: 40px; letter-spacing: 0.02em; margin: 0; }
   h1 span { color: #D4A537; }
+  h2.sec { font-family: Georgia, serif; font-size: 21px; margin: 26px 0 12px; }
   .sub { color: #6E8A78; font-size: 12px; font-family: monospace; margin-top: 6px; }
+  .sub .warn { color: #fcd34d; }
 
   .tabs { display: flex; gap: 4px; background: #16301F; border: 1px solid #2A4A34; border-radius: 10px; padding: 4px; width: fit-content; margin: 22px 0; }
   .tabs button { background: transparent; border: none; color: #8FA394; padding: 9px 20px; border-radius: 7px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; }
   .tabs button.active { background: #D4A537; color: #0F2418; }
 
-  .notes { background: #16301F; border: 1px solid #2A4A34; border-radius: 10px; padding: 14px 16px; margin: 0 0 24px; font-size: 13px; color: #8FA394; line-height: 1.6; }
-  .notes b { color: #D4A537; }
+  details.notes { background: #16301F; border: 1px solid #2A4A34; border-radius: 10px; padding: 12px 16px; margin: 0 0 20px; font-size: 13px; color: #8FA394; line-height: 1.6; }
+  details.notes summary { cursor: pointer; color: #D4A537; font-weight: 600; }
+  details.notes b { color: #D4A537; }
+  details.notes p { margin: 10px 0 0; }
 
-  .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
-  .filters button { background: #16301F; border: 1px solid #2A4A34; color: #8FA394; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-family: monospace; cursor: pointer; }
-  .filters button.active { background: #D4A537; color: #0F2418; border-color: #D4A537; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+  .row .lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: #6E8A78; font-weight: 600; }
+  .chipbtn { background: #16301F; border: 1px solid #2A4A34; color: #8FA394; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-family: monospace; cursor: pointer; }
+  .chipbtn.active { background: #D4A537; color: #0F2418; border-color: #D4A537; }
+  .row input[type=date], .row input[type=number] { width: auto; padding: 5px 8px; font-family: monospace; font-size: 12px; }
 
-  .date-filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
-  .date-filters button { background: #16301F; border: 1px solid #2A4A34; color: #8FA394; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-family: monospace; cursor: pointer; }
-  .date-filters button.active { background: #D4A537; color: #0F2418; border-color: #D4A537; }
-  .date-filters input[type=date] { width: auto; padding: 5px 8px; font-family: monospace; font-size: 12px; }
-  .date-filters .lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: #6E8A78; font-weight: 600; margin-right: 2px; }
   .card { background: #152A1E; border: 1px solid #2A4A34; border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; }
-  .card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 6px; }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; flex-wrap: wrap; gap: 6px; }
   .match { font-size: 15px; font-weight: 600; }
   .meta { font-size: 11px; color: #6E8A78; font-family: monospace; margin-top: 2px; }
-  .pill { font-size: 10px; font-family: monospace; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; border: 1px solid; white-space: nowrap; }
-  .pill.Alta, .pill.vinta { color: #6ee7b7; border-color: rgba(110,231,183,0.4); background: rgba(110,231,183,0.1); }
-  .pill.Media, .pill.in_corso { color: #fcd34d; border-color: rgba(252,211,77,0.4); background: rgba(252,211,77,0.1); }
-  .pill.Bassa, .pill.persa { color: #94a3b8; border-color: rgba(148,163,184,0.4); background: rgba(148,163,184,0.1); }
-  .pill.persa { color: #fca5a5; border-color: rgba(252,165,165,0.4); background: rgba(252,165,165,0.1); }
   .market { color: #D4A537; font-family: monospace; font-size: 14px; margin: 8px 0 4px; }
   .note { color: #8FA394; font-size: 12.5px; line-height: 1.5; }
-  .empty { text-align: center; padding: 60px 20px; color: #5C7A67; font-size: 13px; font-family: monospace; border: 1px dashed #2A4A34; border-radius: 10px; }
+  .empty { text-align: center; padding: 40px 20px; color: #5C7A67; font-size: 13px; font-family: monospace; border: 1px dashed #2A4A34; border-radius: 10px; line-height: 1.6; }
 
-  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 22px; }
-  .stat-card { background: #16301F; border: 1px solid #2A4A34; border-radius: 10px; padding: 14px 16px; }
-  .stat-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: #8FA394; font-weight: 600; }
-  .stat-value { font-family: 'Georgia', serif; font-size: 26px; margin-top: 6px; }
+  .pill { font-size: 10px; font-family: monospace; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; border: 1px solid; white-space: nowrap; }
+  .pill.Alta, .pill.vinta, .pill.W { color: #6ee7b7; border-color: rgba(110,231,183,.4); background: rgba(110,231,183,.1); }
+  .pill.Media, .pill.in_corso, .pill.P { color: #fcd34d; border-color: rgba(252,211,77,.4); background: rgba(252,211,77,.1); }
+  .pill.Bassa, .pill.V { color: #94a3b8; border-color: rgba(148,163,184,.4); background: rgba(148,163,184,.1); }
+  .pill.persa, .pill.L { color: #fca5a5; border-color: rgba(252,165,165,.4); background: rgba(252,165,165,.1); }
+  .pill.value { color: #D4A537; border-color: rgba(212,165,55,.5); background: rgba(212,165,55,.12); }
+  .pill.entrambi { color: #6ee7b7; border-color: rgba(110,231,183,.4); background: rgba(110,231,183,.1); }
+  .pill.statistico, .pill.mercato { color: #94a3b8; border-color: rgba(148,163,184,.4); background: rgba(148,163,184,.1); }
   .pos { color: #6ee7b7; } .neg { color: #fca5a5; }
+  .stake { font-size: 12px; color: #8FA394; margin-top: 6px; font-family: monospace; }
+  .stake b { color: #EDEAE0; }
 
-  .row-between { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
-  .btn-gold { background: #D4A537; color: #0F2418; border: none; padding: 10px 16px; border-radius: 8px; font-weight: 700; font-size: 13px; cursor: pointer; font-family: inherit; }
+  .slip { border-color: #3D6249; }
+  .slip .tipo { font-family: Georgia, serif; font-size: 24px; color: #D4A537; }
+  .leg { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; padding: 5px 0; border-top: 1px dashed #2A4A34; }
+  .leg:first-of-type { border-top: none; }
+  .leg .q { color: #D4A537; font-family: monospace; white-space: nowrap; }
+  .leg .sm { color: #6E8A78; font-size: 11px; font-family: monospace; }
+  .slip-foot { display: flex; gap: 18px; flex-wrap: wrap; font-family: monospace; font-size: 12px; color: #8FA394; margin-top: 8px; border-top: 1px dashed #2A4A34; padding-top: 8px; }
+  .slip-foot b { color: #EDEAE0; }
 
-  .ticket-actions button { font-size: 11px; font-family: monospace; padding: 5px 10px; border-radius: 6px; cursor: pointer; margin-left: 6px; }
-  .btn-win { background: rgba(110,231,183,0.1); border: 1px solid rgba(110,231,183,0.4); color: #6ee7b7; }
-  .btn-lose { background: rgba(252,165,165,0.1); border: 1px solid rgba(252,165,165,0.4); color: #fca5a5; }
+  .btn-gold { background: #D4A537; color: #0F2418; border: none; padding: 9px 14px; border-radius: 8px; font-weight: 700; font-size: 12px; cursor: pointer; font-family: inherit; }
+  .btn-ghost { background: transparent; color: #8FA394; border: 1px solid #2A4A34; padding: 8px 12px; border-radius: 8px; font-size: 12px; cursor: pointer; font-family: inherit; }
+  .btn-ghost:hover { border-color: #D4A537; color: #D4A537; }
+  .btn-win, .btn-lose { font-size: 11px; font-family: monospace; padding: 5px 10px; border-radius: 6px; cursor: pointer; margin-left: 6px; }
+  .btn-win { background: rgba(110,231,183,.1); border: 1px solid rgba(110,231,183,.4); color: #6ee7b7; }
+  .btn-lose { background: rgba(252,165,165,.1); border: 1px solid rgba(252,165,165,.4); color: #fca5a5; }
   .btn-del { background: transparent; border: none; color: #5C7A67; cursor: pointer; font-size: 13px; }
 
-  .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 50; padding: 16px; }
-  .modal { background: #16301F; border: 1px solid #2A4A34; border-radius: 12px; padding: 20px; max-width: 480px; width: 100%; max-height: 85vh; overflow-y: auto; }
-  .modal h3 { margin: 0 0 16px; font-size: 17px; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 18px; }
+  .stat-card { background: #16301F; border: 1px solid #2A4A34; border-radius: 10px; padding: 14px 16px; }
+  .stat-label { font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: #8FA394; font-weight: 600; }
+  .stat-value { font-family: Georgia, serif; font-size: 26px; margin-top: 6px; }
+  .stat-sub { font-size: 11px; color: #6E8A78; font-family: monospace; margin-top: 4px; }
+
+  table.t { width: 100%; border-collapse: collapse; font-size: 12.5px; margin-bottom: 8px; }
+  table.t th { text-align: right; color: #6E8A78; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; padding: 6px 8px; border-bottom: 1px solid #2A4A34; font-weight: 600; }
+  table.t th:first-child, table.t td:first-child { text-align: left; }
+  table.t td { text-align: right; padding: 7px 8px; border-bottom: 1px dashed #234130; font-family: monospace; }
+  table.t td:first-child { font-family: inherit; color: #EDEAE0; }
+  .tablewrap { background: #152A1E; border: 1px solid #2A4A34; border-radius: 10px; padding: 8px 10px; margin-bottom: 14px; overflow-x: auto; }
+  .tablewrap h3 { margin: 6px 8px 4px; font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: #8FA394; }
+  .banner { background: rgba(252,211,77,.08); border: 1px solid rgba(252,211,77,.35); color: #fcd34d; border-radius: 10px; padding: 11px 14px; font-size: 12.5px; line-height: 1.5; margin-bottom: 16px; }
+
+  .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,.6); display: flex; align-items: center; justify-content: center; z-index: 50; padding: 16px; }
+  .modal { background: #16301F; border: 1px solid #2A4A34; border-radius: 12px; padding: 20px; max-width: 500px; width: 100%; max-height: 88vh; overflow-y: auto; }
+  .modal h3 { margin: 0 0 14px; font-size: 17px; }
   .field-label { font-size: 11px; text-transform: uppercase; color: #6E8A78; font-weight: 600; display: block; margin-bottom: 5px; }
   .field { margin-bottom: 12px; }
   input, select { width: 100%; background: #0F2418; border: 1px solid #2A4A34; border-radius: 6px; padding: 9px 10px; color: #EDEAE0; font-size: 13px; font-family: inherit; }
   input:focus, select:focus { outline: none; border-color: #D4A537; }
   .sel-block { border: 1px solid #2A4A34; border-radius: 8px; padding: 10px; background: #122419; margin-bottom: 10px; }
-  .grid3 { display: grid; grid-template-columns: 1.4fr 1fr 0.8fr; gap: 6px; margin-top: 6px; }
+  .grid3 { display: grid; grid-template-columns: 1.3fr 1fr .8fr; gap: 6px; margin-top: 6px; }
   .type-toggle { display: flex; gap: 6px; margin-bottom: 14px; }
   .type-toggle button { flex: 1; padding: 9px; border-radius: 8px; border: 1px solid #2A4A34; background: #0F2418; color: #8FA394; font-weight: 700; font-size: 12px; cursor: pointer; text-transform: uppercase; }
   .type-toggle button.active { background: #D4A537; color: #0F2418; border-color: #D4A537; }
   .modal-close { float: right; background: none; border: none; color: #6E8A78; font-size: 18px; cursor: pointer; }
-
-  .fab { position: fixed; bottom: 22px; right: 22px; display: flex; align-items: center; gap: 8px; background: #D4A537; color: #0F2418; padding: 13px 18px; border-radius: 999px; font-weight: 700; font-size: 13px; text-decoration: none; box-shadow: 0 6px 20px rgba(0,0,0,0.4); z-index: 40; }
+  .total-line { display: flex; justify-content: space-between; font-family: monospace; font-size: 13px; color: #8FA394; margin: 4px 0 14px; }
+  .total-line b { color: #D4A537; }
+  .foot { margin-top: 30px; font-size: 11.5px; color: #5C7A67; line-height: 1.6; border-top: 1px solid #1d3a29; padding-top: 14px; }
 </style>
 </head>
 <body>
@@ -90,336 +106,507 @@
 
   <div class="tabs">
     <button data-tab="home" class="active">Home</button>
+    <button data-tab="verifica">Verifica</button>
     <button data-tab="storico">Storico</button>
   </div>
 
+  <!-- ============ HOME ============ -->
   <div id="tab-home">
-    <div class="notes" id="notes"></div>
-    <div class="date-filters" id="date-filters"></div>
-    <div class="filters" id="filters"></div>
+    <details class="notes" id="notes"><summary>Come leggere i numeri</summary></details>
+
+    <div class="row">
+      <span class="lbl">Budget (€)</span>
+      <input type="number" id="bankroll" min="0" step="10" placeholder="es. 200" style="width:110px" />
+      <span class="note" style="font-size:11.5px">serve solo a calcolare la puntata consigliata, resta su questo dispositivo</span>
+    </div>
+
+    <h2 class="sec">Schedine consigliate</h2>
+    <div id="slips"></div>
+
+    <h2 class="sec">Tutti i segnali</h2>
+    <div class="row" id="date-filters"></div>
+    <div class="row" id="filters"></div>
     <div id="signals"></div>
   </div>
 
+  <!-- ============ VERIFICA ============ -->
+  <div id="tab-verifica" style="display:none"></div>
+
+  <!-- ============ STORICO ============ -->
   <div id="tab-storico" style="display:none">
     <div class="stats-grid" id="stats-grid"></div>
-    <div class="row-between">
-      <h2 style="margin:0;font-family:'Georgia',serif;font-size:22px;">Le tue giocate</h2>
-      <button class="btn-gold" id="btn-new-bet">+ Registra giocata</button>
+    <div class="tablewrap" id="chart-wrap" style="display:none"></div>
+    <div class="row" style="justify-content:space-between;margin-top:6px">
+      <h2 class="sec" style="margin:0">Le tue giocate</h2>
+      <div class="row" style="margin:0">
+        <button class="btn-ghost" id="btn-csv">Esporta CSV</button>
+        <button class="btn-ghost" id="btn-backup">Backup</button>
+        <button class="btn-ghost" id="btn-restore">Ripristina</button>
+        <input type="file" id="file-restore" accept="application/json" style="display:none" />
+        <button class="btn-gold" id="btn-new-bet">+ Registra giocata</button>
+      </div>
     </div>
-    <div id="bets-list"></div>
+    <div id="bets-list" style="margin-top:12px"></div>
+    <div id="bets-breakdown"></div>
   </div>
+
+  <div class="foot">Gioca responsabilmente (18+). Probabilità e valore atteso sono stime statistiche: non garantiscono nessun risultato. Lo Storico è salvato solo in questo browser: usa Backup per spostarlo su un altro dispositivo.</div>
 </div>
 
 <div id="modal-root"></div>
 
 <script>
-/* ---------------- Tabs ---------------- */
+/* ============================================================ utilità */
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const fmtEuro = n => (Number(n) || 0).toLocaleString('it-IT', { style: 'currency', currency: 'EUR' });
+const pct = (x, d = 0) => (x * 100).toFixed(d) + '%';
+const sgn = x => (x >= 0 ? '+' : '') + (x * 100).toFixed(0) + '%';
+function lsGet(k, fb) { try { const v = localStorage.getItem(k); return v == null ? fb : JSON.parse(v); } catch (e) { return fb; } }
+function lsSet(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* storage bloccato */ } }
+
+function parseDay(str) {           // 'DD/MM/YYYY' | 'DD/MM/YY' | 'YYYY-MM-DD' -> 'YYYY-MM-DD'
+  if (!str) return null;
+  let m = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(str);
+  if (m) return `${m[3]}-${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}`;
+  m = /^(\d{1,2})\/(\d{1,2})\/(\d{2})$/.exec(str);
+  if (m) return `20${m[3]}-${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}`;
+  m = /^(\d{4})-(\d{2})-(\d{2})/.exec(str);
+  return m ? `${m[1]}-${m[2]}-${m[3]}` : null;
+}
+const isoLocal = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
+
+/* ============================================================ tab */
 function switchTab(tab) {
   document.querySelectorAll('.tabs button').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
-  document.getElementById('tab-home').style.display = tab === 'home' ? '' : 'none';
-  document.getElementById('tab-storico').style.display = tab === 'storico' ? '' : 'none';
+  ['home', 'verifica', 'storico'].forEach(t => { $('#tab-' + t).style.display = t === tab ? '' : 'none'; });
 }
-document.querySelectorAll('.tabs button').forEach(btn => {
-  btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => switchTab(b.dataset.tab)));
+
+/* ============================================================ budget */
+const BANKROLL_KEY = 'schedina-bankroll';
+const getBankroll = () => Number(lsGet(BANKROLL_KEY, 0)) || 0;
+$('#bankroll').value = getBankroll() || '';
+$('#bankroll').addEventListener('input', e => { lsSet(BANKROLL_KEY, Number(e.target.value) || 0); renderHome(); });
+
+function stakeHtml(item) {          // item: segnale o schedina
+  if (item.ev == null) return '';
+  if (!item.kelly) return '<div class="stake">Puntata consigliata: <b>nessuna</b> (valore atteso non positivo)</div>';
+  const b = getBankroll();
+  const txt = b > 0 ? `<b>${(item.kelly * 100).toFixed(1)}%</b> del budget ≈ <b>${fmtEuro(b * item.kelly)}</b>` : `<b>${(item.kelly * 100).toFixed(1)}%</b> del budget`;
+  return `<div class="stake">Puntata consigliata: ${txt}</div>`;
+}
+const evChip = ev => ev == null ? '' : `<span class="${ev >= 0 ? 'pos' : 'neg'}">valore atteso ${sgn(ev)}</span>`;
+
+/* ============================================================ dati */
+let DATA = null;
+let SIGNALS = [];
+let SLIPS = [];
+
+async function loadData() {
+  const updated = $('#updated');
+  try {
+    const res = await fetch('data.json?' + Date.now(), { cache: 'no-store' });
+    DATA = await res.json();
+  } catch (e) {
+    $('#signals').innerHTML = '<div class="empty">Nessun dato ancora disponibile. Il motore deve girare almeno una volta.</div>';
+    updated.textContent = '';
+    renderVerifica();
+    return;
+  }
+  const gen = new Date(DATA.generated_at);
+  const hours = (Date.now() - gen.getTime()) / 3600000;
+  updated.innerHTML = 'Aggiornato: ' + esc(gen.toLocaleString('it-IT')) +
+    (hours > 36 ? ' <span class="warn">· dati fermi da più di un giorno: controlla l\'ultima esecuzione del motore</span>' : '');
+
+  $('#notes').innerHTML = '<summary>Come leggere i numeri</summary>' +
+    (DATA.model_note ? `<p><b>Modello:</b> ${esc(DATA.model_note)}</p>` : '') +
+    (DATA.odds_note ? `<p><b>Quote:</b> ${esc(DATA.odds_note)}</p>` : '') +
+    (DATA.coverage_note ? `<p><b>Copertura:</b> ${esc(DATA.coverage_note)}</p>` : '');
+
+  SIGNALS = (DATA.signals || []).map((s, i) => Object.assign({ _i: i, _day: s.day || parseDay(s.data) }, s));
+  SLIPS = DATA.slips || [];
+  buildCampionatoFilters();
+  renderDateFilters();
+  renderHome();
+  renderVerifica();
+}
+
+/* ============================================================ home: schedine */
+function renderSlips() {
+  const el = $('#slips');
+  if (!DATA) { el.innerHTML = ''; return; }
+  if (DATA.schema == null || DATA.slips == null) {
+    el.innerHTML = '<div class="empty">Le schedine consigliate compariranno al prossimo aggiornamento del motore.</div>';
+    return;
+  }
+  if (!SLIPS.length) {
+    el.innerHTML = '<div class="empty">Oggi non ci sono abbastanza segnali affidabili per costruire una schedina.<br>Meglio nessuna giocata che una forzata: riprova dopo il prossimo aggiornamento.</div>';
+    return;
+  }
+  el.innerHTML = SLIPS.map((s, i) => `
+    <div class="card slip">
+      <div class="card-top">
+        <div><span class="tipo">${esc(s.tipo)}</span> <span class="meta">· partite entro 3 giorni</span></div>
+        <span class="pill ${s.value ? 'value' : 'statistico'}">${s.value ? 'valore positivo' : 'senza valore'}</span>
+      </div>
+      ${s.legs.map(l => `<div class="leg"><div>${esc(l.partita)}<div class="sm">${esc(l.campionato)} · ${esc(l.data)} · ${esc(l.mercato)}: ${esc(l.pronostico)}</div></div><div class="q">${Number(l.quota).toFixed(2)}</div></div>`).join('')}
+      <div class="slip-foot">
+        <span>Quota totale <b>${Number(s.quota).toFixed(2)}</b></span>
+        <span>Probabilità stimata <b>${pct(s.p, 1)}</b></span>
+        <span>${evChip(s.ev)}</span>
+      </div>
+      ${stakeHtml(s)}
+      <div class="note" style="margin-top:6px">${esc(s.nota)}</div>
+      <button class="btn-gold" style="margin-top:10px" data-slip="${i}">+ Aggiungi a schedina</button>
+    </div>`).join('');
+}
+
+/* ============================================================ home: segnali con filtri */
+let fCamp = 'Tutti', fDate = 'da_oggi', fDay = '', fValue = false;
+const DATE_BTNS = [['da_oggi', 'Da oggi'], ['oggi', 'Oggi'], ['domani', 'Domani'], ['weekend', 'Weekend'], ['7giorni', '7 giorni'], ['tutte', 'Tutte']];
+
+function matchesDate(s) {
+  const today = new Date(), t0 = isoLocal(today), d = s._day;
+  if (fDate === 'tutte') return true;
+  if (!d) return fDate === 'da_oggi';
+  if (fDate === 'da_oggi') return d >= t0;
+  if (fDate === 'oggi') return d === t0;
+  if (fDate === 'domani') return d === isoLocal(addDays(today, 1));
+  if (fDate === '7giorni') return d >= t0 && d <= isoLocal(addDays(today, 7));
+  if (fDate === 'weekend') {
+    const dow = today.getDay(), toSat = dow === 0 ? -1 : 6 - dow;
+    return d === isoLocal(addDays(today, toSat)) || d === isoLocal(addDays(today, toSat + 1));
+  }
+  if (fDate === 'giorno') return fDay ? d === fDay : true;
+  return true;
+}
+
+function renderDateFilters() {
+  const el = $('#date-filters');
+  el.innerHTML = '<span class="lbl">Data</span>' +
+    DATE_BTNS.map(([k, l]) => `<button class="chipbtn ${fDate === k ? 'active' : ''}" data-d="${k}">${l}</button>`).join('') +
+    `<input type="date" id="day-picker" value="${esc(fDay)}" />` +
+    `<button class="chipbtn ${fValue ? 'active' : ''}" data-value="1">Solo value bet</button>`;
+}
+$('#date-filters').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.value) { fValue = !fValue; }
+  else if (b.dataset.d) { fDate = b.dataset.d; fDay = ''; }
+  renderDateFilters(); renderSignals();
+});
+$('#date-filters').addEventListener('change', e => {
+  if (e.target.id !== 'day-picker') return;
+  fDay = e.target.value; fDate = fDay ? 'giorno' : 'da_oggi';
+  renderDateFilters(); renderSignals();
 });
 
-/* ---------------- Home: segnali automatici ---------------- */
-async function loadSignals() {
-  const container = document.getElementById('signals');
-  const updated = document.getElementById('updated');
-  const notes = document.getElementById('notes');
-  const filtersEl = document.getElementById('filters');
-
-  let data;
-  try {
-    const res = await fetch('data.json', { cache: 'no-store' });
-    data = await res.json();
-  } catch (e) {
-    container.innerHTML = '<div class="empty">Nessun dato ancora disponibile. Il motore deve girare almeno una volta.</div>';
-    updated.textContent = '';
-    return;
-  }
-
-  updated.textContent = 'Aggiornato: ' + new Date(data.generated_at).toLocaleString('it-IT');
-  notes.innerHTML = '<b>Copertura:</b> ' + data.coverage_note + '<br><br><b>Quote:</b> ' + data.odds_note;
-
-  const signals = data.signals || [];
-  signals.forEach((s, i) => s._id = i);
-  window.__signalsById = Object.fromEntries(signals.map(s => [s._id, s]));
-
-  if (signals.length === 0) {
-    container.innerHTML = '<div class="empty">Nessun segnale statistico forte trovato in questo momento.</div>';
-    return;
-  }
-
-  const campionati = ['Tutti', ...new Set(signals.map(s => s.campionato))];
-  let active = 'Tutti';
-  let dateMode = 'da_oggi';   // da_oggi | oggi | domani | weekend | 7giorni | tutte | giorno
-  let pickedDay = '';
-
-  // Interpreta le date del motore: DD/MM/YYYY, DD/MM/YY o YYYY-MM-DD. Restituisce 'YYYY-MM-DD' o null.
-  function parseDay(str) {
-    if (!str) return null;
-    let m = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(str);
-    if (m) return `${m[3]}-${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}`;
-    m = /^(\d{1,2})\/(\d{1,2})\/(\d{2})$/.exec(str);
-    if (m) return `20${m[3]}-${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}`;
-    m = /^(\d{4})-(\d{2})-(\d{2})/.exec(str);
-    return m ? `${m[1]}-${m[2]}-${m[3]}` : null;
-  }
-  function isoLocal(d) {
-    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
-  }
-  function addDays(d, n) { const x = new Date(d); x.setDate(x.getDate() + n); return x; }
-  signals.forEach(s => s._day = parseDay(s.data));
-
-  function matchesDate(s) {
-    const today = new Date();
-    const t0 = isoLocal(today);
-    if (dateMode === 'tutte') return true;
-    if (!s._day) return dateMode === 'da_oggi';   // data non leggibile: la tengo solo nella vista di default
-    if (dateMode === 'da_oggi') return s._day >= t0;
-    if (dateMode === 'oggi') return s._day === t0;
-    if (dateMode === 'domani') return s._day === isoLocal(addDays(today, 1));
-    if (dateMode === '7giorni') return s._day >= t0 && s._day <= isoLocal(addDays(today, 7));
-    if (dateMode === 'weekend') {
-      const dow = today.getDay();                       // 0 = domenica
-      const toSat = dow === 0 ? -1 : 6 - dow;           // se è domenica, il weekend è iniziato ieri
-      const sat = isoLocal(addDays(today, toSat));
-      const sun = isoLocal(addDays(today, toSat + 1));
-      return s._day === sat || s._day === sun;
-    }
-    if (dateMode === 'giorno') return pickedDay ? s._day === pickedDay : true;
-    return true;
-  }
-
-  const dateFiltersEl = document.getElementById('date-filters');
-  const DATE_BTNS = [
-    ['da_oggi', 'Da oggi'], ['oggi', 'Oggi'], ['domani', 'Domani'],
-    ['weekend', 'Weekend'], ['7giorni', '7 giorni'], ['tutte', 'Tutte'],
-  ];
-  function renderDateFilters() {
-    dateFiltersEl.innerHTML =
-      '<span class="lbl">Data</span>' +
-      DATE_BTNS.map(([k, l]) => `<button data-d="${k}" class="${dateMode === k ? 'active' : ''}">${l}</button>`).join('') +
-      `<input type="date" id="day-picker" value="${pickedDay}" />`;
-    dateFiltersEl.querySelectorAll('button').forEach(btn => {
-      btn.addEventListener('click', () => { dateMode = btn.dataset.d; pickedDay = ''; renderDateFilters(); render(); });
-    });
-    document.getElementById('day-picker').addEventListener('change', e => {
-      pickedDay = e.target.value;
-      dateMode = pickedDay ? 'giorno' : 'da_oggi';
-      renderDateFilters(); render();
-    });
-  }
-
-  function render() {
-    const filtered = signals
-      .filter(s => (active === 'Tutti' || s.campionato === active) && matchesDate(s))
-      .sort((a, b) => (a._day || '9999').localeCompare(b._day || '9999'));
-    container.innerHTML = filtered.map(s => `
-      <div class="card">
-        <div class="card-top">
-          <div>
-            <div class="match">${s.partita}</div>
-            <div class="meta">${s.campionato} · ${s.data || ''}</div>
-          </div>
-          <span class="pill ${s.confidenza}">${s.confidenza} confidenza</span>
-        </div>
-        <div class="market">${s.mercato}: ${s.pronostico}${s.quota ? ' <span style="color:#8FA394;font-size:12px">(quota ' + s.quota + ')</span>' : ''}</div>
-        <div class="note">${s.nota}</div>
-        <button class="btn-gold" style="margin-top:10px;font-size:12px;padding:7px 12px" onclick="window.__addToSchedina(${s._id})">+ Aggiungi a schedina</button>
-      </div>
-    `).join('') || '<div class="empty">Nessun segnale per questi filtri. Prova con "Tutte" nelle date.</div>';
-  }
-
-  filtersEl.innerHTML = campionati.map(c => `<button data-c="${c}" class="${c === active ? 'active' : ''}">${c}</button>`).join('');
-  filtersEl.querySelectorAll('button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      active = btn.dataset.c;
-      filtersEl.querySelectorAll('button').forEach(b => b.classList.toggle('active', b === btn));
-      render();
-    });
-  });
-  renderDateFilters();
-  render();
+function buildCampionatoFilters() {
+  const camps = ['Tutti', ...new Set(SIGNALS.map(s => s.campionato))];
+  $('#filters').innerHTML = camps.map(c => `<button class="chipbtn ${c === fCamp ? 'active' : ''}" data-c="${esc(c)}">${esc(c)}</button>`).join('');
 }
-loadSignals();
+$('#filters').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  fCamp = b.dataset.c; buildCampionatoFilters(); renderSignals();
+});
 
-/* ---------------- Storico: salvato nel browser (localStorage) ---------------- */
+function renderSignals() {
+  const el = $('#signals');
+  if (!DATA) return;
+  const list = SIGNALS
+    .filter(s => (fCamp === 'Tutti' || s.campionato === fCamp) && matchesDate(s) && (!fValue || s.value))
+    .sort((a, b) => (a._day || '9999').localeCompare(b._day || '9999') || (b.value - a.value) || ((b.ev == null ? -9 : b.ev) - (a.ev == null ? -9 : a.ev)));
+  if (!SIGNALS.length) { el.innerHTML = '<div class="empty">Nessun segnale trovato in questo momento.</div>'; return; }
+  el.innerHTML = list.map(s => `
+    <div class="card">
+      <div class="card-top">
+        <div><div class="match">${esc(s.partita)}</div><div class="meta">${esc(s.campionato)} · ${esc(s.data)}</div></div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          ${s.tipo ? `<span class="pill ${esc(s.tipo)}">${esc(s.tipo === 'entrambi' ? 'statistico + value' : s.tipo)}</span>` : ''}
+          <span class="pill ${esc(s.confidenza)}">${esc(s.confidenza)} confidenza</span>
+        </div>
+      </div>
+      <div class="market">${esc(s.mercato)}: ${esc(s.pronostico)}${s.quota ? ` <span style="color:#8FA394;font-size:12px">(quota ${Number(s.quota).toFixed(2)})</span>` : ''}
+        ${s.p != null && s.ev != null ? ` <span style="font-size:12px">· stima ${pct(s.p)} · ${evChip(s.ev)}</span>` : ''}</div>
+      <div class="note">${esc(s.nota)}</div>
+      ${stakeHtml(s)}
+      <button class="btn-gold" style="margin-top:10px" data-sig="${s._i}">+ Aggiungi a schedina</button>
+    </div>`).join('') || '<div class="empty">Nessun segnale per questi filtri. Prova con "Tutte" nelle date.</div>';
+}
+function renderHome() { renderSlips(); renderSignals(); }
+
+$('#tab-home').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.sig != null) { const s = SIGNALS[+b.dataset.sig]; openBetModal(presetFromSignal(s)); }
+  if (b.dataset.slip != null) { openBetModal(presetFromSlip(SLIPS[+b.dataset.slip])); }
+});
+
+function presetFromSignal(s) {
+  return { tipo: 'Singola', campionato: s.campionato, data: s._day || isoLocal(new Date()),
+    importo: (s.kelly && getBankroll() > 0) ? (getBankroll() * s.kelly).toFixed(2) : '',
+    selezioni: [{ squadre: s.partita, mercato: s.mercato, pronostico: s.pronostico, quota: s.quota ? String(s.quota) : '' }] };
+}
+function presetFromSlip(sl) {
+  const camps = [...new Set(sl.legs.map(l => l.campionato))];
+  return { tipo: sl.legs.length > 1 ? 'Multipla' : 'Singola', campionato: camps.join(' / '),
+    data: parseDay(sl.legs[0].data) || sl.day || isoLocal(new Date()),
+    importo: (sl.kelly && getBankroll() > 0) ? (getBankroll() * sl.kelly).toFixed(2) : '',
+    selezioni: sl.legs.map(l => ({ squadre: l.partita, mercato: l.mercato, pronostico: l.pronostico, quota: String(l.quota) })) };
+}
+
+/* ============================================================ verifica */
+const KEY_LABEL = { H: '1 (vittoria casa)', A: '2 (vittoria trasferta)', O25: 'Over 2.5', U25: 'Under 2.5', BTTS: 'Gol (GG)', D: 'X (pareggio)' };
+const TIPO_LABEL = { value: 'Value (solo modello)', entrambi: 'Statistico + value', statistico: 'Solo statistico' };
+
+function agg(arr) {
+  const n = arr.length, w = arr.filter(e => e.status === 'W').length;
+  const odds = arr.filter(e => e.quota);
+  const roi = odds.length ? odds.reduce((a, e) => a + (e.status === 'W' ? e.quota - 1 : -1), 0) / odds.length : null;
+  const withP = arr.filter(e => e.p != null);
+  const exp = withP.length ? withP.reduce((a, e) => a + e.p, 0) / withP.length : null;
+  return { n, w, rate: n ? w / n : null, roi, exp };
+}
+function groupBy(arr, fn) { const m = {}; arr.forEach(e => { (m[fn(e)] = m[fn(e)] || []).push(e); }); return m; }
+
+function tableHtml(title, groups, labelFn) {
+  const rows = Object.entries(groups).map(([k, arr]) => [k, agg(arr)]).sort((a, b) => b[1].n - a[1].n);
+  if (!rows.length) return '';
+  return `<div class="tablewrap"><h3>${esc(title)}</h3><table class="t"><tr><th>Gruppo</th><th>Giocate</th><th>Uscite</th><th>% uscite</th><th>Attesa</th><th>ROI</th></tr>` +
+    rows.map(([k, a]) => `<tr><td>${esc(labelFn ? labelFn(k) : k)}</td><td>${a.n}</td><td>${a.w}</td><td>${a.rate == null ? '–' : pct(a.rate)}</td><td>${a.exp == null ? '–' : pct(a.exp)}</td><td class="${a.roi == null ? '' : a.roi >= 0 ? 'pos' : 'neg'}">${a.roi == null ? 'n/d' : sgn(a.roi)}</td></tr>`).join('') +
+    '</table></div>';
+}
+
+function renderVerifica() {
+  const el = $('#tab-verifica');
+  const h = DATA && DATA.history;
+  if (!h || !(h.signals || []).length) {
+    el.innerHTML = '<div class="empty">Il tabellone si riempie da solo: dal prossimo aggiornamento il motore registra ogni segnale pubblicato e, a partita finita, controlla se è uscito.<br>Dopo qualche settimana vedrai qui quanto funziona davvero ciascun tipo di segnale.</div>';
+    return;
+  }
+  const sig = h.signals, slips = h.slips || [];
+  const done = sig.filter(e => e.status === 'W' || e.status === 'L');
+  const pend = sig.filter(e => e.status === 'P').length;
+  const A = agg(done);
+  const doneSlips = slips.filter(e => e.status === 'W' || e.status === 'L');
+
+  let html = '';
+  if (done.length < 30) html += `<div class="banner">Per ora le giocate verificate sono ${done.length}: sono troppo poche perché le percentuali significhino qualcosa. Aspetta almeno 30-50 giocate prima di fidarti dei numeri, in un senso o nell'altro.</div>`;
+  html += `<div class="stats-grid">
+    <div class="stat-card"><div class="stat-label">Verificate</div><div class="stat-value">${done.length}</div><div class="stat-sub">${pend} in attesa</div></div>
+    <div class="stat-card"><div class="stat-label">Uscite</div><div class="stat-value">${A.rate == null ? '–' : pct(A.rate)}</div><div class="stat-sub">${A.exp == null ? '' : 'il modello prevedeva ' + pct(A.exp)}</div></div>
+    <div class="stat-card"><div class="stat-label">ROI (1€ a giocata)</div><div class="stat-value ${A.roi == null ? '' : A.roi >= 0 ? 'pos' : 'neg'}">${A.roi == null ? 'n/d' : sgn(A.roi)}</div><div class="stat-sub">solo giocate con quota</div></div>
+    <div class="stat-card"><div class="stat-label">Schedine verificate</div><div class="stat-value">${doneSlips.length}</div><div class="stat-sub">${doneSlips.filter(e => e.status === 'W').length} vinte</div></div>
+  </div>`;
+  html += tableHtml('Per tipo di segnale', groupBy(done, e => e.tipo || 'statistico'), k => TIPO_LABEL[k] || k);
+  html += tableHtml('Per mercato', groupBy(done, e => e.key), k => KEY_LABEL[k] || k);
+  html += tableHtml('Per confidenza', groupBy(done, e => e.conf), k => k + ' confidenza');
+  html += tableHtml('Per campionato', groupBy(done, e => e.campionato || e.lg), null);
+  const sl = groupBy(doneSlips, e => e.tipo);
+  const slRows = Object.entries(sl).map(([k, arr]) => {
+    const n = arr.length, w = arr.filter(e => e.status === 'W').length;
+    const roi = arr.reduce((a, e) => a + (e.status === 'W' ? e.quota - 1 : -1), 0) / n;
+    const exp = arr.reduce((a, e) => a + (e.p || 0), 0) / n;
+    return `<tr><td>${esc(k)}</td><td>${n}</td><td>${w}</td><td>${pct(w / n)}</td><td>${pct(exp)}</td><td class="${roi >= 0 ? 'pos' : 'neg'}">${sgn(roi)}</td></tr>`;
+  });
+  if (slRows.length) html += `<div class="tablewrap"><h3>Schedine consigliate</h3><table class="t"><tr><th>Tipo</th><th>Giocate</th><th>Vinte</th><th>% vinte</th><th>Attesa</th><th>ROI</th></tr>${slRows.join('')}</table></div>`;
+
+  const recent = [...done].sort((a, b) => b.day.localeCompare(a.day)).slice(0, 15);
+  html += '<h2 class="sec">Ultime verificate</h2>' + recent.map(e => `
+    <div class="card" style="padding:10px 14px"><div class="card-top" style="margin:0">
+      <div><div class="match" style="font-size:14px">${esc(e.home)} - ${esc(e.away)} <span class="meta">${esc(e.score || '')}</span></div>
+      <div class="meta">${esc(e.campionato || '')} · ${esc(e.day)} · ${esc(e.pronostico)}${e.quota ? ' @ ' + Number(e.quota).toFixed(2) : ''}</div></div>
+      <span class="pill ${e.status}">${e.status === 'W' ? 'uscita' : 'non uscita'}</span></div></div>`).join('');
+  el.innerHTML = html;
+}
+
+/* ============================================================ storico (localStorage) */
 const BETS_KEY = 'schedina-bets-v1';
 const MERCATI = ['1X2', 'Over/Under', 'GG/NG', 'Doppia Chance', 'Handicap', 'Marcatore', 'Altro'];
-
-function loadBets() {
-  try { return JSON.parse(localStorage.getItem(BETS_KEY)) || []; } catch (e) { return []; }
-}
-function saveBets(bets) {
-  localStorage.setItem(BETS_KEY, JSON.stringify(bets));
-}
-function uid() { return Math.random().toString(36).slice(2) + Date.now().toString(36); }
-function fmtEuro(n) { return (Number(n) || 0).toLocaleString('it-IT', { style: 'currency', currency: 'EUR' }); }
-function quotaTotale(bet) { return bet.selezioni.reduce((acc, s) => acc * (Number(s.quota) || 1), 1); }
+const loadBets = () => { const b = lsGet(BETS_KEY, []); return Array.isArray(b) ? b : []; };
+const saveBets = b => lsSet(BETS_KEY, b);
+const uid = () => Math.random().toString(36).slice(2) + Date.now().toString(36);
+const quotaTot = bet => bet.selezioni.reduce((a, s) => a * (Number(s.quota) || 1), 1);
 function profitto(bet) {
-  const importo = Number(bet.importo) || 0;
-  if (bet.esito === 'vinta') return importo * quotaTotale(bet) - importo;
-  if (bet.esito === 'persa') return -importo;
+  const imp = Number(bet.importo) || 0;
+  if (bet.esito === 'vinta') return imp * quotaTot(bet) - imp;
+  if (bet.esito === 'persa') return -imp;
   return 0;
+}
+
+function betStats(bets) {
+  const dec = bets.filter(b => b.esito !== 'in_corso');
+  const staked = dec.reduce((a, b) => a + (Number(b.importo) || 0), 0);
+  const profit = dec.reduce((a, b) => a + profitto(b), 0);
+  const won = dec.filter(b => b.esito === 'vinta').length;
+  return { n: dec.length, won, staked, profit, roi: staked ? profit / staked : 0, rate: dec.length ? won / dec.length : 0 };
+}
+function breakdown(title, bets, keyFn) {
+  const g = groupBy(bets.filter(b => b.esito !== 'in_corso'), keyFn);
+  const rows = Object.entries(g).map(([k, arr]) => [k, betStats(arr)]).sort((a, b) => b[1].n - a[1].n);
+  if (!rows.length) return '';
+  return `<div class="tablewrap"><h3>${esc(title)}</h3><table class="t"><tr><th>Gruppo</th><th>Giocate</th><th>% vinte</th><th>Puntato</th><th>Profitto</th><th>ROI</th></tr>` +
+    rows.map(([k, s]) => `<tr><td>${esc(k)}</td><td>${s.n}</td><td>${pct(s.rate)}</td><td>${fmtEuro(s.staked)}</td><td class="${s.profit >= 0 ? 'pos' : 'neg'}">${s.profit >= 0 ? '+' : ''}${fmtEuro(s.profit)}</td><td class="${s.roi >= 0 ? 'pos' : 'neg'}">${sgn(s.roi)}</td></tr>`).join('') + '</table></div>';
+}
+
+function chartSvg(bets) {
+  const dec = bets.filter(b => b.esito !== 'in_corso').sort((a, b) => String(a.data).localeCompare(String(b.data)));
+  if (dec.length < 2) return '';
+  let cum = 0; const pts = dec.map(b => (cum += profitto(b)));
+  const W = 640, H = 150, pad = 14;
+  const mn = Math.min(0, ...pts), mx = Math.max(0, ...pts), rng = (mx - mn) || 1;
+  const x = i => pad + (W - 2 * pad) * i / (pts.length - 1);
+  const y = v => H - pad - (H - 2 * pad) * (v - mn) / rng;
+  const line = pts.map((v, i) => `${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+  return `<h3 style="margin:6px 8px 4px;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#8FA394">Andamento del profitto</h3>
+    <svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Andamento del profitto cumulato">
+      <line x1="${pad}" x2="${W - pad}" y1="${y(0)}" y2="${y(0)}" stroke="#3D6249" stroke-dasharray="4 4"/>
+      <polyline points="${line}" fill="none" stroke="#D4A537" stroke-width="2"/>
+      ${pts.map((v, i) => `<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="3" fill="#D4A537"/>`).join('')}
+    </svg>
+    <div class="stat-sub" style="padding:0 8px 6px">Ora: <b class="${cum >= 0 ? 'pos' : 'neg'}">${cum >= 0 ? '+' : ''}${fmtEuro(cum)}</b></div>`;
 }
 
 function renderStorico() {
   const bets = loadBets();
-  const decided = bets.filter(b => b.esito !== 'in_corso');
-  const totalStaked = decided.reduce((a, b) => a + (Number(b.importo) || 0), 0);
-  const totalProfit = decided.reduce((a, b) => a + profitto(b), 0);
-  const won = decided.filter(b => b.esito === 'vinta').length;
-  const winRate = decided.length ? (won / decided.length) * 100 : 0;
-  const roi = totalStaked ? (totalProfit / totalStaked) * 100 : 0;
+  const s = betStats(bets);
   const pending = bets.filter(b => b.esito === 'in_corso').length;
+  $('#stats-grid').innerHTML = `
+    <div class="stat-card"><div class="stat-label">Profitto/Perdita</div><div class="stat-value ${s.profit >= 0 ? 'pos' : 'neg'}">${s.profit >= 0 ? '+' : ''}${fmtEuro(s.profit)}</div></div>
+    <div class="stat-card"><div class="stat-label">ROI</div><div class="stat-value ${s.roi >= 0 ? 'pos' : 'neg'}">${sgn(s.roi)}</div></div>
+    <div class="stat-card"><div class="stat-label">Win rate</div><div class="stat-value">${pct(s.rate)}</div><div class="stat-sub">${s.n} concluse</div></div>
+    <div class="stat-card"><div class="stat-label">Puntato</div><div class="stat-value">${fmtEuro(s.staked)}</div><div class="stat-sub">${pending} in corso</div></div>`;
+  const chart = chartSvg(bets);
+  $('#chart-wrap').style.display = chart ? '' : 'none';
+  $('#chart-wrap').innerHTML = chart;
 
-  document.getElementById('stats-grid').innerHTML = `
-    <div class="stat-card"><div class="stat-label">Profitto/Perdita</div><div class="stat-value ${totalProfit >= 0 ? 'pos' : 'neg'}">${totalProfit >= 0 ? '+' : ''}${fmtEuro(totalProfit)}</div></div>
-    <div class="stat-card"><div class="stat-label">ROI</div><div class="stat-value ${roi >= 0 ? 'pos' : 'neg'}">${roi.toFixed(1)}%</div></div>
-    <div class="stat-card"><div class="stat-label">Win rate</div><div class="stat-value">${winRate.toFixed(0)}%</div></div>
-    <div class="stat-card"><div class="stat-label">Puntato</div><div class="stat-value">${fmtEuro(totalStaked)}</div></div>
-  `;
+  const list = $('#bets-list');
+  if (!bets.length) list.innerHTML = '<div class="empty">Nessuna giocata registrata. Usa "+ Aggiungi a schedina" nella Home oppure il pulsante qui sopra.</div>';
+  else list.innerHTML = bets.map(b => {
+    const pr = profitto(b);
+    return `<div class="card">
+      <div class="card-top"><span class="meta">${esc(b.tipo)} · ${esc(b.campionato || '—')} · ${esc(b.data)}</span>
+        <span><span class="pill ${esc(b.esito)}">${b.esito === 'in_corso' ? 'In corso' : b.esito === 'vinta' ? 'Vinta' : 'Persa'}</span>
+        <button class="btn-del" data-del="${esc(b.id)}" title="Elimina">✕</button></span></div>
+      ${b.selezioni.map(x => `<div class="leg"><div>${esc(x.squadre)}<div class="sm">${esc(x.mercato)}${x.pronostico ? ' · ' + esc(x.pronostico) : ''}</div></div><div class="q">${Number(x.quota || 0).toFixed(2)}</div></div>`).join('')}
+      <div class="slip-foot"><span>Quota tot. <b>${quotaTot(b).toFixed(2)}</b></span><span>Puntato <b>${fmtEuro(b.importo)}</b></span>
+        <span style="margin-left:auto">${b.esito === 'in_corso'
+          ? `<button class="btn-win" data-esito="vinta" data-id="${esc(b.id)}">Vinta</button><button class="btn-lose" data-esito="persa" data-id="${esc(b.id)}">Persa</button>`
+          : `<b class="${pr >= 0 ? 'pos' : 'neg'}">${pr >= 0 ? '+' : ''}${fmtEuro(pr)}</b>`}</span></div></div>`;
+  }).join('');
 
-  const list = document.getElementById('bets-list');
-  if (bets.length === 0) {
-    list.innerHTML = '<div class="empty">Nessuna giocata registrata. Salvata solo su questo dispositivo/browser.</div>';
-    return;
-  }
-  list.innerHTML = bets.map(b => `
-    <div class="card">
-      <div class="card-top">
-        <div>
-          <span class="meta">${b.tipo} · ${b.campionato || '—'} · ${b.data}</span>
-        </div>
-        <div class="ticket-actions">
-          <span class="pill ${b.esito}">${b.esito === 'in_corso' ? 'In corso' : b.esito === 'vinta' ? 'Vinta' : 'Persa'}</span>
-          <button class="btn-del" onclick="deleteBet('${b.id}')">✕</button>
-        </div>
-      </div>
-      ${b.selezioni.map(s => `
-        <div style="display:flex;justify-content:space-between;font-size:13px;margin:4px 0;">
-          <span>${s.squadre} <span style="color:#6E8A78">— ${s.mercato}${s.pronostico ? ' · ' + s.pronostico : ''}</span></span>
-          <span style="color:#D4A537;font-family:monospace">${Number(s.quota || 0).toFixed(2)}</span>
-        </div>
-      `).join('')}
-      <div class="card-top" style="margin-top:8px;border-top:1px dashed #2A4A34;padding-top:8px;">
-        <span class="meta">Quota tot. <b style="color:#D4A537">${quotaTotale(b).toFixed(2)}</b> · Puntato <b>${fmtEuro(b.importo)}</b></span>
-        ${b.esito === 'in_corso'
-          ? `<span class="ticket-actions"><button class="btn-win" onclick="setEsito('${b.id}','vinta')">Vinta</button><button class="btn-lose" onclick="setEsito('${b.id}','persa')">Persa</button></span>`
-          : `<span style="font-weight:700;color:${profitto(b) >= 0 ? '#6ee7b7' : '#fca5a5'}">${profitto(b) >= 0 ? '+' : ''}${fmtEuro(profitto(b))}</span>`
-        }
-      </div>
-    </div>
-  `).join('');
+  $('#bets-breakdown').innerHTML = bets.length ?
+    '<h2 class="sec">Come stai andando</h2>' +
+    breakdown('Per tipo di giocata', bets, b => b.tipo) +
+    breakdown('Per campionato', bets, b => b.campionato || '—') +
+    breakdown('Per mercato (solo singole)', bets.filter(b => b.selezioni.length === 1), b => b.selezioni[0].mercato) : '';
 }
+$('#tab-storico').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.del) { saveBets(loadBets().filter(x => x.id !== b.dataset.del)); renderStorico(); }
+  if (b.dataset.esito) { const bets = loadBets(); const x = bets.find(y => y.id === b.dataset.id); if (x) x.esito = b.dataset.esito; saveBets(bets); renderStorico(); }
+});
 
-function deleteBet(id) {
-  saveBets(loadBets().filter(b => b.id !== id));
-  renderStorico();
+/* ---- export / backup ---- */
+function download(name, text, type) {
+  const blob = new Blob([text], { type });
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
 }
-function setEsito(id, esito) {
-  const bets = loadBets();
-  const b = bets.find(x => x.id === id);
-  if (b) b.esito = esito;
-  saveBets(bets);
-  renderStorico();
-}
-
-/* ---------------- Modal: nuova giocata ---------------- */
-function emptySel() { return { squadre: '', mercato: MERCATI[0], pronostico: '', quota: '' }; }
-
-function ddmmyyyyToInput(d) {
-  const m = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(d || '');
-  return m ? `${m[3]}-${m[2]}-${m[1]}` : new Date().toISOString().slice(0, 10);
-}
-
-function openNewBetModal(preset) {
-  let tipo = 'Singola';
-  let selezioni = [preset ? {
-    squadre: preset.partita || '',
-    mercato: MERCATI.includes(preset.mercato) ? preset.mercato : MERCATI[0],
-    pronostico: preset.pronostico || '',
-    quota: preset.quota != null ? String(preset.quota) : '',
-  } : emptySel()];
-  if (preset) { window.__campionato = preset.campionato || ''; window.__data = ddmmyyyyToInput(preset.data); }
-
-  function optionsHtml() { return MERCATI.map(m => `<option value="${m}">${m}</option>`).join(''); }
-
-  function selHtml(i) {
-    const s = selezioni[i];
-    return `
-      <div class="sel-block">
-        ${tipo === 'Multipla' ? `<div style="display:flex;justify-content:space-between;margin-bottom:6px"><span class="meta">Evento ${i + 1}</span>${selezioni.length > 1 ? `<button class="btn-del" onclick="window.__removeSel(${i})">✕</button>` : ''}</div>` : ''}
-        <input placeholder="Squadra A - Squadra B" value="${s.squadre}" oninput="window.__updateSel(${i},'squadre',this.value)" />
-        <div class="grid3">
-          <select onchange="window.__updateSel(${i},'mercato',this.value)">${optionsHtml()}</select>
-          <input placeholder="Es. Over 2.5" value="${s.pronostico}" oninput="window.__updateSel(${i},'pronostico',this.value)" />
-          <input placeholder="Quota" inputmode="decimal" value="${s.quota}" oninput="window.__updateSel(${i},'quota',this.value)" />
-        </div>
-      </div>`;
-  }
-
-  function renderModal() {
-    document.getElementById('modal-root').innerHTML = `
-      <div class="modal-bg" id="modal-bg">
-        <div class="modal">
-          <button class="modal-close" onclick="window.__closeModal()">✕</button>
-          <h3>Registra giocata</h3>
-          <div class="type-toggle">
-            <button class="${tipo === 'Singola' ? 'active' : ''}" onclick="window.__setTipo('Singola')">Singola</button>
-            <button class="${tipo === 'Multipla' ? 'active' : ''}" onclick="window.__setTipo('Multipla')">Multipla</button>
-          </div>
-          <div class="field"><label class="field-label">Campionato</label><input id="f-campionato" placeholder="Serie A, Premier League..." /></div>
-          <div class="field"><label class="field-label">Data</label><input id="f-data" type="date" /></div>
-          <div id="sel-container">${selezioni.map((_, i) => selHtml(i)).join('')}</div>
-          ${tipo === 'Multipla' ? `<button class="btn-gold" style="width:100%;margin-bottom:12px;background:#0F2418;color:#8FA394;border:1px dashed #3D6249" onclick="window.__addSel()">+ Aggiungi evento</button>` : ''}
-          <div class="field"><label class="field-label">Importo puntato (€)</label><input id="f-importo" placeholder="0.00" inputmode="decimal" /></div>
-          <button class="btn-gold" style="width:100%" onclick="window.__saveBet()">Salva giocata</button>
-        </div>
-      </div>`;
-    document.getElementById('f-campionato').value = window.__campionato || '';
-    document.getElementById('f-data').value = window.__data || new Date().toISOString().slice(0, 10);
-    document.getElementById('f-importo').value = window.__importo || '';
-    document.getElementById('f-campionato').oninput = e => window.__campionato = e.target.value;
-    document.getElementById('f-data').oninput = e => window.__data = e.target.value;
-    document.getElementById('f-importo').oninput = e => window.__importo = e.target.value;
-    document.getElementById('modal-bg').addEventListener('click', e => { if (e.target.id === 'modal-bg') window.__closeModal(); });
-  }
-
-  window.__setTipo = (t) => { tipo = t; if (t === 'Singola') selezioni = [selezioni[0] || emptySel()]; renderModal(); };
-  window.__updateSel = (i, key, val) => { selezioni[i][key] = val; };
-  window.__addSel = () => { selezioni.push(emptySel()); renderModal(); };
-  window.__removeSel = (i) => { selezioni.splice(i, 1); renderModal(); };
-  window.__closeModal = () => { document.getElementById('modal-root').innerHTML = ''; window.__campionato = window.__data = window.__importo = ''; };
-  window.__saveBet = () => {
-    const valid = selezioni.every(s => s.squadre.trim() && Number(s.quota) > 0);
-    const importo = document.getElementById('f-importo').value;
-    if (!valid || !(Number(importo) > 0)) { alert('Compila squadre, quote e importo per salvare.'); return; }
-    const bets = loadBets();
-    bets.unshift({
-      id: uid(), tipo, campionato: document.getElementById('f-campionato').value,
-      data: document.getElementById('f-data').value, importo, esito: 'in_corso', selezioni,
-    });
-    saveBets(bets);
-    window.__closeModal();
-    renderStorico();
+const csvCell = v => { const s = String(v == null ? '' : v); return /[";\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+$('#btn-csv').addEventListener('click', () => {
+  const rows = [['data', 'tipo', 'campionato', 'selezioni', 'quota_totale', 'importo', 'esito', 'profitto']];
+  loadBets().forEach(b => rows.push([b.data, b.tipo, b.campionato, b.selezioni.map(s => `${s.squadre} [${s.mercato} ${s.pronostico}] @${s.quota}`).join(' | '),
+    quotaTot(b).toFixed(2).replace('.', ','), String(b.importo).replace('.', ','), b.esito, profitto(b).toFixed(2).replace('.', ',')]));
+  download('schedine.csv', '﻿' + rows.map(r => r.map(csvCell).join(';')).join('\n'), 'text/csv;charset=utf-8');
+});
+$('#btn-backup').addEventListener('click', () => download('schedine-backup.json', JSON.stringify(loadBets(), null, 1), 'application/json'));
+$('#btn-restore').addEventListener('click', () => $('#file-restore').click());
+$('#file-restore').addEventListener('change', e => {
+  const f = e.target.files[0]; if (!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    try {
+      const arr = JSON.parse(r.result);
+      if (!Array.isArray(arr) || !arr.every(b => b && Array.isArray(b.selezioni))) throw new Error('formato');
+      const cur = loadBets(), ids = new Set(cur.map(b => b.id));
+      const added = arr.filter(b => !ids.has(b.id));
+      saveBets([...added, ...cur]); renderStorico();
+      alert(`Ripristino completato: ${added.length} giocate aggiunte.`);
+    } catch (err) { alert('File non valido: serve un backup creato con il pulsante Backup.'); }
+    e.target.value = '';
   };
+  r.readAsText(f);
+});
 
+/* ============================================================ modal nuova giocata */
+let M = null;   // stato del modal
+function openBetModal(preset) {
+  M = Object.assign({ tipo: 'Singola', campionato: '', data: isoLocal(new Date()), importo: '', selezioni: [{ squadre: '', mercato: MERCATI[0], pronostico: '', quota: '' }] }, preset || {});
   renderModal();
 }
-document.getElementById('btn-new-bet').addEventListener('click', () => openNewBetModal());
+function selBlock(s, i) {
+  return `<div class="sel-block">
+    ${M.tipo === 'Multipla' ? `<div style="display:flex;justify-content:space-between;margin-bottom:6px"><span class="meta">Evento ${i + 1}</span>${M.selezioni.length > 1 ? `<button class="btn-del" data-act="rm" data-i="${i}">✕</button>` : ''}</div>` : ''}
+    <input data-sel="${i}" data-k="squadre" placeholder="Squadra A - Squadra B" value="${esc(s.squadre)}" />
+    <div class="grid3">
+      <select data-sel="${i}" data-k="mercato">${MERCATI.map(m => `<option ${m === s.mercato ? 'selected' : ''}>${esc(m)}</option>`).join('')}</select>
+      <input data-sel="${i}" data-k="pronostico" placeholder="Es. Over 2.5" value="${esc(s.pronostico)}" />
+      <input data-sel="${i}" data-k="quota" placeholder="Quota" inputmode="decimal" value="${esc(s.quota)}" />
+    </div></div>`;
+}
+function renderModal() {
+  if (!M) { $('#modal-root').innerHTML = ''; return; }
+  $('#modal-root').innerHTML = `<div class="modal-bg" data-act="bg"><div class="modal">
+    <button class="modal-close" data-act="close">✕</button><h3>Registra giocata</h3>
+    <div class="type-toggle">${['Singola', 'Multipla'].map(t => `<button class="${M.tipo === t ? 'active' : ''}" data-act="tipo" data-t="${t}">${t}</button>`).join('')}</div>
+    <div class="field"><label class="field-label">Campionato</label><input data-f="campionato" value="${esc(M.campionato)}" placeholder="Serie A, Premier League..." /></div>
+    <div class="field"><label class="field-label">Data</label><input type="date" data-f="data" value="${esc(M.data)}" /></div>
+    ${M.selezioni.map(selBlock).join('')}
+    ${M.tipo === 'Multipla' ? '<button class="btn-ghost" style="width:100%;margin-bottom:12px" data-act="add">+ Aggiungi evento</button>' : ''}
+    <div class="field"><label class="field-label">Importo puntato (€)</label><input data-f="importo" inputmode="decimal" value="${esc(M.importo)}" placeholder="0.00" /></div>
+    <div class="total-line"><span>Quota totale <b id="m-quota"></b></span><span>Vincita potenziale <b id="m-win"></b></span></div>
+    <button class="btn-gold" style="width:100%;padding:12px" data-act="save">Salva giocata</button></div></div>`;
+  updateTotals();
+}
+function updateTotals() {
+  if (!M || !$('#m-quota')) return;
+  const q = M.selezioni.reduce((a, s) => a * (Number(s.quota) || 1), 1);
+  $('#m-quota').textContent = q.toFixed(2);
+  $('#m-win').textContent = fmtEuro(q * (Number(M.importo) || 0));
+}
+$('#modal-root').addEventListener('input', e => {
+  if (!M) return;
+  const t = e.target;
+  if (t.dataset.f) M[t.dataset.f] = t.dataset.f === 'importo' ? t.value.replace(',', '.') : t.value;
+  else if (t.dataset.sel != null) M.selezioni[+t.dataset.sel][t.dataset.k] = t.dataset.k === 'quota' ? t.value.replace(',', '.') : t.value;
+  updateTotals();
+});
+$('#modal-root').addEventListener('change', e => {   // il select non emette sempre 'input' su tutti i browser
+  if (M && e.target.dataset.sel != null) M.selezioni[+e.target.dataset.sel][e.target.dataset.k] = e.target.value;
+});
+$('#modal-root').addEventListener('click', e => {
+  if (!M) return;
+  const b = e.target.closest('[data-act]'); if (!b) return;
+  const act = b.dataset.act;
+  if (act === 'bg') { if (e.target === b) { M = null; renderModal(); } return; }
+  if (act === 'close') { M = null; renderModal(); }
+  else if (act === 'tipo') { M.tipo = b.dataset.t; if (M.tipo === 'Singola') M.selezioni = [M.selezioni[0]]; renderModal(); }
+  else if (act === 'add') { M.selezioni.push({ squadre: '', mercato: MERCATI[0], pronostico: '', quota: '' }); renderModal(); }
+  else if (act === 'rm') { M.selezioni.splice(+b.dataset.i, 1); renderModal(); }
+  else if (act === 'save') {
+    const ok = M.selezioni.every(s => s.squadre.trim() && Number(s.quota) > 0) && Number(M.importo) > 0;
+    if (!ok) { alert('Compila squadre, quote e importo per salvare.'); return; }
+    const bets = loadBets();
+    bets.unshift({ id: uid(), tipo: M.tipo, campionato: M.campionato, data: M.data, importo: M.importo, esito: 'in_corso', selezioni: M.selezioni });
+    saveBets(bets); M = null; renderModal(); renderStorico(); switchTab('storico');
+  }
+});
+$('#btn-new-bet').addEventListener('click', () => openBetModal());
 
-window.__addToSchedina = function (id) {
-  const signal = window.__signalsById ? window.__signalsById[id] : null;
-  if (!signal) return;
-  switchTab('storico');
-  openNewBetModal(signal);
-};
-
+/* ============================================================ avvio */
 renderStorico();
+loadData();
 </script>
 </body>
 </html>

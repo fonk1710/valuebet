@@ -76,3 +76,14 @@ forma recente, non un modello predittivo validato.
   servirebbe un provider a pagamento (API-Football, The Odds API)
 - Più bookmaker o quote più fresche (aggiornate più spesso della settimana)
   → provider a pagamento con API in tempo reale
+
+## Novità (v2)
+
+- **Schedine consigliate** (Singola, X2–X5) costruite ogni giorno con le partite dei prossimi 3 giorni, con quota totale, probabilità stimata, valore atteso (EV) e puntata consigliata (Kelly al 25%, con tetti 2% singola / 1% multipla).
+- **Modello Poisson** (forza attacco/difesa casa/trasferta, ridotta verso la media del campionato) mescolato 50/50 con le probabilità di mercato senza margine. *Value bet* = EV ≥ +3% e probabilità ≥ 20%.
+- **Verifica**: ogni segnale e schedina pubblicati vengono registrati in `docs/data.json` (`history`) e controllati a partita finita. Il tab mostra % uscite e ROI per tipo, mercato, confidenza e campionato. Servono almeno 30-50 giocate prima che i numeri significhino qualcosa.
+- **Storico**: budget, statistiche per tipo/campionato/mercato, grafico del profitto, export CSV, backup/ripristino.
+- Corretto un bug del vecchio motore che scartava i risultati con 0 gol.
+- Test: `python3 tests/test_engine.py`.
+
+Non ancora implementati: veri "sistemi" (es. 3 su 4), Serie C e Eerste Divisie (non disponibili gratis).
