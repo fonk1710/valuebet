@@ -34,6 +34,11 @@
   .filters button { background: #16301F; border: 1px solid #2A4A34; color: #8FA394; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-family: monospace; cursor: pointer; }
   .filters button.active { background: #D4A537; color: #0F2418; border-color: #D4A537; }
 
+  .date-filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+  .date-filters button { background: #16301F; border: 1px solid #2A4A34; color: #8FA394; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-family: monospace; cursor: pointer; }
+  .date-filters button.active { background: #D4A537; color: #0F2418; border-color: #D4A537; }
+  .date-filters input[type=date] { width: auto; padding: 5px 8px; font-family: monospace; font-size: 12px; }
+  .date-filters .lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: #6E8A78; font-weight: 600; margin-right: 2px; }
   .card { background: #152A1E; border: 1px solid #2A4A34; border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; }
   .card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 6px; }
   .match { font-size: 15px; font-weight: 600; }
@@ -90,6 +95,7 @@
 
   <div id="tab-home">
     <div class="notes" id="notes"></div>
+    <div class="date-filters" id="date-filters"></div>
     <div class="filters" id="filters"></div>
     <div id="signals"></div>
   </div>
@@ -148,9 +154,69 @@ async function loadSignals() {
 
   const campionati = ['Tutti', ...new Set(signals.map(s => s.campionato))];
   let active = 'Tutti';
+  let dateMode = 'da_oggi';   // da_oggi | oggi | domani | weekend | 7giorni | tutte | giorno
+  let pickedDay = '';
+
+  // Interpreta le date del motore: DD/MM/YYYY, DD/MM/YY o YYYY-MM-DD. Restituisce 'YYYY-MM-DD' o null.
+  function parseDay(str) {
+    if (!str) return null;
+    let m = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(str);
+    if (m) return `${m[3]}-${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}`;
+    m = /^(\d{1,2})\/(\d{1,2})\/(\d{2})$/.exec(str);
+    if (m) return `20${m[3]}-${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}`;
+    m = /^(\d{4})-(\d{2})-(\d{2})/.exec(str);
+    return m ? `${m[1]}-${m[2]}-${m[3]}` : null;
+  }
+  function isoLocal(d) {
+    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  }
+  function addDays(d, n) { const x = new Date(d); x.setDate(x.getDate() + n); return x; }
+  signals.forEach(s => s._day = parseDay(s.data));
+
+  function matchesDate(s) {
+    const today = new Date();
+    const t0 = isoLocal(today);
+    if (dateMode === 'tutte') return true;
+    if (!s._day) return dateMode === 'da_oggi';   // data non leggibile: la tengo solo nella vista di default
+    if (dateMode === 'da_oggi') return s._day >= t0;
+    if (dateMode === 'oggi') return s._day === t0;
+    if (dateMode === 'domani') return s._day === isoLocal(addDays(today, 1));
+    if (dateMode === '7giorni') return s._day >= t0 && s._day <= isoLocal(addDays(today, 7));
+    if (dateMode === 'weekend') {
+      const dow = today.getDay();                       // 0 = domenica
+      const toSat = dow === 0 ? -1 : 6 - dow;           // se è domenica, il weekend è iniziato ieri
+      const sat = isoLocal(addDays(today, toSat));
+      const sun = isoLocal(addDays(today, toSat + 1));
+      return s._day === sat || s._day === sun;
+    }
+    if (dateMode === 'giorno') return pickedDay ? s._day === pickedDay : true;
+    return true;
+  }
+
+  const dateFiltersEl = document.getElementById('date-filters');
+  const DATE_BTNS = [
+    ['da_oggi', 'Da oggi'], ['oggi', 'Oggi'], ['domani', 'Domani'],
+    ['weekend', 'Weekend'], ['7giorni', '7 giorni'], ['tutte', 'Tutte'],
+  ];
+  function renderDateFilters() {
+    dateFiltersEl.innerHTML =
+      '<span class="lbl">Data</span>' +
+      DATE_BTNS.map(([k, l]) => `<button data-d="${k}" class="${dateMode === k ? 'active' : ''}">${l}</button>`).join('') +
+      `<input type="date" id="day-picker" value="${pickedDay}" />`;
+    dateFiltersEl.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => { dateMode = btn.dataset.d; pickedDay = ''; renderDateFilters(); render(); });
+    });
+    document.getElementById('day-picker').addEventListener('change', e => {
+      pickedDay = e.target.value;
+      dateMode = pickedDay ? 'giorno' : 'da_oggi';
+      renderDateFilters(); render();
+    });
+  }
 
   function render() {
-    const filtered = active === 'Tutti' ? signals : signals.filter(s => s.campionato === active);
+    const filtered = signals
+      .filter(s => (active === 'Tutti' || s.campionato === active) && matchesDate(s))
+      .sort((a, b) => (a._day || '9999').localeCompare(b._day || '9999'));
     container.innerHTML = filtered.map(s => `
       <div class="card">
         <div class="card-top">
@@ -164,7 +230,7 @@ async function loadSignals() {
         <div class="note">${s.nota}</div>
         <button class="btn-gold" style="margin-top:10px;font-size:12px;padding:7px 12px" onclick="window.__addToSchedina(${s._id})">+ Aggiungi a schedina</button>
       </div>
-    `).join('') || '<div class="empty">Nessun segnale per questo filtro.</div>';
+    `).join('') || '<div class="empty">Nessun segnale per questi filtri. Prova con "Tutte" nelle date.</div>';
   }
 
   filtersEl.innerHTML = campionati.map(c => `<button data-c="${c}" class="${c === active ? 'active' : ''}">${c}</button>`).join('');
@@ -175,6 +241,7 @@ async function loadSignals() {
       render();
     });
   });
+  renderDateFilters();
   render();
 }
 loadSignals();
