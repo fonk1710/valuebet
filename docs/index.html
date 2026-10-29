@@ -123,6 +123,10 @@
     <h2 class="sec">Schedine consigliate</h2>
     <div id="slips"></div>
 
+    <h2 class="sec">Sistemi</h2>
+    <div class="note" style="margin:-4px 0 12px">Un sistema "3 su 4" gioca tutte le combinazioni da 3 eventi sui 4 scelti, con la stessa puntata ciascuna: non serve azzeccarli tutti per incassare, ma la vincita è più bassa di una multipla.</div>
+    <div id="systems"></div>
+
     <h2 class="sec">Tutti i segnali</h2>
     <div class="row" id="date-filters"></div>
     <div class="row" id="filters"></div>
@@ -263,6 +267,33 @@ function renderSlips() {
     </div>`).join('');
 }
 
+function renderSystems() {
+  const el = $('#systems');
+  if (!DATA) { el.innerHTML = ''; return; }
+  const SY = DATA.systems;
+  if (SY == null) { el.innerHTML = '<div class="empty">I sistemi compariranno al prossimo aggiornamento del motore.</div>'; return; }
+  if (!SY.length) { el.innerHTML = '<div class="empty">Servono almeno 3 selezioni affidabili nei prossimi giorni per costruire un sistema.</div>'; return; }
+  el.innerHTML = SY.map((s, i) => {
+    const b = getBankroll();
+    const tot = (s.kelly && b > 0) ? b * s.kelly : 0;
+    const per = tot ? tot / s.combinazioni : 0;
+    return `<div class="card slip">
+      <div class="card-top"><div><span class="tipo">${esc(s.tipo)}</span> <span class="meta">· ${s.combinazioni} combinazioni</span></div>
+        <span class="pill ${s.value ? 'value' : 'statistico'}">${s.value ? 'valore positivo' : 'senza valore'}</span></div>
+      ${s.legs.map(l => `<div class="leg"><div>${esc(l.partita)}<div class="sm">${esc(l.campionato)} · ${esc(l.data)} · ${esc(l.mercato)}: ${esc(l.pronostico)}</div></div><div class="q">${Number(l.quota).toFixed(2)}</div></div>`).join('')}
+      <div class="slip-foot">
+        <span>Probabilità di incassare <b>${pct(s.p_rientro)}</b></span>
+        <span>Ritorno se ne escono ${s.k} <b>da ${Number(s.ritorno_min).toFixed(2)}x</b></span>
+        <span>Se escono tutti <b>${Number(s.ritorno_max).toFixed(2)}x</b></span>
+        <span>${evChip(s.ev)}</span>
+      </div>
+      ${s.kelly ? `<div class="stake">Puntata consigliata: <b>${(s.kelly * 100).toFixed(1)}%</b> del budget${tot ? ` ≈ <b>${fmtEuro(tot)}</b> in tutto (${fmtEuro(per)} per combinazione)` : ''}</div>` : '<div class="stake">Puntata consigliata: <b>nessuna</b> (valore atteso non positivo)</div>'}
+      <div class="note" style="margin-top:6px">${esc(s.nota)} I ritorni sono per 1 € puntato in tutto.</div>
+      <div class="note" style="margin-top:4px">Per giocarlo, registra ogni combinazione come multipla nel tuo Storico oppure usa il sistema dal tuo bookmaker.</div>
+    </div>`;
+  }).join('');
+}
+
 /* ============================================================ home: segnali con filtri */
 let fCamp = 'Tutti', fDate = 'da_oggi', fDay = '', fValue = false;
 const DATE_BTNS = [['da_oggi', 'Da oggi'], ['oggi', 'Oggi'], ['domani', 'Domani'], ['weekend', 'Weekend'], ['7giorni', '7 giorni'], ['tutte', 'Tutte']];
@@ -334,7 +365,7 @@ function renderSignals() {
       <button class="btn-gold" style="margin-top:10px" data-sig="${s._i}">+ Aggiungi a schedina</button>
     </div>`).join('') || '<div class="empty">Nessun segnale per questi filtri. Prova con "Tutte" nelle date.</div>';
 }
-function renderHome() { renderSlips(); renderSignals(); }
+function renderHome() { renderSlips(); renderSystems(); renderSignals(); }
 
 $('#tab-home').addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b) return;

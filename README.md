@@ -86,4 +86,6 @@ forma recente, non un modello predittivo validato.
 - Corretto un bug del vecchio motore che scartava i risultati con 0 gol.
 - Test: `python3 tests/test_engine.py`.
 
-Non ancora implementati: veri "sistemi" (es. 3 su 4), Serie C e Eerste Divisie (non disponibili gratis).
+- **Sistemi** integrali (2 su 3, 3 su 4, 3 su 5, 4 su 5, 4 su 6) con probabilità di incasso, ritorno minimo/massimo ed EV calcolati esattamente (eventi supposti indipendenti). Non sono ancora registrati nella scheda Verifica.
+
+Non ancora implementati: Serie C e Eerste Divisie (non disponibili gratis).

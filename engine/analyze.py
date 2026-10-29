@@ -22,6 +22,7 @@ ha bisogno di toccare altri file.
 import csv
 import io
 import json
+import itertools
 import math
 import os
 import time
@@ -439,7 +440,8 @@ def analyze_extra_leagues(today):
 # Schedine consigliate
 # ----------------------------------------------------------------------------
 
-def build_slips(signals, today):
+def pick_legs(signals, today):
+    """Selezioni candidate per schedine e sistemi: una per partita, migliori prima."""
     horizon = today + timedelta(days=SLIP_WINDOW_DAYS)
     pool = []
     for s in signals:
@@ -460,7 +462,56 @@ def build_slips(signals, today):
             continue
         seen.add(match)
         picked.append(s)
+    return picked
 
+
+SYSTEM_DEFS = [(2, 3), (3, 4), (3, 5), (4, 5), (4, 6)]   # "k su n"
+SYSTEM_STAKE_CAP = 0.01
+
+
+def build_systems(picked):
+    """Sistemi integrali k su n: tutte le combinazioni da k eventi, stessa puntata ciascuna.
+    Probabilita' e valore atteso calcolati esattamente (eventi supposti indipendenti)."""
+    out = []
+    for k, n in SYSTEM_DEFS:
+        if len(picked) < n:
+            continue
+        legs = picked[:n]
+        combos = list(itertools.combinations(range(n), k))
+        qs = [l["quota"] for l in legs]
+        ps = [l["p"] for l in legs]
+        exp_ret, p_any = 0.0, 0.0
+        for mask in range(1 << n):
+            hit = [i for i in range(n) if mask >> i & 1]
+            pr = math.prod(ps[i] if i in hit else 1 - ps[i] for i in range(n))
+            ret = sum(math.prod(qs[i] for i in c) for c in combos if all(i in hit for i in c))
+            exp_ret += pr * ret
+            if ret > 0:
+                p_any += pr
+        cost = len(combos)
+        ev = exp_ret / cost - 1
+        worst = min(math.prod(qs[i] for i in c) for c in combos) / cost
+        best_all = sum(math.prod(qs[i] for i in c) for c in combos) / cost
+        out.append({
+            "id": f"{k}su{n}", "tipo": f"{k} su {n}", "k": k, "n": n,
+            "combinazioni": cost,
+            "p_rientro": round(p_any, 3),                # almeno k eventi su n
+            "ritorno_min": round(worst, 2),              # ritorno per 1 € totale se ne escono esattamente k (caso peggiore)
+            "ritorno_max": round(best_all, 2),           # ritorno per 1 € totale se escono tutti
+            "ev": round(ev, 3),
+            "kelly": SYSTEM_STAKE_CAP if ev > 0 else 0.0,
+            "value": ev > 0,
+            "legs": [{k2: l[k2] for k2 in ("id", "partita", "campionato", "data", "mercato",
+                                           "pronostico", "quota", "p", "confidenza")} for l in legs],
+            "nota": (f"Puntata divisa in {cost} combinazioni da {k} eventi: basta che ne escano {k} su {n} per incassare qualcosa (non sempre quanto puntato). "
+                     + ("Valore atteso positivo secondo la stima." if ev > 0 else
+                        "Valore atteso non positivo: indicazione statistica, non una puntata consigliata.")),
+        })
+    return out
+
+
+def build_slips(signals, today):
+    picked = pick_legs(signals, today)
     slips = []
     for n in range(1, 6):
         if len(picked) < n:
@@ -598,6 +649,7 @@ def main():
         print(f"  Errore campionati extra: {exc}")
 
     slips = build_slips(signals, today)
+    systems = build_systems(pick_legs(signals, today))
     history = update_history(load_previous_history(OUTPUT_PATH), signals, slips, results_by_league, today)
 
     output = {
@@ -622,6 +674,7 @@ def main():
         ),
         "signals": signals,
         "slips": slips,
+        "systems": systems,
         "history": history,
     }
 

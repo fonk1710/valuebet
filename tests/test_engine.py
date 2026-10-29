@@ -192,6 +192,25 @@ def test_slips():
     assert A.build_slips([], TODAY) == []
     print("ok schedine")
 
+    # sistemi k su n
+    picked = A.pick_legs(pool, TODAY)
+    systems = A.build_systems(picked)
+    assert [x["id"] for x in systems] == ["2su3", "3su4", "3su5", "4su5"], [x["id"] for x in systems]   # solo 5 selezioni valide
+    s23 = systems[0]
+    legs = picked[:3]
+    qs = [l["quota"] for l in legs]; ps = [l["p"] for l in legs]
+    assert s23["combinazioni"] == 3
+    # prob. rientro = almeno 2 su 3
+    exp = (ps[0]*ps[1]*ps[2] + ps[0]*ps[1]*(1-ps[2]) + ps[0]*(1-ps[1])*ps[2] + (1-ps[0])*ps[1]*ps[2])
+    assert math.isclose(s23["p_rientro"], round(exp, 3), abs_tol=0.001)
+    assert math.isclose(s23["ritorno_max"], round((qs[0]*qs[1] + qs[0]*qs[2] + qs[1]*qs[2]) / 3, 2), abs_tol=0.01)
+    # EV esatto con 3 su 3 combinazioni indipendenti: E[ritorno] = somma(prod p * prod q) / costo
+    ev = sum(ps[a]*ps[b]*qs[a]*qs[b] for a, b in [(0,1),(0,2),(1,2)]) / 3 - 1
+    assert math.isclose(s23["ev"], round(ev, 3), abs_tol=0.002)
+    assert s23["kelly"] == (A.SYSTEM_STAKE_CAP if s23["ev"] > 0 else 0.0)
+    assert A.build_systems(picked[:2]) == []
+    print("ok sistemi")
+
 
 def test_history():
     yesterday, two = TODAY - timedelta(days=1), TODAY - timedelta(days=2)
