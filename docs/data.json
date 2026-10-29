@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T13:56:16.470259+00:00",
+  "generated_at": "2026-10-29T14:03:58.099719+00:00",
   "coverage_note": "Quote reali gratuite da football-data.co.uk: Premier League, Championship, League One, League Two, National League, Bundesliga, 2.Bundesliga, Serie A, Serie B, LaLiga, LaLiga 2, Ligue 1, Ligue 2, Eredivisie, Belgio, Irlanda, Norvegia, Svezia. Non coperti gratuitamente: Serie C, Eerste Divisie (Olanda 2).",
   "odds_note": "Le quote 'Avg' sono la media tra piu' bookmaker, raccolte il venerdi' per il turno del weekend e il martedi' per gli infrasettimanali. Per Irlanda, Norvegia e Svezia mostriamo solo il favorito di mercato: nessuno storico gratuito disponibile per calcolare segnali.",
   "signals": [
@@ -27,11 +27,21 @@
       "partita": "Luton - Doncaster",
       "campionato": "League One",
       "data": "27/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Luton)",
+      "quota": 1.5,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Luton (media punti 1.62 vs 0.33 nelle ultime 8/6 partite). Quota di mercato 1.5."
+    },
+    {
+      "partita": "Luton - Doncaster",
+      "campionato": "League One",
+      "data": "27/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.49,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.49."
+      "nota": "Over 2.5 nel 86% delle ultime partite di entrambe. Quota di mercato 1.49."
     },
     {
       "partita": "Luton - Doncaster",
@@ -51,7 +61,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.58,
       "confidenza": "Media",
-      "nota": "Over 2.5 nel 69% delle ultime partite di entrambe. Quota di mercato 1.58."
+      "nota": "Over 2.5 nel 73% delle ultime partite di entrambe. Quota di mercato 1.58."
     },
     {
       "partita": "Milton Keynes Dons - Bromley",
@@ -90,8 +100,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.67,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.67."
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 72% delle ultime partite di entrambe. Quota di mercato 1.67."
     },
     {
       "partita": "Sheffield Weds - Cambridge",
@@ -141,7 +151,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.57,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 79% delle ultime partite di entrambe. Quota di mercato 1.57."
+      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 1.57."
     },
     {
       "partita": "Boston Utd - Gateshead",
@@ -221,7 +231,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.43,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 93% delle ultime partite di entrambe. Quota di mercato 1.43."
+      "nota": "Over 2.5 nel 94% delle ultime partite di entrambe. Quota di mercato 1.43."
     },
     {
       "partita": "Tamworth - Scunthorpe",
@@ -361,7 +371,7 @@
       "pronostico": "2 (vittoria Lazio)",
       "quota": 2.09,
       "confidenza": "Media",
-      "nota": "Forma recente nettamente a favore del Lazio (media punti 2.5 vs 1.14 nelle ultime 7/4 partite). Quota di mercato 2.09."
+      "nota": "Forma recente nettamente a favore del Lazio (media punti 2.6 vs 1.0 nelle ultime 8/5 partite). Quota di mercato 2.09."
     },
     {
       "partita": "Sassuolo - Lazio",
@@ -371,7 +381,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.66,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 93% delle ultime partite di entrambe. Quota di mercato 1.66."
+      "nota": "Over 2.5 nel 94% delle ultime partite di entrambe. Quota di mercato 1.66."
     },
     {
       "partita": "Sassuolo - Lazio",
@@ -391,7 +401,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.61,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 75% delle ultime partite di entrambe. Quota di mercato 1.61."
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.61."
     },
     {
       "partita": "Roma - Cagliari",
@@ -407,11 +417,21 @@
       "partita": "Torino - Como",
       "campionato": "Serie A",
       "data": "27/10/2026",
+      "mercato": "1X2",
+      "pronostico": "2 (vittoria Como)",
+      "quota": 1.74,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Como (media punti 2.67 vs 1.43 nelle ultime 7/6 partite). Quota di mercato 1.74."
+    },
+    {
+      "partita": "Torino - Como",
+      "campionato": "Serie A",
+      "data": "27/10/2026",
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.65,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 82% delle ultime partite di entrambe. Quota di mercato 1.65."
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.65."
     },
     {
       "partita": "Torino - Como",
@@ -431,7 +451,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.81,
       "confidenza": "Media",
-      "nota": "Over 2.5 nel 68% delle ultime partite di entrambe. Quota di mercato 1.81."
+      "nota": "Over 2.5 nel 74% delle ultime partite di entrambe. Quota di mercato 1.81."
     },
     {
       "partita": "Milan - Bologna",
@@ -511,7 +531,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.69,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 1.69."
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.69."
     },
     {
       "partita": "Monza - Napoli",
@@ -570,8 +590,8 @@
       "mercato": "Over/Under",
       "pronostico": "Over 2.5",
       "quota": 1.6,
-      "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.6."
+      "confidenza": "Media",
+      "nota": "Over 2.5 nel 73% delle ultime partite di entrambe. Quota di mercato 1.6."
     },
     {
       "partita": "Benevento - Catanzaro",
@@ -612,6 +632,16 @@
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
+    },
+    {
+      "partita": "Cesena - Empoli",
+      "campionato": "Serie B",
+      "data": "27/10/2026",
+      "mercato": "1X2",
+      "pronostico": "1 (vittoria Cesena)",
+      "quota": 2.0,
+      "confidenza": "Media",
+      "nota": "Forma recente nettamente a favore del Cesena (media punti 1.57 vs 0.2 nelle ultime 7/5 partite). Quota di mercato 2.0."
     },
     {
       "partita": "Cesena - Empoli",
@@ -671,7 +701,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.75,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 80% delle ultime partite di entrambe. Quota di mercato 1.75."
+      "nota": "Over 2.5 nel 83% delle ultime partite di entrambe. Quota di mercato 1.75."
     },
     {
       "partita": "Vicenza - Modena",
@@ -682,16 +712,6 @@
       "quota": null,
       "confidenza": "Alta",
       "nota": "Entrambe a segno nel 100% delle ultime partite (quota GG/NG non disponibile in questa fonte)."
-    },
-    {
-      "partita": "Virtus Entella - Avellino",
-      "campionato": "Serie B",
-      "data": "27/10/2026",
-      "mercato": "Over/Under",
-      "pronostico": "Over 2.5",
-      "quota": 2.12,
-      "confidenza": "Media",
-      "nota": "Over 2.5 nel 70% delle ultime partite di entrambe. Quota di mercato 2.12."
     },
     {
       "partita": "Virtus Entella - Avellino",
@@ -711,7 +731,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.69,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 82% delle ultime partite di entrambe. Quota di mercato 1.69."
+      "nota": "Over 2.5 nel 84% delle ultime partite di entrambe. Quota di mercato 1.69."
     },
     {
       "partita": "Pisa - Palermo",
@@ -731,7 +751,7 @@
       "pronostico": "Over 2.5",
       "quota": 1.97,
       "confidenza": "Alta",
-      "nota": "Over 2.5 nel 88% delle ultime partite di entrambe. Quota di mercato 1.97."
+      "nota": "Over 2.5 nel 90% delle ultime partite di entrambe. Quota di mercato 1.97."
     },
     {
       "partita": "Carrarese - Arezzo",
