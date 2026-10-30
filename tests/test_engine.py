@@ -307,7 +307,8 @@ def test_full_run():
     assert extra_sig[0]["pronostico"].startswith("Favorita di mercato: 2"), extra_sig[0]["pronostico"]
     logged = d["history"]["signals"]
     assert len(logged) == sum(1 for s in d["signals"] if s["key"])
-    assert d["slips"] and d["slips"][0]["n"] == 1
+    assert d["slips"] and d["slips"][0]["n"] == 1 and isinstance(d["lowcost"], list)
+    assert any(x["partita"] == "Forti - Deboli B" for x in d["lowcost"]), d["lowcost"]
     json.dumps(d)  # serializzabile
     print(f"ok giro completo: {len(d['signals'])} segnali, {len(d['slips'])} schedine, {len(logged)} registrati")
 
@@ -476,6 +477,22 @@ def test_backtest():
     print(f"ok backtest: {rep['matches']} partite, ROI mercato efficiente {ov['roi']}, mercato cieco {o2['roi']} su {o2['n']} bet")
 
 
+def test_lowcost():
+    d = TODAY + timedelta(days=1)
+    row = fixture("Alpha", "Beta", d, h=1.60, d=3.8, a=5.5)
+    row.update({"MaxH": "1.68"})
+    lc = A.lowcost_pick(row, "E0", "Premier League", set(), TODAY)
+    assert lc and lc["key"] == "H" and lc["quota_media"] == 1.6 and lc["quota_max"] == 1.68
+    assert lc["soglia"] == 1.6 and -0.12 < lc["costo"] < 0 and "Alpha" in lc["pronostico"]
+    away = A.lowcost_pick(fixture("Alpha", "Beta", d, h=5.5, d=3.8, a=1.45), "E0", "x", set(), TODAY)
+    assert away["key"] == "A" and away["quota_media"] == 1.45
+    assert A.lowcost_pick(fixture("A", "B", d, h=1.2, d=6.0, a=12.0), "E0", "x", set(), TODAY) is None, "troppo bassa"
+    assert A.lowcost_pick(fixture("A", "B", d, h=2.4, d=3.2, a=3.0), "E0", "x", set(), TODAY) is None, "nessuna favorita netta"
+    assert A.lowcost_pick(fixture("A", "B", TODAY - timedelta(days=1), h=1.6), "E0", "x", set(), TODAY) is None
+    assert A.lowcost_pick(row, "E0", "x", {("Alpha", "Beta", d)}, TODAY) is None
+    print("ok basso costo")
+
+
 def test_costs():
     import costs as C
     c = C.Costs()
@@ -510,6 +527,6 @@ def test_costs():
 if __name__ == "__main__":
     for t in (test_parsers, test_poisson, test_kelly, test_outcomes, test_model_and_form,
               test_analyze_fixture, test_slips, test_history, test_asian_handicap,
-              test_odds_movement_and_ah_history, test_backtest, test_costs, test_full_run):
+              test_odds_movement_and_ah_history, test_backtest, test_costs, test_lowcost, test_full_run):
         t()
     print("\nTUTTI I TEST OK")

@@ -96,3 +96,10 @@ Non ancora implementati: Serie C e Eerste Divisie (non disponibili gratis).
 - **Movimento quote**: per ogni segnale registrato si tiene l'ultima quota vista prima della partita (`q_last`) e la scheda Verifica mostra quanto spesso la quota scende dopo il segnale.
 - **Handicap asiatico** (linee intere e con mezzo punto; i quarti sono saltati): segnali value con rimborso gestito. Non entra in schedine e sistemi.
 - **Limiti di gioco** nello Storico: spesa massima e perdita massima mensili, avvisi e conferma prima di registrare giocate oltre il limite (salvati nel browser).
+
+## Novità (v4): ridurre il costo del gioco
+
+Il backtest (v3) ha mostrato che i value bet del modello perdono circa il 9% di quanto puntato, come il margine dei bookmaker. Il modello non batte il mercato.
+- **Tab Costi** (`engine/costs.py`): perdita media per 100 € su 24.000 partite reali, per scelta (favorita/sfavorita/pareggio), fascia di quota, singola o multipla e margine di ciascun bookmaker. Si aggiorna insieme al backtest (mensile).
+- **Home "Giocate a basso costo"**: singole sulla favorita con quota media 1,30-2,00, con la soglia sotto cui non giocare sul proprio bookmaker. Schedine, sistemi e segnali del modello sono in una sezione "curiosità" con avviso.
+- Nessuna giocata ha valore atteso positivo: il sito riduce la perdita attesa, non la elimina.

@@ -113,6 +113,7 @@
 
   <div class="tabs">
     <button data-tab="home" class="active">Home</button>
+    <button data-tab="costi">Costi</button>
     <button data-tab="verifica">Verifica</button>
     <button data-tab="storico">Storico</button>
   </div>
@@ -128,20 +129,27 @@
       <span class="note" style="font-size:11.5px">serve solo a calcolare la puntata consigliata, resta su questo dispositivo</span>
     </div>
 
-    <h2 class="sec">Schedine consigliate</h2>
-    <div id="slips"></div>
-
-    <h2 class="sec">Sistemi</h2>
-    <div class="note" style="margin:-4px 0 12px">Un sistema "3 su 4" gioca tutte le combinazioni da 3 eventi sui 4 scelti, con la stessa puntata ciascuna: non serve azzeccarli tutti per incassare, ma la vincita è più bassa di una multipla.</div>
-    <div id="systems"></div>
-
-    <h2 class="sec">Tutti i segnali</h2>
+    <h2 class="sec">Giocate a basso costo</h2>
+    <div class="note" style="margin:-4px 0 12px">Il test su 24.000 partite dice che la perdita media si riduce giocando <b>singole sulla favorita</b>, con quota tra 1,30 e 2,00. Perdere a lungo andare resta la norma: queste sono le giocate che costano meno, non giocate che vincono.</div>
     <div class="row" id="date-filters"></div>
-    <div class="row" id="filters"></div>
-    <div id="signals"></div>
+    <div id="lowcost"></div>
+
+    <details class="notes" style="margin-top:26px" id="altre">
+      <summary>Altre analisi (curiosità)</summary>
+      <div class="banner" style="margin-top:12px">Attenzione: nel test sul passato questi consigli avrebbero perso circa il 9% di quanto puntato, più delle giocate a basso costo. Guardali come statistica, non come indicazione di puntata.</div>
+      <h2 class="sec">Schedine</h2>
+      <div id="slips"></div>
+      <h2 class="sec">Sistemi</h2>
+      <div class="note" style="margin:-4px 0 12px">Un sistema "3 su 4" gioca tutte le combinazioni da 3 eventi sui 4 scelti, con la stessa puntata ciascuna.</div>
+      <div id="systems"></div>
+      <h2 class="sec">Tutti i segnali</h2>
+      <div class="row" id="filters"></div>
+      <div id="signals"></div>
+    </details>
   </div>
 
   <!-- ============ VERIFICA ============ -->
+  <div id="tab-costi" style="display:none"></div>
   <div id="tab-verifica" style="display:none"></div>
 
   <!-- ============ STORICO ============ -->
@@ -193,7 +201,7 @@ const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); r
 /* ============================================================ tab */
 function switchTab(tab) {
   document.querySelectorAll('.tabs button').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
-  ['home', 'verifica', 'storico'].forEach(t => { $('#tab-' + t).style.display = t === tab ? '' : 'none'; });
+  ['home', 'costi', 'verifica', 'storico'].forEach(t => { $('#tab-' + t).style.display = t === tab ? '' : 'none'; });
 }
 document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => switchTab(b.dataset.tab)));
 
@@ -216,6 +224,7 @@ const evChip = ev => ev == null ? '' : `<span class="${ev >= 0 ? 'pos' : 'neg'}"
 let DATA = null;
 let SIGNALS = [];
 let SLIPS = [];
+let LOWCOST = [];
 
 async function loadData() {
   const updated = $('#updated');
@@ -240,9 +249,11 @@ async function loadData() {
 
   SIGNALS = (DATA.signals || []).map((s, i) => Object.assign({ _i: i, _day: s.day || parseDay(s.data) }, s));
   SLIPS = DATA.slips || [];
+  LOWCOST = (DATA.lowcost || []).map((s, i) => Object.assign({ _i: i, _day: s.day }, s));
   buildCampionatoFilters();
   renderDateFilters();
   renderHome();
+  renderCosti();
   renderVerifica();
 }
 
@@ -262,7 +273,7 @@ function renderSlips() {
     <div class="card slip">
       <div class="card-top">
         <div><span class="tipo">${esc(s.tipo)}</span> <span class="meta">· partite entro 3 giorni</span></div>
-        <span class="pill ${s.value ? 'value' : 'statistico'}">${s.value ? 'valore positivo' : 'senza valore'}</span>
+        <span class="pill ${s.value ? 'value' : 'statistico'}">${s.value ? 'stima positiva (non verificata)' : 'senza valore'}</span>
       </div>
       ${s.legs.map(l => `<div class="leg"><div>${esc(l.partita)}<div class="sm">${esc(l.campionato)} · ${esc(l.data)} · ${esc(l.mercato)}: ${esc(l.pronostico)}</div></div><div class="q">${Number(l.quota).toFixed(2)}</div></div>`).join('')}
       <div class="slip-foot">
@@ -288,7 +299,7 @@ function renderSystems() {
     const per = tot ? tot / s.combinazioni : 0;
     return `<div class="card slip">
       <div class="card-top"><div><span class="tipo">${esc(s.tipo)}</span> <span class="meta">· ${s.combinazioni} combinazioni</span></div>
-        <span class="pill ${s.value ? 'value' : 'statistico'}">${s.value ? 'valore positivo' : 'senza valore'}</span></div>
+        <span class="pill ${s.value ? 'value' : 'statistico'}">${s.value ? 'stima positiva (non verificata)' : 'senza valore'}</span></div>
       ${s.legs.map(l => `<div class="leg"><div>${esc(l.partita)}<div class="sm">${esc(l.campionato)} · ${esc(l.data)} · ${esc(l.mercato)}: ${esc(l.pronostico)}</div></div><div class="q">${Number(l.quota).toFixed(2)}</div></div>`).join('')}
       <div class="slip-foot">
         <span>Probabilità di incassare <b>${pct(s.p_rientro)}</b></span>
@@ -327,28 +338,28 @@ function renderDateFilters() {
   const el = $('#date-filters');
   el.innerHTML = '<span class="lbl">Data</span>' +
     DATE_BTNS.map(([k, l]) => `<button class="chipbtn ${fDate === k ? 'active' : ''}" data-d="${k}">${l}</button>`).join('') +
-    `<input type="date" id="day-picker" value="${esc(fDay)}" />` +
-    `<button class="chipbtn ${fValue ? 'active' : ''}" data-value="1">Solo value bet</button>`;
+    `<input type="date" id="day-picker" value="${esc(fDay)}" />`;
 }
 $('#date-filters').addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b) return;
-  if (b.dataset.value) { fValue = !fValue; }
-  else if (b.dataset.d) { fDate = b.dataset.d; fDay = ''; }
-  renderDateFilters(); renderSignals();
+  if (b.dataset.d) { fDate = b.dataset.d; fDay = ''; }
+  renderDateFilters(); renderLowcost(); renderSignals();
 });
 $('#date-filters').addEventListener('change', e => {
   if (e.target.id !== 'day-picker') return;
   fDay = e.target.value; fDate = fDay ? 'giorno' : 'da_oggi';
-  renderDateFilters(); renderSignals();
+  renderDateFilters(); renderLowcost(); renderSignals();
 });
 
 function buildCampionatoFilters() {
   const camps = ['Tutti', ...new Set(SIGNALS.map(s => s.campionato))];
-  $('#filters').innerHTML = camps.map(c => `<button class="chipbtn ${c === fCamp ? 'active' : ''}" data-c="${esc(c)}">${esc(c)}</button>`).join('');
+  $('#filters').innerHTML = camps.map(c => `<button class="chipbtn ${c === fCamp ? 'active' : ''}" data-c="${esc(c)}">${esc(c)}</button>`).join('') +
+    `<button class="chipbtn ${fValue ? 'active' : ''}" data-value="1">Solo stime positive</button>`;
 }
 $('#filters').addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b) return;
-  fCamp = b.dataset.c; buildCampionatoFilters(); renderSignals();
+  if (b.dataset.value) fValue = !fValue; else fCamp = b.dataset.c;
+  buildCampionatoFilters(); renderSignals();
 });
 
 function renderSignals() {
@@ -374,11 +385,35 @@ function renderSignals() {
       <button class="btn-gold" style="margin-top:10px" data-sig="${s._i}">+ Aggiungi a schedina</button>
     </div>`).join('') || '<div class="empty">Nessun segnale per questi filtri. Prova con "Tutte" nelle date.</div>';
 }
-function renderHome() { renderSlips(); renderSystems(); renderSignals(); }
+function renderLowcost() {
+  const el = $('#lowcost');
+  if (!DATA) { el.innerHTML = ''; return; }
+  if (DATA.lowcost == null) { el.innerHTML = '<div class="empty">Le giocate a basso costo compariranno al prossimo aggiornamento del motore.</div>'; return; }
+  const list = LOWCOST.filter(matchesDate);
+  if (!list.length) { el.innerHTML = '<div class="empty">Nessuna favorita netta (quota 1,30-2,00) per queste date.<br>Con "Tutte" nelle date vedi tutte le partite disponibili.</div>'; return; }
+  const b = getBankroll();
+  el.innerHTML = list.map(s => `
+    <div class="card">
+      <div class="card-top">
+        <div><div class="match">${esc(s.partita)}</div><div class="meta">${esc(s.campionato)} · ${esc(s.data)}</div></div>
+        <span class="pill Media">singola</span>
+      </div>
+      <div class="market">${esc(s.pronostico)} <span style="color:#8FA394;font-size:12px">(quota media di mercato ${Number(s.quota_media).toFixed(2)})</span></div>
+      <div class="slip-foot" style="margin-top:6px">
+        <span>Gioca solo se Goldbet paga almeno <b>${Number(s.soglia).toFixed(2)}</b></span>
+        <span>Probabilità secondo il mercato <b>${pct(s.p_mercato)}</b></span>
+        <span>Costo medio ogni 100 €: <b class="neg">${(Math.abs(s.costo) * 100).toFixed(1)} €</b></span>
+      </div>
+      <div class="stake">${b > 0 ? 'Tetto per questa giocata: <b>' + fmtEuro(b * 0.02) + '</b> (2% del budget)' : 'Tetto per giocata: 2% del budget (inserisci il budget in alto)'}${s.quota_max ? ' · quota migliore trovata tra i bookmaker ' + Number(s.quota_max).toFixed(2) : ''}</div>
+      <button class="btn-gold" style="margin-top:10px" data-low="${s._i}">+ Aggiungi a schedina</button>
+    </div>`).join('');
+}
+function renderHome() { renderLowcost(); renderSlips(); renderSystems(); renderSignals(); }
 
 $('#tab-home').addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b) return;
   if (b.dataset.sig != null) { const s = SIGNALS[+b.dataset.sig]; openBetModal(presetFromSignal(s)); }
+  if (b.dataset.low != null) { const s = LOWCOST[+b.dataset.low]; openBetModal({ tipo: 'Singola', campionato: s.campionato, data: s.day, importo: getBankroll() > 0 ? (getBankroll() * 0.02).toFixed(2) : '', selezioni: [{ squadre: s.partita, mercato: '1X2', pronostico: s.pronostico, quota: String(s.soglia) }] }); }
   if (b.dataset.slip != null) { openBetModal(presetFromSlip(SLIPS[+b.dataset.slip])); }
 });
 
@@ -461,6 +496,31 @@ function backtestHtml(bt) {
       <div class="stat-card"><div class="stat-label">ROI (1 unità a puntata)</div><div class="stat-value ${o.roi == null ? '' : o.roi >= 0 ? 'pos' : 'neg'}">${o.roi == null ? 'n/d' : sgn(o.roi)}</div><div class="stat-sub">± ${o.ci == null ? '–' : (o.ci * 100).toFixed(0) + '%'} (95%)</div></div>
     </div>` + brier + grid + bt3('Per mercato', bt.by_key, k => KEY_LABEL[k] || k) + bt3('Per stagione', bt.by_season) + bt3('Per fascia di valore atteso', bt.by_bucket) + bt3('Per campionato', bt.by_lg) +
     `<div class="note">${esc(bt.note || '')}</div>`;
+}
+
+const RULE_LABEL = { favorita: 'Puntare sulla favorita', sfavorita: 'Puntare sulla sfavorita', pareggio: 'Puntare sul pareggio' };
+function renderCosti() {
+  const el = $('#tab-costi'), c = DATA && DATA.backtest && DATA.backtest.costs;
+  if (!c) { el.innerHTML = '<div class="empty">I costi di gioco compariranno dopo la prossima esecuzione del motore.</div>'; return; }
+  const eur = x => (x == null ? 'n/d' : (x >= 0 ? '+' : '−') + Math.abs(x * 100).toFixed(1) + ' €');
+  const L = c.labels || {};
+  const marg = (title, obj) => {
+    const rows = Object.entries(obj || {});
+    if (!rows.length) return '';
+    return `<div class="tablewrap"><h3>${esc(title)}</h3><table class="t"><tr><th>Bookmaker</th><th>Margine</th><th>Partite</th></tr>` +
+      rows.map(([k, v]) => `<tr><td>${esc(L[k] || k)}</td><td>${pct(v.margin, 1)}</td><td>${v.n}</td></tr>`).join('') + '</table></div>';
+  };
+  const rules = Object.entries(c.rules || {}).map(([r, d]) => `<tr><td>${esc(RULE_LABEL[r] || r)}</td><td class="${d.Avg && d.Avg.roi < 0 ? 'neg' : 'pos'}">${eur(d.Avg && d.Avg.roi)}</td><td>${eur(d.Max && d.Max.roi)}</td></tr>`).join('');
+  const buckets = Object.entries(c.buckets || {}).map(([b, d]) => `<tr><td>${esc(b)}</td><td class="${d.Avg.roi < 0 ? 'neg' : 'pos'}">${eur(d.Avg.roi)}</td><td>${eur(d.Max.roi)}</td><td>${d.Avg.n}</td></tr>`).join('');
+  const multi = (c.multiples && c.multiples.Avg) ? Object.entries(c.multiples.Avg).map(([k, v]) => `<tr><td>${k === '1' ? 'Singola' : 'Multipla da ' + k}</td><td class="neg">${eur(v)}</td><td>${eur(c.multiples.Max && c.multiples.Max[k])}</td></tr>`).join('') : '';
+  el.innerHTML = `<div class="banner">Quanto si perde in media ogni 100 € puntati, calcolato su ${c.matches} partite reali di 4 stagioni, senza nessun modello. Perdere zero è impossibile: questa pagina mostra cosa lo riduce.</div>
+    <div class="tablewrap"><h3>Che cosa punti (quote medie · quota migliore tra tutti i bookmaker)</h3><table class="t"><tr><th>Scelta</th><th>Perdita ogni 100 €</th><th>Con la quota migliore</th></tr>${rules}</table></div>
+    <div class="tablewrap"><h3>Quanto è alta la quota (tutti gli esiti 1X2)</h3><table class="t"><tr><th>Quota</th><th>Perdita ogni 100 €</th><th>Con la quota migliore</th><th>Puntate</th></tr>${buckets}</table></div>
+    <div class="tablewrap"><h3>Singola o multipla (sempre sulla favorita)</h3><table class="t"><tr><th>Tipo</th><th>Perdita ogni 100 €</th><th>Con la quota migliore</th></tr>${multi}</table></div>
+    ${marg('Margine del bookmaker sull\'1X2 (più basso = meglio)', c.margin_1x2)}
+    ${marg('Margine su Under/Over 2.5', c.margin_ou)}
+    ${marg('Margine su handicap asiatico', c.margin_ah)}
+    <div class="note">"Quota migliore" è la più alta tra tutti i bookmaker censiti, anche quelli che in Italia non puoi usare: con un solo bookmaker sei più vicino alla colonna "quote medie". Goldbet non è nei dati: confronta sempre la sua quota con la soglia indicata in Home.</div>`;
 }
 
 function renderVerifica() {

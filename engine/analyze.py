@@ -484,6 +484,36 @@ def analyze_fixture(row, code, league_name, form, model, played, today):
     return signals
 
 
+LOWCOST_MIN_ODDS = 1.30
+LOWCOST_MAX_ODDS = 2.00
+
+
+def lowcost_pick(row, code, league_name, played, today):
+    """Singola sulla favorita (quota media 1.30-2.00): la categoria che, nei dati storici, costa meno."""
+    home, away = row.get("HomeTeam"), row.get("AwayTeam")
+    day = parse_day(row.get("Date"))
+    if not home or not away or day is None or day < today or (home, away, day) in played:
+        return None
+    qh, qd, qa = num(row.get("AvgH")), num(row.get("AvgD")), num(row.get("AvgA"))
+    if not (qh and qd and qa):
+        return None
+    ph, pd_, pa = devig([qh, qd, qa])
+    key, quota, p = ("H", qh, ph) if qh <= qa else ("A", qa, pa)
+    if not (LOWCOST_MIN_ODDS <= quota <= LOWCOST_MAX_ODDS):
+        return None
+    qmax = num(row.get("MaxH" if key == "H" else "MaxA"))
+    mercato, tpl = LABELS[key]
+    return {
+        "id": f"{day.isoformat()}|{home}|{away}|{key}", "partita": f"{home} - {away}",
+        "campionato": league_name, "lg": code, "data": row.get("Date", ""), "day": day.isoformat(),
+        "key": key, "pronostico": tpl.format(home=home, away=away, line="", aline=""),
+        "quota_media": round(quota, 2), "quota_max": round(qmax, 2) if qmax else None,
+        "soglia": int(quota * 100) / 100,                     # gioca solo se il tuo bookmaker paga almeno questo
+        "p_mercato": round(p, 3),
+        "costo": round(p * quota - 1, 4),                     # perdita attesa per 1 euro a quota media (negativa)
+    }
+
+
 def fixture_odds(row, today):
     """Quote correnti di una partita futura, per chiave dell'id del registro."""
     home, away = row.get("HomeTeam"), row.get("AwayTeam")
@@ -768,6 +798,16 @@ def main():
     for row in fixtures:
         if row.get("Div") in MAIN_LEAGUES:
             current_odds.update(fixture_odds(row, today))
+    lowcost = []
+    for code, name in MAIN_LEAGUES.items():
+        results = results_by_league[code]
+        played_lc = {(m["home"], m["away"], m["day"]) for m in results}
+        for row in fixtures:
+            if row.get("Div") == code:
+                lc = lowcost_pick(row, code, name, played_lc, today)
+                if lc:
+                    lowcost.append(lc)
+    lowcost.sort(key=lambda x: (x["day"], -x["costo"]))
     for code, name in MAIN_LEAGUES.items():
         results = results_by_league[code]
         form = form_stats(results)
@@ -809,6 +849,7 @@ def main():
         "signals": signals,
         "slips": slips,
         "systems": systems,
+        "lowcost": lowcost,
         "history": history,
         "backtest": get_backtest(load_previous_backtest(OUTPUT_PATH), today),
     }
