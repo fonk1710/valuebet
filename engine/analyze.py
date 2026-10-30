@@ -654,7 +654,7 @@ def load_previous_backtest(path):
 
 def get_backtest(previous, today):
     """Riusa il backtest salvato se e' recente; altrimenti lo rifa (impiega qualche minuto)."""
-    if previous and previous.get("generated_at"):
+    if previous and previous.get("generated_at") and "costs" in previous:
         try:
             age = (today - datetime.fromisoformat(previous["generated_at"]).date()).days
             if age < BACKTEST_REFRESH_DAYS:

@@ -14,6 +14,7 @@ import time
 from collections import defaultdict
 
 import analyze as A
+import costs as C
 
 GRID_WEIGHTS = (0.0, 0.25, 0.5, 0.75)      # peso del mercato nella stima
 GRID_THRESHOLDS = (0.0, 0.03, 0.06, 0.10)  # valore atteso minimo
@@ -207,6 +208,7 @@ def run(today, codes, generated_at, fetch=None, sleep=1.0):
     fetch = fetch or A.fetch_csv
     seasons = previous_season_codes(today)
     bt = Backtest()
+    cost = C.Costs()
     used = []
     for season in seasons:
         got = 0
@@ -216,6 +218,8 @@ def run(today, codes, generated_at, fetch=None, sleep=1.0):
             except Exception as exc:  # noqa: BLE001
                 print(f"  backtest: {season}/{code} non disponibile ({exc})")
                 continue
+            for r in rows:
+                cost.add_row(r)
             matches = parse_rows(rows)
             if len(matches) > WARMUP_MATCHES + 30:
                 bt.run_season(matches, A.MAIN_LEAGUES.get(code, code), f"20{season[:2]}/{season[2:]}")
@@ -223,4 +227,6 @@ def run(today, codes, generated_at, fetch=None, sleep=1.0):
             time.sleep(sleep)
         if got:
             used.append(f"20{season[:2]}/{season[2:]}")
-    return bt.report(used, generated_at)
+    report = bt.report(used, generated_at)
+    report["costs"] = cost.report()
+    return report

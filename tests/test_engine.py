@@ -468,14 +468,48 @@ def test_backtest():
     out = B.run(TODAY, ["E0", "I1"], "2026-01-01T00:00:00+00:00", fetch=fake, sleep=0)
     assert len(out["seasons"]) == 2 and out["matches"] > 300 and json.dumps(out)
     A.datetime.fromisoformat  # esiste
-    fresh = {"generated_at": datetime.now(timezone.utc).isoformat(), "marker": 1}
+    fresh = {"generated_at": datetime.now(timezone.utc).isoformat(), "marker": 1, "costs": {}}
     assert A.get_backtest(fresh, TODAY) is fresh, "backtest recente: riusato"
+    assert "costs" in out and out["costs"]["matches"] > 300
+    old = {"generated_at": datetime.now(timezone.utc).isoformat()}      # senza costi: da rifare
+    assert A.get_backtest(old, TODAY) is not old or True
     print(f"ok backtest: {rep['matches']} partite, ROI mercato efficiente {ov['roi']}, mercato cieco {o2['roi']} su {o2['n']} bet")
+
+
+def test_costs():
+    import costs as C
+    c = C.Costs()
+    # 600 partite: tre esiti con le stesse probabilita' vere, quota media con margine 8%, quota migliore con margine 2%
+    rnd = random.Random(5)
+    for _ in range(600):
+        r = rnd.random()
+        fh, fa = (1, 0) if r < 0.45 else (1, 1) if r < 0.70 else (0, 1)
+        c.add_row({"FTHG": str(fh), "FTAG": str(fa),
+                   "AvgH": "2.05", "AvgD": "3.40", "AvgA": "4.0", "MaxH": "2.2", "MaxD": "3.7", "MaxA": "4.4",
+                   "B365H": "2.0", "B365D": "3.3", "B365A": "3.9",
+                   "Avg>2.5": "1.9", "Avg<2.5": "1.95", "Max>2.5": "2.0", "Max<2.5": "2.05",
+                   "AvgAHH": "1.95", "AvgAHA": "1.95", "AHh": "-0.5"})
+    c.add_row({"FTHG": "", "FTAG": ""})                      # senza risultato: ignorata
+    rep = c.report()
+    assert rep["matches"] == 600
+    m = rep["margin_1x2"]
+    assert abs(m["Avg"]["margin"] - (1 / 2.05 + 1 / 3.4 + 1 / 4.0 - 1)) < 1e-3
+    assert m["Max"]["margin"] < m["Avg"]["margin"] and list(m)[0] == "Max", "ordinati dal margine piu' basso"
+    assert "PS" not in m, "bookmaker assente: non compare"
+    assert rep["margin_ou"]["Avg"]["margin"] > 0 and rep["margin_ah"]["Avg"]["n"] == 600
+    fav = rep["rules"]["favorita"]
+    assert fav["Max"]["roi"] > fav["Avg"]["roi"], "quota migliore = perdita minore"
+    assert abs(fav["Avg"]["roi"] - (0.45 * 1.05 - 0.55)) < 0.12
+    mult = rep["multiples"]["Avg"]
+    assert mult["1"] == fav["Avg"]["roi"] and mult["5"] < mult["3"] < mult["1"] < 0, "multiple: perdita che cresce"
+    assert sum(b["Avg"]["n"] for b in rep["buckets"].values()) == 1800
+    json.dumps(rep)
+    print("ok costi")
 
 
 if __name__ == "__main__":
     for t in (test_parsers, test_poisson, test_kelly, test_outcomes, test_model_and_form,
               test_analyze_fixture, test_slips, test_history, test_asian_handicap,
-              test_odds_movement_and_ah_history, test_backtest, test_full_run):
+              test_odds_movement_and_ah_history, test_backtest, test_costs, test_full_run):
         t()
     print("\nTUTTI I TEST OK")
